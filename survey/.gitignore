@@ -4,3 +4,9 @@
 *.out
 *.inspect.ndjson
 main.pdf
+
+# Manuscript sources are not public website downloads.
+HBC_Catalogue_Overleaf.zip
+HBC_Catalogue_arXiv_Source.zip
+main.tex
+catalogue.tex

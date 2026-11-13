@@ -27,7 +27,9 @@ Four EMBC 2026 programme entries were found but are not counted as confirmed pub
 
 ## Rebuild
 
-Run `python anc/make_catalogue.py` and `python anc/make_figures.py` (matplotlib/numpy), then compile `main.tex` twice with pdfLaTeX. The Overleaf ZIP opens directly with main.tex as its main document. The page generator in `anc/build_page.py` reuses the repository's shared navigation/assets and updates HBC_Survey.html. The workbook generator uses the @oai/artifact-tool runtime; the exported XLSX does not need that runtime to open.
+The page generator in `anc/build_page.py` reuses the repository's shared navigation/assets and updates HBC_Survey.html. Run it from any directory. The workbook generator uses the @oai/artifact-tool runtime; the exported XLSX does not need that runtime to open.
+
+The catalogue PDF is the primary public download. Overleaf/arXiv source ZIPs and manuscript TeX files are not distributed in the current website tree. Do not add source-download links or republish those manuscript files. Earlier Git history can still contain previously published files.
 
 ## Validation
 
@@ -35,6 +37,6 @@ Run `python anc/make_catalogue.py` and `python anc/make_figures.py` (matplotlib/
 - All 337 reference labels occur in the 12-page PDF. PDF compilation, links and rendered pages checked.
 - JavaScript syntax and DOM tests passed: 50-paper pagination, search, category filters, DOI links, scope selection, point details and CSV newline handling.
 - Workbook formula error scan passed; native scatter charts reference only IC_Energy. All four sheet views rendered and inspected.
-- Browser visual verification was unavailable: local Chromium launch was blocked by the environment. Desktop/mobile visual review remains required before publishing.
+- The live GitHub Pages release was checked in the browser after deployment; the published PDF matched the approved file byte-for-byte.
 
 The branch updates only HBC_Survey.html and the survey/ directory. Merging or deploying is a separate step; this release has not changed the live Purdue website.
