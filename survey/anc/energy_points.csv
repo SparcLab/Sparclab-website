@@ -1,0 +1,126 @@
+id,year,operating_point,scope,energy_pJ_per_bit,mode,doi,notes
+hbc-002,2026,1,TX,31.1,Unclassified,10.1109/cicc65509.2026.11509582,Transmitter energy reported in the paper title. Other circuit metrics not extracted.
+hbc-003,2026,1,RX,4.5,Body Resonance,10.1109/ojsscs.2026.3727553,Added 2026-09-26. Receiver only: 4.5 pJ/bit includes clock recovery; the title’s 0.7 pJ/bit is front-end only and is not used as full-Rx energy. Source: https://ieeexplore.ieee.org/document/11667019/ Source: https://doi.org/10.1109/ojsscs.2026.3727553
+hbc-004,2026,1,TX,31.05,Unclassified,10.1109/jssc.2025.3602683,Author institution’s performance table: title’s 9.5 pJ/bit is RX only. Tx energy and Tx+Rx energy are calculated from the table’s separate TX/RX powers at 40 Mbps.
+hbc-004,2026,1,RX,9.5,Unclassified,10.1109/jssc.2025.3602683,Author institution’s performance table: title’s 9.5 pJ/bit is RX only. Tx energy and Tx+Rx energy are calculated from the table’s separate TX/RX powers at 40 Mbps.
+hbc-004,2026,1,TX+RX,40.55,Unclassified,10.1109/jssc.2025.3602683,Author institution’s performance table: title’s 9.5 pJ/bit is RX only. Tx energy and Tx+Rx energy are calculated from the table’s separate TX/RX powers at 40 Mbps.
+hbc-030,2026,1,TX+RX,11.55,Common-ground,10.1016/j.rineng.2025.108456,"Added 2026-09-26. Shared Tx/Rx ground. Maximum supported rate 13.5 Mbps; quoted 23.10 μW and 11.55 pJ/bit are at 2 Mbps with 4 MHz clock, not at maximum rate. Journal issue 2026; online 2025. Source: https://ccsl.kaust.edu.sa/projects/by-year/2026/biocontact-assurance-system Source: https://doi.org/10.1016/j.rineng.2025.108456"
+hbc-337,2026,1,RX,0.67,EQS Brain Channel,10.1109/cicc65509.2026.11509547,"CICC 2026, presented April 2026. Fabricated 16 nm time-domain brain-channel receiver. Official IEEE conference abstract reports 80 Mb/s at 0.67 pJ/bit. This is RX-only energy; no TX or full-link energy is inferred. Other metrics remain blank pending full-paper extraction."
+hbc-338,2026,1,TX,0.84,Capacitive,10.1109/cicc65509.2026.11509469,"CICC 2026, presented April 2026. Fabricated 16 nm FinFET capacitive HBC transceiver; chip photograph and measurements in the author-hosted paper. TX 0.84 pJ/bit and RX 3.2 pJ/bit are taken separately from the paper abstract. The 2.2 pJ/b title figure is described in the presentation as a 50% TX / 50% RX operating assumption; it is NOT treated as simultaneous TX+RX link energy. The paper and slides contain differing RX power/energy breakdowns, so a full-link total is left blank pending reconciliation. 15 MHz carrier and -47 dBm sensitivity from the paper. A resonant TX driver does not imply magnetic body coupling."
+hbc-338,2026,1,RX,3.2,Capacitive,10.1109/cicc65509.2026.11509469,"CICC 2026, presented April 2026. Fabricated 16 nm FinFET capacitive HBC transceiver; chip photograph and measurements in the author-hosted paper. TX 0.84 pJ/bit and RX 3.2 pJ/bit are taken separately from the paper abstract. The 2.2 pJ/b title figure is described in the presentation as a 50% TX / 50% RX operating assumption; it is NOT treated as simultaneous TX+RX link energy. The paper and slides contain differing RX power/energy breakdowns, so a full-link total is left blank pending reconciliation. 15 MHz carrier and -47 dBm sensitivity from the paper. A resonant TX driver does not imply magnetic body coupling."
+hbc-037,2025,1,TX,0.94,Galvanic,10.1109/esserc66193.2025.11213996,0.94 pJ/bit is transmitter-only. Receiver energy not extracted.
+hbc-038,2025,1,TX,428.8,Electric (unclassified),10.1109/tbcas.2024.3439619,Added 2026-09-26. Journal issue 2025; early access 2024. Table II reports 1.42 nJ/bit = 1420 pJ/bit. Component powers and abstract total have small published rounding discrepancy. Tx/Rx energy cells derived at 0.5 Mbps. Source: https://doi.org/10.1109/TBCAS.2024.3439619 Source: https://doi.org/10.1109/tbcas.2024.3439619 Related publication: https://doi.org/10.1109/a-sscc56115.2022.9980620. Distinct publication; not necessarily a distinct chip.
+hbc-038,2025,1,RX,995.0,Electric (unclassified),10.1109/tbcas.2024.3439619,Added 2026-09-26. Journal issue 2025; early access 2024. Table II reports 1.42 nJ/bit = 1420 pJ/bit. Component powers and abstract total have small published rounding discrepancy. Tx/Rx energy cells derived at 0.5 Mbps. Source: https://doi.org/10.1109/TBCAS.2024.3439619 Source: https://doi.org/10.1109/tbcas.2024.3439619 Related publication: https://doi.org/10.1109/a-sscc56115.2022.9980620. Distinct publication; not necessarily a distinct chip.
+hbc-038,2025,1,TX+RX,1420,Electric (unclassified),10.1109/tbcas.2024.3439619,Added 2026-09-26. Journal issue 2025; early access 2024. Table II reports 1.42 nJ/bit = 1420 pJ/bit. Component powers and abstract total have small published rounding discrepancy. Tx/Rx energy cells derived at 0.5 Mbps. Source: https://doi.org/10.1109/TBCAS.2024.3439619 Source: https://doi.org/10.1109/tbcas.2024.3439619 Related publication: https://doi.org/10.1109/a-sscc56115.2022.9980620. Distinct publication; not necessarily a distinct chip.
+hbc-042,2025,1,TX+RX,25,Capacitive,10.1109/biocas67066.2025.00033,Added 2026-09-26. Carrier-based operating mode. Second row reports carrier-less operation of the SAME IC/publication; count charts count operating-mode records. Conference year 2025; proceedings appeared online in 2026. Source: https://doi.org/10.1109/biocas67066.2025.00033 Additional mode: Added 2026-09-26. Carrier-less operating mode of the same dual-mode IC. Total energy 8.4 pJ/bit is reported rounded value (44 μW / 5.25 Mbps). Conference year 2025; proceedings appeared online in 2026. Source: https://doi.org/10.1109/biocas67066.2025.00033
+hbc-042,2025,2,TX+RX,8.4,Capacitive,10.1109/biocas67066.2025.00033,Added 2026-09-26. Carrier-based operating mode. Second row reports carrier-less operation of the SAME IC/publication; count charts count operating-mode records. Conference year 2025; proceedings appeared online in 2026. Source: https://doi.org/10.1109/biocas67066.2025.00033 Additional mode: Added 2026-09-26. Carrier-less operating mode of the same dual-mode IC. Total energy 8.4 pJ/bit is reported rounded value (44 μW / 5.25 Mbps). Conference year 2025; proceedings appeared online in 2026. Source: https://doi.org/10.1109/biocas67066.2025.00033
+hbc-125,2023,1,TX,118.85714285714286,Capacitive,10.34133/cbsystems.0030,"Full-text comparison table explicitly labels 16 pJ/bit RX efficiency, at 1.5 m ground-path distance. Tx and total energy are calculated from 624 µW TX and 84 µW RX."
+hbc-125,2023,1,RX,16,Capacitive,10.34133/cbsystems.0030,"Full-text comparison table explicitly labels 16 pJ/bit RX efficiency, at 1.5 m ground-path distance. Tx and total energy are calculated from 624 µW TX and 84 µW RX."
+hbc-125,2023,1,TX+RX,134.85714285714286,Capacitive,10.34133/cbsystems.0030,"Full-text comparison table explicitly labels 16 pJ/bit RX efficiency, at 1.5 m ground-path distance. Tx and total energy are calculated from 624 µW TX and 84 µW RX."
+hbc-127,2023,1,TX,112.5,Unclassified,10.1109/tbcas.2023.3290085,119.2 pJ/bit is RX-only. 231.7 pJ/bit total is reported in Table II of the 2 m TBCAS paper. TX/RX powers independently agree with that total.
+hbc-127,2023,1,RX,119.2,Unclassified,10.1109/tbcas.2023.3290085,119.2 pJ/bit is RX-only. 231.7 pJ/bit total is reported in Table II of the 2 m TBCAS paper. TX/RX powers independently agree with that total.
+hbc-127,2023,1,TX+RX,231.7,Unclassified,10.1109/tbcas.2023.3290085,119.2 pJ/bit is RX-only. 231.7 pJ/bit total is reported in Table II of the 2 m TBCAS paper. TX/RX powers independently agree with that total.
+hbc-131,2023,1,TX,56000,Ultrasonic,10.1109/tbcas.2023.3289919,Two ASICs: 180 nm BCD analog front end and 65 nm CMOS baseband. A single process-node entry would be misleading. Tx+Rx energy is the sum of reported Tx/Rx energies.
+hbc-131,2023,1,RX,10900,Ultrasonic,10.1109/tbcas.2023.3289919,Two ASICs: 180 nm BCD analog front end and 65 nm CMOS baseband. A single process-node entry would be misleading. Tx+Rx energy is the sum of reported Tx/Rx energies.
+hbc-131,2023,1,TX+RX,66900.0,Ultrasonic,10.1109/tbcas.2023.3289919,Two ASICs: 180 nm BCD analog front end and 65 nm CMOS baseband. A single process-node entry would be misleading. Tx+Rx energy is the sum of reported Tx/Rx energies.
+hbc-153,2022,1,TX,33.72,Electric (unclassified),10.1109/esscirc55480.2022.9911296,"Added 2026-09-26. 2022 backfill. Adaptive DFE and 3× oversampling CDR; 75 cm channel at 0.75 cycles/s motion. Coupling subtype and other metrics not verified, so not inferred from title. Source: https://doi.org/10.1109/esscirc55480.2022.9911296 TX supply 1.2 V, RX supply 1 V. Powers and RX energy from the ESSCIRC’22 column of the comparison table in DOI 10.34133/cbsystems.0030; Tx and total energy calculated at 50 Mbps."
+hbc-153,2022,1,RX,68.84,Electric (unclassified),10.1109/esscirc55480.2022.9911296,"Added 2026-09-26. 2022 backfill. Adaptive DFE and 3× oversampling CDR; 75 cm channel at 0.75 cycles/s motion. Coupling subtype and other metrics not verified, so not inferred from title. Source: https://doi.org/10.1109/esscirc55480.2022.9911296 TX supply 1.2 V, RX supply 1 V. Powers and RX energy from the ESSCIRC’22 column of the comparison table in DOI 10.34133/cbsystems.0030; Tx and total energy calculated at 50 Mbps."
+hbc-153,2022,1,TX+RX,102.56,Electric (unclassified),10.1109/esscirc55480.2022.9911296,"Added 2026-09-26. 2022 backfill. Adaptive DFE and 3× oversampling CDR; 75 cm channel at 0.75 cycles/s motion. Coupling subtype and other metrics not verified, so not inferred from title. Source: https://doi.org/10.1109/esscirc55480.2022.9911296 TX supply 1.2 V, RX supply 1 V. Powers and RX energy from the ESSCIRC’22 column of the comparison table in DOI 10.34133/cbsystems.0030; Tx and total energy calculated at 50 Mbps."
+hbc-154,2022,1,TX,4.2,BP-QBC,10.1109/isscc42614.2022.9731793,
+hbc-154,2022,1,RX,4,BP-QBC,10.1109/isscc42614.2022.9731793,
+hbc-154,2022,1,TX+RX,8.26,BP-QBC,10.1109/isscc42614.2022.9731793,
+hbc-156,2022,1,TX,15.5,Magnetic,10.1109/lssc.2022.3158691,
+hbc-156,2022,1,RX,4.6,Magnetic,10.1109/lssc.2022.3158691,
+hbc-156,2022,1,TX+RX,17.7,Magnetic,10.1109/lssc.2022.3158691,
+hbc-156,2022,2,TX,19.4,Magnetic,10.1109/lssc.2022.3158691,
+hbc-156,2022,2,RX,2.7,Magnetic,10.1109/lssc.2022.3158691,
+hbc-156,2022,2,TX+RX,20.9,Magnetic,10.1109/lssc.2022.3158691,
+hbc-158,2022,1,TX,32,Capacitive,10.1109/isscc42614.2022.9731733, Audit 2026-11-13: inherited combined value 31.4453 pJ/bit withheld from plots because it is below a listed component value; original value retained in withheldMetrics pending source reconciliation.
+hbc-170,2022,1,TX+RX,112.99999999999999,Capacitive,10.1109/jssc.2022.3142177,
+hbc-184,2021,1,TX,52,BP-QBC,10.23919/vlsicircuits52068.2021.9492445, Audit 2026-11-13: inherited combined value 7.715 pJ/bit withheld from plots because it is below a listed component value; original value retained in withheldMetrics pending source reconciliation.
+hbc-186,2021,1,TX,46,Capacitive,10.1109/a-sscc53895.2021.9634761, Audit 2026-11-13: inherited combined value 55.5 pJ/bit withheld from plots because it is below a listed component value; original value retained in withheldMetrics pending source reconciliation.
+hbc-186,2021,1,RX,470,Capacitive,10.1109/a-sscc53895.2021.9634761, Audit 2026-11-13: inherited combined value 55.5 pJ/bit withheld from plots because it is below a listed component value; original value retained in withheldMetrics pending source reconciliation.
+hbc-194,2021,1,TX+RX,20.75,Capacitive,10.1109/jssc.2020.3041874,
+hbc-195,2020,1,TX,7400,Optical,10.1109/isscc19947.2020.9063005,
+hbc-196,2020,1,TX,2.24,Capacitive,10.1109/rfic49505.2020.9218344,
+hbc-197,2020,1,TX,3050,Inductive,10.1109/tbcas.2020.3037452,
+hbc-197,2020,1,TX+RX,3053.097345132743,Inductive,10.1109/tbcas.2020.3037452,
+hbc-199,2020,1,TX,33.9,Capacitive,10.1109/lssc.2020.2978852,
+hbc-199,2020,1,RX,3.7,Capacitive,10.1109/lssc.2020.2978852,
+hbc-199,2020,1,TX+RX,37.60479041916168,Capacitive,10.1109/lssc.2020.2978852,
+hbc-207,2019,1,TX+RX,9200.0,Unclassified,10.1109/jssc.2019.2899521,
+hbc-208,2019,1,TX,7.15,Magnetic,10.1109/jssc.2019.2935549,
+hbc-208,2019,1,RX,4.7,Magnetic,10.1109/jssc.2019.2935549,
+hbc-208,2019,1,TX+RX,12.040000000000001,Magnetic,10.1109/jssc.2019.2935549,
+hbc-209,2019,1,TX,3.7,Magnetic,10.1109/isscc.2019.8662387,
+hbc-209,2019,1,RX,4.8,Magnetic,10.1109/isscc.2019.8662387,
+hbc-209,2019,1,TX+RX,8.4,Magnetic,10.1109/isscc.2019.8662387,
+hbc-212,2019,1,TX,3.1,Capacitive,10.1109/jssc.2019.2932852,
+hbc-212,2019,1,RX,3.27,Capacitive,10.1109/jssc.2019.2932852,
+hbc-212,2019,1,TX+RX,6.366666666666666,Capacitive,10.1109/jssc.2019.2932852,
+hbc-215,2019,1,TX+RX,6400.0,Inductive,10.1109/biocas.2019.8919217,
+hbc-215,2019,2,TX+RX,3200000.0,Inductive,10.1109/biocas.2019.8919217,
+hbc-216,2018,1,TX,22,Capacitive,10.1109/isscc.2018.8310294,
+hbc-216,2018,1,RX,100,Capacitive,10.1109/isscc.2018.8310294,
+hbc-216,2018,1,TX+RX,121.25,Capacitive,10.1109/isscc.2018.8310294,
+hbc-216,2018,2,TX,160,Capacitive,10.1109/isscc.2018.8310294,
+hbc-216,2018,2,RX,1600,Capacitive,10.1109/isscc.2018.8310294,
+hbc-216,2018,2,TX+RX,1760.0,Capacitive,10.1109/isscc.2018.8310294,
+hbc-217,2018,1,TX+RX,187.5,Galvanic,10.1109/isscc.2018.8310298,
+hbc-218,2018,1,TX,3.1,Capacitive,10.1109/cicc.2018.8357033,
+hbc-218,2018,1,RX,3.27,Capacitive,10.1109/cicc.2018.8357033,
+hbc-218,2018,1,TX+RX,6.366666666666666,Capacitive,10.1109/cicc.2018.8357033,
+hbc-226,2017,1,TX,550,Capacitive,10.1109/jssc.2017.2713522,
+hbc-226,2017,1,TX+RX,550.0,Capacitive,10.1109/jssc.2017.2713522,
+hbc-227,2017,1,TX,3.5,Capacitive,10.23919/vlsic.2017.8008549,
+hbc-227,2017,1,RX,20,Capacitive,10.23919/vlsic.2017.8008549,
+hbc-235,2016,1,TX,42.5,Capacitive,10.1109/jssc.2015.2498761,
+hbc-235,2016,1,RX,78.8,Capacitive,10.1109/jssc.2015.2498761,
+hbc-235,2016,1,TX+RX,111.25,Capacitive,10.1109/jssc.2015.2498761,
+hbc-235,2016,2,TX,210,Capacitive,10.1109/jssc.2015.2498761,
+hbc-235,2016,2,RX,430,Capacitive,10.1109/jssc.2015.2498761,
+hbc-235,2016,2,TX+RX,635.0,Capacitive,10.1109/jssc.2015.2498761,
+hbc-237,2016,1,RX,1400,Capacitive,10.1109/jssc.2016.2639536,
+hbc-237,2016,1,TX+RX,2500.0,Capacitive,10.1109/jssc.2016.2639536,
+hbc-243,2016,1,TX+RX,10750.0,Unclassified,10.1109/tbcas.2016.2514522,
+hbc-252,2014,1,TX+RX,6641.221374045801,Capacitive,10.1109/cicc.2014.6946058,
+hbc-253,2014,1,TX,1067,Capacitive,10.1109/asscc.2014.7008919,
+hbc-253,2014,1,RX,3810,Capacitive,10.1109/asscc.2014.7008919,
+hbc-253,2014,1,TX+RX,4876.190476190476,Capacitive,10.1109/asscc.2014.7008919,
+hbc-254,2014,1,TX,31,Capacitive,10.1109/isscc.2014.6757529,
+hbc-254,2014,1,RX,150,Capacitive,10.1109/isscc.2014.6757529,
+hbc-254,2014,1,TX+RX,181.16666666666666,Capacitive,10.1109/isscc.2014.6757529,
+hbc-255,2014,1,TX,30,RF,10.1109/cicc.2014.6946071,
+hbc-257,2014,1,TX+RX,2900.0,Unclassified,10.1109/jssc.2014.2328343,
+hbc-269,2013,1,RX,187.5,Capacitive,10.1109/tcsi.2013.2249173,
+hbc-270,2013,1,RX,4230,Capacitive,10.1109/isscc.2013.6487811,
+hbc-270,2013,1,TX+RX,4230.7692307692305,Capacitive,10.1109/isscc.2013.6487811,
+hbc-276,2012,1,TX+RX,95.0,Unclassified,10.1109/isscc.2012.6177004,
+hbc-283,2011,1,TX,200,Capacitive,10.1109/isscc.2011.5746207,
+hbc-283,2011,1,RX,240,Capacitive,10.1109/isscc.2011.5746207,
+hbc-283,2011,1,TX+RX,440.0,Capacitive,10.1109/isscc.2011.5746207,
+hbc-285,2011,1,TX,200,Capacitive,10.1109/asscc.2011.6123632,
+hbc-285,2011,1,RX,240,Capacitive,10.1109/asscc.2011.6123632,
+hbc-285,2011,1,TX+RX,440.0,Capacitive,10.1109/asscc.2011.6123632,
+hbc-286,2011,1,RX,84,Capacitive,10.1109/jssc.2011.2109450,
+hbc-286,2011,1,TX+RX,224.0,Capacitive,10.1109/jssc.2011.2109450,
+hbc-297,2009,1,RX,1.12,Inductive,10.1109/jssc.2009.2028952,
+hbc-297,2009,1,TX+RX,4.0200000000000005,Inductive,10.1109/jssc.2009.2028952,
+hbc-298,2009,1,TX+RX,460.0,Capacitive,10.1109/jssc.2009.2032592,BCC
+hbc-298,2009,2,TX+RX,42500.0,Capacitive,10.1109/jssc.2009.2032592,BCC
+hbc-299,2009,1,TX,70,Capacitive,10.1109/isscc.2009.4977379,
+hbc-299,2009,1,RX,250,Capacitive,10.1109/isscc.2009.4977379,
+hbc-299,2009,1,TX+RX,323.52941176470586,Capacitive,10.1109/isscc.2009.4977379,
+hbc-300,2009,1,TX,1600,MICS,,
+hbc-300,2009,1,TX+RX,3560.0,MICS,,
+hbc-303,2009,1,RX,260,Capacitive,10.1109/apccas.2008.4745947, Audit 2026-11-13: inherited combined value 230 pJ/bit withheld from plots because it is below a listed component value; original value retained in withheldMetrics pending source reconciliation.
+hbc-308,2008,1,TX,235,Capacitive,10.1109/jssc.2008.2012328,
+hbc-308,2008,1,RX,370,Capacitive,10.1109/jssc.2008.2012328,
+hbc-308,2008,1,TX+RX,605.0,Capacitive,10.1109/jssc.2008.2012328,
+hbc-311,2007,1,RX,2500,Capacitive,10.1109/jssc.2007.903080,
+hbc-311,2007,1,TX+RX,2500.0,Capacitive,10.1109/jssc.2007.903080,
+hbc-312,2007,1,TX,71,Capacitive,10.1109/isscc.2007.373446,
+hbc-312,2007,1,RX,189,Capacitive,10.1109/isscc.2007.373446,
+hbc-312,2007,1,TX+RX,260.0,Capacitive,10.1109/isscc.2007.373446,
+hbc-318,2006,1,TX+RX,100.0,Capacitive,10.1109/isscc.2006.1696290,
+hbc-319,2006,1,RX,480,Capacitive,10.1109/esscir.2006.307496,

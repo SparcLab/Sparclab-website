@@ -1,0 +1,24 @@
+{
+  "snapshot": "2026-11-13",
+  "records": 337,
+  "categories": {
+    "ICs": 103,
+    "Channels & models": 147,
+    "Other literature": 87
+  },
+  "energy": {
+    "TX": {
+      "points": 38,
+      "publications": 35
+    },
+    "RX": {
+      "points": 38,
+      "publications": 35
+    },
+    "TX+RX": {
+      "points": 49,
+      "publications": 43
+    }
+  },
+  "snapshot_sha256": "ed4ae9acbf6eba70b29a481077bfd56aadf9099d45c7954748d85be2b8c7544b"
+}

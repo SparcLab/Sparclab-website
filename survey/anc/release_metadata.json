@@ -1,0 +1,48 @@
+{
+  "version": "v3.11",
+  "release_date": "2026-11-13",
+  "literature_snapshot": "2026-11-13",
+  "version_scheme": "v<major>.<month>; .10 denotes October; record full date including year",
+  "history": [
+    {
+      "version": "V1",
+      "date": "2022-06-19",
+      "conference": "IEEE Radio Frequency Integrated Circuits Symposium (RFIC)",
+      "session": "Human Body Communications workshop",
+      "talk": "Secure and Efficient Internet of Bodies (IoB) using Body as a ‘Wire’"
+    },
+    {
+      "version": "V2",
+      "date": "2023-02-23",
+      "conference": "IEEE International Solid-State Circuits Conference (ISSCC)",
+      "session": "Forum 7: Advanced Circuits and Technologies for Wearable and Implantable Devices",
+      "talk": "Secure and Efficient Internet of Bodies (IoB) using Body as a ‘Wire’"
+    },
+    {
+      "version": "v3.10",
+      "date": "2026-10",
+      "description": "Expanded curated catalogue and disclosure updates."
+    },
+    {
+      "version": "v3.11",
+      "date": "2026-11-13",
+      "description": "Literature refresh, verified backfills and inherited energy consistency screening."
+    }
+  ],
+  "ai_usage_statement": "Artificial intelligence (AI), including large language models accessed through OpenAI ChatGPT and Codex, has been used for literature discovery, bibliographic organization, and preparation of the website, manuscript, and scripts. AI-assisted content may contain mistakes. If you find a mistake, please let us know.",
+  "conflict_of_interest_statement": "Shreyas Sen is a founder, Chairman and Chief Technology Officer of Quasistatics, Inc. (doing business as Ixana). This affiliation is disclosed as a potential competing interest. The catalogue includes publications coauthored by Shreyas Sen.",
+  "inclusion_request": "We may have missed relevant papers. If you would like a relevant paper published in a Tier-1 journal or conference to be considered for inclusion, please email shreyas@purdue.edu with its title, full citation, and DOI or source link. Requests will be reviewed for inclusion.",
+  "corrections": "If you find a mistake, please email shreyas@purdue.edu with the paper identifier or DOI and a description of the error. Reported issues will be reviewed, and confirmed corrections will be incorporated into subsequent updates.",
+  "contact_email": "shreyas@purdue.edu",
+  "source": "Shreyas Sen CV, January 2026, page 45 (talks), page 1 (company roles); release associations confirmed by Shreyas Sen on 5 October 2026",
+  "acknowledgements": "The author thanks Gourab Barik, Baibhab Chatterjee, Shovan Maity, Mayukh Nath, Debayan Das, Donghyun Seo, David Yang, and Arunashish Datta for their contributions to V1 and V2 of the survey.",
+  "displayed_reference_format": "Numeric labels, e.g. [001]; original dataset IDs and citation keys remain stable.",
+  "title": "Human Body Communication: A Living Survey of Integrated Circuits and Channel Models",
+  "curation_revision": {
+    "date": "2026-10-05",
+    "removedRecords": 12,
+    "reason": "Scope screening and author-requested exclusions; original IDs retained."
+  },
+  "records": 337,
+  "doi_records": 335
+}
