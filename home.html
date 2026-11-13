@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SPARC Lab | Purdue University</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<!-- Bootstrap CSS -->
+
+        
+                
+            
+    
+    <link rel="stylesheet" href="static/css/footersilder.css" type="text/css" xmlns="http://www.w3.org/1999/html" xmlns:p="http://www.w3.org/1999/html">
+    
+
+
+
+
+        
+<style>
+        
+
+* {box-sizing: border-box}
+body {margin:0}
+.mySlides {display: none}
+img {vertical-align: middle; }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  max-height: 800px;
+  position: relative;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1280px) 
+{
+.xyz{padding-top: 30px}
+
+}
+	
+	</style>
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+
+    <div class="container-fluid">
+
+    <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html">News</a>
+                        <a class="dropdown-item" href="media.html">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="chip.html">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+   
+    </div>
+
+    
+    
+    
+    
+    
+    
+    <div class="slideshow-container" style="padding-top:10px">
+
+<div class="mySlides">
+  <div class="numbertext">1 / 3</div>
+  <img class="xyz" src="static/img/Home/Picture1.jpg" style="width:100%; padding-left: 50px;padding-right: 50px ;">
+  
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 3</div>
+  <img src="static/img/gateway-arch.png" style="width:100%;padding-left: 50px;padding-right: 50px">
+  
+</div>
+<!--
+<div class="mySlides">
+  <div class="numbertext">3 / 4</div>
+  <img src="static/img/hovde-belltower-sculpture-blossoms.jpg" style="width:100%;padding-left: 50px;padding-right: 50px ;height: 70%;">
+  
+</div>
+-->
+
+
+<div class="mySlides">
+  <div class="numbertext">3 / 3</div>
+  <img class="xyz" src="static/img/team_2022.jpg" style="width:100%; padding-left: 50px;padding-right: 50px;">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+    
+    
+    
+    
+    
+    
+    
+    <!-- START THE FEATURETTES -->
+
+    <br>
+    <br>
+
+    <div class = "bg-custom-dark" style="margin-top:-70px">
+
+        <div class="canvas">
+            <div class ="container-fluid marketing">
+                <!--  Short Bio-->
+                <div class="row">
+                    <p></p>
+                </div>
+                <div class = "row">
+
+                    <div class="col-lg-4">
+                        <a href="static/img/Sen-web.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                            <img src="static/img/Sen-web.jpg" class="img-fluid rounded-circle">
+
+                        </a>
+                        
+                        
+                        <h3>Prof. Shreyas Sen </h3>
+                        <a class="btn btn-lg btn-primary" href="static/img/Home/CV.pdf" target="_blank" role="button">Full CV</a>
+
+                        
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="accent_home" style="font-size:20px">
+                            Short Bio: Shreyas Sen is a Professor of ECE & BME, Purdue University. His current research interests span mixed-signal circuits/systems and electromagnetics for the Internet of Bodies (IoB) and Hardware Security. He has co-authored 3 book chapters, over 200 journal and conference papers and has 25 patents granted/pending. Dr. Sen serves as the Director of the Center for Internet of Bodies (C-IoB) at Purdue. Dr. Sen is the inventor of the Electro-Quasistatic Human Body Communication (EQS-HBC), or Body as a Wire technology, for which, he is the recipient of the MIT Technology Review top-10 Indian Inventor Worldwide under 35 (MIT TR35 India) Award in 2018 and Georgia Tech 40 Under 40 Award in 2022. To commercialize this invention Dr. Sen founded Ixana and serves as the Chairman and CTO and led Ixana to awards such as 2x CES Innovation Award 2024, EE Times Silicon 100, Indiana Startup of the Year Mira Award 2023, among others. His work has been covered by 250+ news releases worldwide, invited appearances on TEDx Indianapolis, NASDAQ live Trade Talks at CES 2023, Indian National Television CNBC TV18 Young Turks Program, NPR subsidiary Lakeshore Public Radio and the CyberWire podcast. Dr. Sen is a recipient of the NSF CAREER Award 2020, AFOSR Young Investigator Award 2016, NSF CISE CRII Award 2017, Intel Outstanding Researcher Award 2020, Google Faculty Research Award 2017, Purdue CoE Early Career Research Award 2021, Intel Labs Quality Award 2012 for industry wide impact on USB-C type, Intel Ph.D. Fellowship 2010, IEEE Microwave Fellowship 2008, GSRC Margarida Jacome Best Research Award 2007, and nine best paper awards including IEEE CICC 2019, 2021 and in IEEE HOST 2017-2020, for four consecutive years. Dr. Sen's work was chosen as one of the top-10 papers in the Hardware Security field (TopPicks 2019). He serves/has served as an Associate Editor for IEEE Journal of Solid State Circuits (JSSC), Solid-State Circuits Letters (SSC-L), Nature Scientific Reports, Frontiers in Electronics, IEEE Design & Test, Executive Committee member of IEEE Central Indiana Section and Technical Program Committee member of TPC member of ISSCC, CICC, DAC, CCS, IMS, DATE, ISLPED, ICCAD, ITC, and VLSI Design. Dr. Sen is a Senior Member of IEEE and Distinguished Lecturer of the IEEE SSCS society.
+                        </p>
+			<p class="accent_home" style="font-size:20px"> <a href="https://engineering.purdue.edu/C-IoB" target="_blank"> Director, Center for Internet of Bodies(C-IoB) </a> |
+                            <a href="https://www.livemint.com/Industry/QwmwtJkbUYtTXAzTO5OTVL/Indias-top-innovators-under-35.html" target="_blank"> MIT TR35 India</a> | <a href="https://www.ted.com/talks/shreyas_sen_how_your_body_will_play_an_integral_role_in_the_future_of_wearable_security" target="_blank"> TEDx Indy</a> | <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1944602" target="_blank"> NSF CAREER </a> | <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657455 " target="_blank"> NSF CRII </a> | <a href="https://www.wpafb.af.mil/News/Article-Display/Article/969772/afosr-awards-grants-to-58-scientists-and-engineers-through-its-young-investigat/" target="_blank">AFOSR YIP</a> | <a href="https://ai.googleblog.com/2017/02/google-research-awards-2016.html" target="_blank"> Google FRA</a> | <a href="https://engineering.purdue.edu/ECE/News/2021/prof-shreyas-sen-receives-intel-outstanding-researcher-award" target="_blank"> Intel ORA</a>
+                        </pi>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Research Area     -->
+    <div class="canvas">
+        <div class="container-fluid">
+            
+
+            <div class="row"  align="center">
+
+                <h4 class="display-4"> Research Areas</h4>
+
+		<div class="container-fluid">
+                    <p class="lead" style="font-size:18px"> <b class="accent" style="font-size:18px"> Overview Slides: </b>  <b> <a href="https://tinyurl.com/sparclab-purdue-research">Please Click here</a> </b>.</p>
+                </div>
+
+
+
+                <p class="lead" style="font-size:20px"> Our group is broadly interested in research of circuits/systems that interfaces between the
+                    physical world and digital information. More specifically we focus on fundamental improvements in sensing
+                    and communication circuits/systems. This research has applications in the areas of Internet of Things (IoT),
+                    Biomedical and Security, among others. </p>
+
+		<div class="container-fluid">
+                    <p class="lead" style="font-size:18px"> <b class="accent" style="font-size:18px"> We are hiring!</b>  Prospective PhD students and Post-Doctoral researchers may apply. For details <b>
+                        <a href="open.html"> Click here</a> </b></p>
+            	</div>
+
+                <div class="col-lg-4">
+                    <a href="research.html#hbc "><img src="static/img/Home/Area1_png.png" width="60%"  ></a>
+
+                    <h2><a href="research.html#hbc">HBC (Physics to IC)</a> </h2>
+
+                </div>
+                <div class="col-lg-4">
+                    <a href="research.html#security"><img src="static/img/Home/Area2.png" width="60%"></a>
+
+                    <h2 ><a href="research.html#security"> Secured MicroelectronICs</a>  </h2>
+
+                </div>
+                <div class="col-lg-4">
+                    <a href="research.html#iot"><img src="static/img/research/Display2.png" width="60%" ></a>
+                    <h2><a href="research.html#iot">Intelligent IoT Sensor Nodes</a> </h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <div class="bg-custom-dark">
+        <div class="canvas">
+            <div class="container-fluid pb-video-container">
+                <divo class="col-md-10 offset-md-1">
+                    <h3 class="display-4">Video Gallery</h3>
+                    <div class="row pb-row">
+                        <div class="col-md-4 pb-video">
+                            <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/NHqfT1vIe6E" frameborder="0" allowfullscreen></iframe>
+                            
+                        </div>
+                        <div class="col-md-4 pb-video">
+                            <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/6NKGX-sinOA" frameborder="0" allowfullscreen></iframe>
+                            
+                        </div>
+                        <div class="col-md-4 pb-video">
+                            <iframe class="pb-video-frame " width="100%" height="230" src="https://www.youtube.com/embed/QFSlZ4X3CwQ" frameborder="0" allowfullscreen></iframe>
+                            
+                        </div>
+                        
+                        
+                        
+                        
+
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="col-md-5">
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" role="button"><i class="fa fa-video"></i> More Videos</a>
+                        </p>
+                    </div>
+                </divo>
+            </div>
+            <style>
+                .pb-video-container {
+                    padding-top: 20px;
+                    background: #18171C;
+                    color: whitesmoke;
+                
+                }
+
+                .pb-video {
+                    border: 1px solid #e6e6e6;
+                    padding: 5px;
+                }
+
+                .pb-video:hover {
+                    background: #2c3e50;
+                }
+
+                .pb-video-frame {
+                    transition: width 2s, height 2s;
+                }
+
+                .pb-video-frame:hover {
+                    height: 300px;
+                }
+
+                .pb-row {
+                    margin-bottom: 10px;
+                }
+            </style>
+        </div>
+    </div>
+    <div align="center"  class="container-fluid">
+        <a class="twitter-timeline"  data-height="500" data-width="600" href="https://twitter.com/SPARCLab_Purdue?ref_src=twsrc%5Etfw">Tweets by SPARCLab_Purdue</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <hr>
+    <div class="col-lg-6">
+        
+    </div>
+
+
+
+    
+    <div class="canvas">
+        <div class="container-fluid">
+            <h2 style="text-align: center; padding: 10px; ">Sparc Lab Research Sponsors</h2>
+            
+            <div class="customer-logos slider" >
+                <div class="slide"><img src="static/img/logo/1200px-Eli_Lilly_and_Company.svg.png"></div>
+                <div class="slide"><img  src="static/img/logo/1200px-Google_2015_logo.svg1dc31dc3.png"></div>
+                <div class="slide"><img src="static/img/logo/b3bc6e49212072a7b2638c22511a7604_400x400f852f852.jpg"></div>
+                <div class="slide"><img  src="static/img/logo/cropped-ctsi-logo-horizontal.png"></div>
+                <div class="slide"><img src="static/img/logo/DARPA_logo_(current).png"></div>
+                <div class="slide"><img  src="static/img/logo/smartfilms.jpg"></div>
+                <div class="slide"><img src="static/img/logo/printlogo.png"></div>
+                <div class="slide"><img  src="static/img/logo/nsf-logo.png"></div>
+                <div class="slide"><img  src="static/img/logo/src-logo-print.png"></div>
+            </div>
+        </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<script>
+    $(document).ready(function(){
+
+        // 1. The code for the logo slider (This was already here)
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: { slidesToShow: 4 }
+            }, {
+                breakpoint: 520,
+                settings: { slidesToShow: 3 }
+            }]
+        });
+
+        // 2. The code for the navigation dropdowns (You are adding this)
+        $('.dropdown-submenu > a').on("click", function(e) {
+            var submenu = $(this);
+            $('.dropdown-submenu .dropdown-menu').removeClass('show');
+            submenu.next('.dropdown-menu').addClass('show');
+            e.stopPropagation();
+        });
+
+        $('.dropdown').on("hidden.bs.dropdown", function() {
+            $('.dropdown-menu.show').removeClass('show');
+        });
+
+    });
+</script>
+<br>
+</body>
+
+<footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+
+</html>

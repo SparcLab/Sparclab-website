@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>RF Test | SPARC Lab</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+    <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html" aria-current="page">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html">News</a>
+                        <a class="dropdown-item" href="media.html">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="chip.html">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <h1 class="page-title">RF Test, Adaptation and Self-Healing</h1>
+    </header>
+            </div>
+
+
+
+   
+    <div class="bg-custom-dark">
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+
+            <h2 class="accent">System Level Self-Healing of RF Transceivers </h2>
+            <p class="row">CMOS technology scaling has exacerbated the effects of process variations on circuit level performance and has driven the need
+                for post-manufacture tuning of high-performance RF systems. In this work, a new iterative built-in testing and tuning approach for RF transceiver
+                systems is proposed that uses: (a) the baseband processor to stimulate the RF front end in loopback mode using DSP-generated multitones, (b) the output
+                of the receiver and sensors designed into the RF signal path to acquire the response of the front-end to the applied stimulus, (c) assessment of all the
+                relevant transceiver specifications in a single data acquisition from the observed front-end response and (d) iterative testing and tuning of the RF front
+                end using DSP-activated tuning control until all the RF front end performance specifications are within acceptable bounds with minimal impact on overall
+                power consumption. The proposed methodology enables yield recovery of devices not possible with earlier methods, avoids local minima, is validated on a
+                set of industrial devices and can be implemented at low cost.</p>
+            <br>
+            <p class="row">Key Publications : VTS 2010, IEEE D&T 2014 </p>
+            <div class="row">
+                <a href="static/img/research/Self-Healing.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/Self-Healing.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+        <h2 class="accent">Process-Variation Tolerant Low-Noise Amplifier</h2>
+        <p class="lead">A self compensating process variation tolerant RF Low Noise Amplifier (LNA) is demonstrated. A novel non–intrusive mixing technique is
+            proposed which enables minimal intrusion negative feedback in RF circuits making them process variation tolerant. The proposed design technique provides
+            18% yield improvement over comparable conventional LNA under severe process variation.</p>
+        <br>
+
+        <p class="lead">Key Publications : ISCAS 2008</p>
+        <div class="row">
+            <a href="static/img/research/VTLNA.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                <img src="static/img/research/VTLNA.png" class="img-fluid rounded">
+            </a>
+
+        </div>
+    </div>
+    <div class="bg-custom-dark">
+
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+            <h2 class="accent">Low-cost AM/AM & AM/PM Testing of RF Power Amplifiers </h2>
+
+            <p class="row">This work develops a simple, practical yet easily realizable method for low cost measurement of phase and amplitude distortions in radio
+                frequency power amplifiers (RF PA). Amplitude-to-amplitude (AM-AM) and amplitude-to-phase (AM-PM) distortions are two significant distortion effects in
+                PAs at high output power levels, causing out of band interference in the transmitted signal and bit errors in the received signal. Traditional measurements
+                of amplitude and phase distortion in RF PAs require the use of expensive vector network analyzers. In this work, we propose the use of phase-to-amplitude
+                conversion to develop a low cost and accurate test methodology for AM-AM and AM-PM measurement using simple load board test circuitry along with software
+                based difference generation and peak detection mechanisms. Using either simple sine wave stimulus with power sweep or a single amplitude modulated RF
+                stimulus, both distortion effects can be measured with high accuracy for nominal devices as well as over process and voltage variations, while allowing
+                significant reduction in test cost.</p>
+
+            <p class="row">Key Publications : ITC 2009, TVLSI 2012 </p>
+            <div class="row">
+                <a href="static/img/research/ITC_TVLSI.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/ITC_TVLSI.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+        <h2 class="accent">Testing of Polar RF Transceivers</h2>
+        <p class="lead">This work presents a Built-in self-test (BIST) solution for polar transmitters with low cost. Polar transmitters are desirable for portable
+            devices due to higher power efficiency they provide compared to traditional Cartesian transmitters. However, they generally require iterative test/measurement/calibration
+            cycles. The delay skew between the envelope and phase signals and the finite envelope bandwidth can create inter modulation distortion (IMD) that leads to the violation of
+            the spectral mask and error vector magnitude (EVM) requirements. Typically, these parameters are not directly measured but calibrated through spectral performance analysis
+            using expensive RF equipment, leading to lengthy and costly measurement/calibration cycles. Characterization and calibration of these parameters inside the device would
+            reduce the test time and cost considerably. In this work, we propose a technique to measure the delay skew and the finite envelope bandwidth, two parameters that can be
+            digitally calibrated, based on the measurement of the output of the receiver in the loop-back mode. Simulation and hardware measurement results show that the proposed
+            technique can characterize the targeted impairments in the polar transmitter accurately.</p>
+
+        <p class="lead">Key Publications : VTS 2013, DATE 2014</p>
+        <div class="row">
+            <a href="static/img/research/polar.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                <img src="static/img/research/polar.png" class="img-fluid rounded">
+            </a>
+
+        </div>
+    </div>
+    <div class="bg-custom-dark">
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+            <h2 class="accent">Low-cost IQ Mismatch BIST</h2>
+            <p class="row">This work proposes a cost and time efficient accurate DSP based measurement and compensation methodology for I/Q imperfections in quadrature transceivers
+                through phase-to-­amplitude conversion using no hardware overhead. The proposed one-shot technique utilizes equation based optimum test stimulus estimation and power
+                detection mechanisms. Circuit simulations presented show that both gain and phase mismatch can be measured with high accuracy. Hardware validation of the methodology
+                provide for impairment estimation accuracy of within 0.5% for gain and 4.5% for phase. </p>
+
+            <p class="row">Key Publications : IMS 2010 </p>
+            <div class="row">
+                <a href="static/img/research/IQ.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/IQ.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </body>
+
+    <!-- Footer -->
+<footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

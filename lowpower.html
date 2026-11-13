@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Low-Power Adaptive Wireless | SPARC Lab</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+    <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html" aria-current="page">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html">News</a>
+                        <a class="dropdown-item" href="media.html">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="chip.html">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <h1 class="page-title">Low-Power Adaptive Wireless</h1>
+    </header>
+            </div>
+
+
+
+   
+    <div class="bg-custom-dark">
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+
+            <h2 class="accent">Virtually Zero Margin RF (VIZOR) Channel-adaptive RF systems</h2>
+            <p class="row">Wireless circuits/systems are designed to support wide dynamic range of channel conditions. Worst case design methodology for wireless transceivers leads to
+                significant power overhead when the channel is not worst case. My doctoral research demonstrated channel-adaptive zero-margin wireless systems that adapt itself continuously,
+                to only consume the minimum power required to deliver a given Quality of Service (QoS). This was achieved by designing system level feedback to control circuit power/performance.
+                The key enablers of such system are a) circuits with built-in tuning knobs that exhibit graceful power-performance trade-off b) a sensor/adaptation metric (Error Vector Magnitude, EVM)
+                that can be calculated in real-time, represents sum information of front-end and channel quality, and exhibits strong correlation with the end-to-end quality metric (bit-error-rate) c)
+                an adaptation algorithm that tunes the circuit performance depending on the instantaneous channel quality. Such a Virtually Zero-margin RF (VIZOR) transceiver could provide 60-75%
+                power savings under the best channel conditions.</p>
+
+            <p class="row">Key Publications : RWS 2008, TCAS2 2008, TCAS1 2011</p>
+            <div class="row">
+                <a href="static/img/research/VTLNA.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/VTLNA.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+        <h2 class="accent">Process-Variation Tolerant (Pro-Vizor) Channel-adaptive RF systems</h2>
+        <p class="lead">VIZOR systems follow an adaptation control-law to adapt to changing channel conditions to always operate at minimum power possible. However, this control-law depends on the manufactured
+            process corner of the device and hence the optimum control-law for the nominal device is not optimum anymore for a device with process variation.  Process-variation tolerant channel-adaptive
+            systems (Pro-VIZOR) are deigned by adapting the channel-adaptation control-law based on the devices process corner to ensure optimum channel-adaptation for the given device. The process
+            information of the device is sensed using low-cost built-in-self-test (BIST) techniques and drives the choice of the control law, leading to extra power savings under process-variation for
+            channel-adaptive systems.</p>
+
+        <p class="lead">Key Publications : DAC 2008, TCAD 2014</p>
+        <div class="row">
+            <a href="static/img/research/Pro_Vizor.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                <img src="static/img/research/Pro_Vizor.png" class="img-fluid rounded">
+            </a>
+
+        </div>
+    </div>
+
+    <div class="bg-custom-dark">
+
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+            <h2 class="accent">Wideband Jammer Detector for Real-Time Blocker Tolerance</h2>
+            <p class="row">To simultaneously meet the stringent power budget and high performance requirements modern portable radio receivers employ adaptive circuit/system techniques. Adaptive receivers
+                opportunistically reduce its power consumption when operating environment is better than its worst case. The highest power requirement in wireless receiver design comes from the widely varying
+                signal and blocker/jammer scenarios that a receiver has to deal with. Handling high blocker requires high linearity whereas low signal strength calls for very low noise figure and high gain.
+                One way to save power in a receiver is to operate in a low linearity mode when there are no jammers present in the radio channel. To enable this, adaptive receivers‘ monitor the signal and
+                jammer strength by employing an extra built in low power circuit called jammer detector (JD) that can detect the presence of jammers in the operating environment. Traditional jammer detectors
+                used in commercial receivers are narrow band (NB JD), i.e. they can only look for jammers in the close vicinity of the signal. They are generally implemented by tapping the intermediate/low
+                frequency output of the downconversion mixer. Similar implementation of an NBJD uses 4 power detectors (2 in IF frequency and 2 in digital) to measure the power in different points along the
+                receiver chain to estimate jammer and signal powers. However, only NBJD does not provide the true jammer scenario as it cannot give an estimation of far-out jammers (caused by own transmitter
+                in concurrent operation 183 mode or from other transmitters) which also cause problems when the signal to be sensed is very low and the jammers are very high power. For example a DVB-H receiver
+                suffers from such far out jammers at GSM (900 MHz), WLAN (2.4GHz) and jammers at odd harmonics of the local oscillator frequency. The only circuits that are capable of measuring these jammers
+                are on-chip spectrum analyzer or multi-resolution spectrum sensing  developed for cognitive radios, both of which are significantly high power, consuming almost same power as the receiver itself.
+                To address the issue of far-out jammer detection this work proposes the design of an ultra-low power miniature wideband (1GHz @ 2.2 mW, 2.4 GHz @ 3.6 mW) jammer detector (WBJD) as part of an
+                adaptive DVB-H receiver. This design includes a high gain low power RF amplifier to increase JD sensitivity, a low power peak detector and digital conditioning circuit that allows a programmable
+                attack time, all within 2.2 mW.</p>
+
+            <p class="row">Key Publications : US Patent "Wideband Jammer Detector", S.Sen PhD Thesis, "Design of Process and Environment Adaptive Ultra Low Power Wireless Circuits and Systems" </p>
+            <div class="row">
+                <a href="static/img/research/WBJD.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/WBJD.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+        <h2 class="accent">Orthogonally-Tunable Circuits For optimum Low-Power Adaptation </h2>
+        <p class="lead">To enable better adaptation we proposed the design of orthogonally tunable circuit blocks where the key specifications (e.g. gain and linearity in an LNA) of the circuit block can be
+            tuned independent of each other to save power. Most of the traditional RF circuits are static or minimally tunable using some digital controllability. For example, high power, low power and shut
+            down modes are available in some commercially available transceivers. If available, the tuning knobs affect different specifications in an interdependent manner. This is not enough for optimal
+            operation of complete self-aware self-adaptive systems. Independent or orthogonal tunability of the important conflicting specifications using built-in tuning knobs allow optimal adaptation of
+            the wireless systems. This work demonstrates the design and benefits of orthogonal tuning knobs using an inductorless LNA as a test vehicle. The orthogonally tunable LNA  has a 14 dB Gain and 30
+            dB OIP3 tuning range as its power consumption goes down by 20×. Use of the orthogonally tunable LNA within an adaptive wireless receiver framework shows an extra 22% system power savings compared
+            to a traditional non-orthogonal case.</p>
+
+        <p class="lead">Key Publications : ISCAS 2011,  TCAS 1 2012 </p>
+
+        <div class="row">
+            <a href="static/img/research/OTLNA.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                <img src="static/img/research/OTLNA.png" class="img-fluid rounded">
+            </a>
+
+        </div>
+    </div>
+    <div class="bg-custom-dark">
+        <div style="max-width: 80%; margin: 0 auto; padding: 10px">
+            <h2 class="accent">Zero-Margin MIMO systems (Energy vs. Data Priority Modes)</h2>
+            <p class="row">The VIZOR concept is extended to MIMO systems in this work. In the diversity mode, due to reduced fading margin requirements, more power can be saved during VIZOR operation. It is shown
+                that the modulation switch points for maximum data rate (Data Priority Mode) doesn't translate to minimum energy operation. An additional mode and corresponding switch points are proposed which
+                minimizes energy consumption (Energy Priority Mode), leading to as much as 2X savings for some channel conditions. </p>
+
+            <p class="row">Key Publications : DAC 2013, TCAD 15</p>
+            <div class="row">
+                <a href="static/img/research/DAC_MIMO.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/DAC_MIMO.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+	</div>
+    </div>
+
+	<div style="max-width: 80%; margin: 0 auto; padding: 10px">
+            <h2 class="accent">Self-Learning Variation-Tolerant Zero-Margin RF systems </h2>
+            <p class="lead">Pro-VIZOR systems use a pre-characterized locus (adaptation control law) generated in design phase for variation-tolerant low-power adaptation. Though this is feasible for SISO systems,
+                generating a huge number of loci for MIMO systems is largely intractable due to the complexity of simulation across all channel conditions and process corners. In this work we propose a self-learning
+                strategy for adaptive MIMO-RF systems. In this approach, RF devices learn their own performance vs. power consumption vs. tuning knob relationships “on-the-fly” and formulate the optimum
+                reconfiguration strategy using neural-network based learning techniques during real-time operation. The methodology is demonstrated for a MIMO-RF receiver front-end and is supported by hardware
+                validation leading to 2.5x power savings in minimal learning time.</p>
+
+            <p class="lead">Key Publications : ICCAD 2014, TCAS 1 2017</p>
+            <div class="row">
+                <a href="static/img/research/Self_Learning_ICCAD.png.html" data-toggle="lightbox" data-gallery="gallery" class="col-md-12">
+                    <img src="static/img/research/Self_Learning_ICCAD.png" class="img-fluid rounded">
+                </a>
+
+            </div>
+
+        </div>
+
+    <br>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </body>
+
+    <!-- Footer -->
+<footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

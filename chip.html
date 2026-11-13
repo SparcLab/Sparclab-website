@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chip Gallery | SPARC Lab</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<style>
+        :root {
+            --background-main: #F0F4F8;
+            --text-primary: #1A365D;
+            --text-secondary: #5A7A9E;
+            --accent-primary: #0D6EFD;
+            --border-color: #CDE2F5;
+            --card-bg: #EFF6FF;      /* Adopted from old theme */
+            --card-border: #64b4ff;   /* Adopted from old theme */
+        }
+/* Basic layout from Publications Page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Correct Font */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px; /* Correct height (56px instead of 80px) */
+    background-color: #F0F4F8; /* Kept your Chip Gallery background color preference */
+    color: #1A365D; /* Kept your Chip Gallery text color preference */
+    overflow-x: hidden;
+}
+
+/* Navbar Styles from Publications Page */
+.navbar-custom .nav-link {
+    color: rgba(255, 255, 255, .75);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-item.active .nav-link {
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand {
+    color: #fff;
+}
+        .dropdown-submenu { position: relative; }
+        .dropdown-submenu .dropdown-menu { top: 0; left: 100%; margin-top: -1px; }
+
+        .display-4 { font-weight: 300; color: #212529; }
+        .text-muted { color: #6c757d !important; }
+        .nav-pills { border-bottom: none; padding-bottom: 10px; }
+        .nav-pills .nav-link {
+            color: var(--text-secondary);
+            background-color: #FFFFFF;
+            margin: 5px;
+            border-radius: 999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--border-color);
+        }
+        .nav-pills .nav-link:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-primary);
+        }
+        .nav-pills .nav-link.active {
+            color: #ffffff;
+            background-color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+        
+        /* --- CHIP CARD STYLES (THEME APPLIED) --- */
+        .chip-card-container {
+            max-width: 20rem;
+            margin: 0 15px 30px 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        @media (hover: hover) {
+            .chip-card-container:hover { 
+                transform: translateY(-8px); 
+            }
+        }
+        .card-content {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+            box-shadow: 0 4px 10px rgba(26, 54, 93, 0.05);
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border); /* Applied old theme border */
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+        @media (hover: hover) {
+            .chip-card-container:hover .card-content {
+                box-shadow: 0 20px 25px -5px rgba(26, 54, 93, 0.1), 0 8px 10px -6px rgba(26, 54, 93, 0.1);
+                border-color: var(--accent-primary);
+                filter: brightness(1.05);
+            }
+        }
+        .card-content img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+            mix-blend-mode: multiply;
+        }
+
+        .chip-name {
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .fade-in.is-visible { opacity: 1; transform: translateY(0); }
+        
+        /* --- SIMPLIFIED MODAL STYLES --- */
+        .modal-content {
+            background: #FDFEFF;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(26, 54, 93, 0.25);
+        }
+        .modal-header { 
+            border-bottom: 1px solid var(--border-color); 
+            padding: 1.5rem;
+        }
+        .modal-header .close { color: var(--text-primary); text-shadow: none; opacity: 0.7; }
+        .modal-header .close:hover { opacity: 1; }
+        .modal-title { font-weight: 600; }
+        
+        .modal-body { padding: 1.5rem; }
+        .modal-body img.modal-chip-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 12px;
+            background-color: var(--background-main);
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            mix-blend-mode: multiply;
+        }
+
+        .details-heading {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .details-list p {
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+        .details-list .detail-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .details-list ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+         .details-list li {
+            margin-bottom: 0.5rem;
+         }
+        .details-list a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .details-list a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+        
+        /* --- FOOTER STYLES (FROM OLD SITE) --- */
+        .page-footer { background-color: #18171c; }
+        .page-footer .list-inline-item a {
+            color: rgba(255, 255, 255, 0.7) !important;
+            font-size: 1.2rem;
+            transition: color 0.2s ease-in-out;
+        }
+        .page-footer .list-inline-item a:hover { color: #ffffff !important; }
+    </style>
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+<body>
+    <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html">News</a>
+                        <a class="dropdown-item" href="media.html">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item active"><a class="nav-link" href="chip.html" aria-current="page">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <h1 class="page-title">Chip Gallery</h1>
+        <p class="page-subtitle">A showcase of our fabricated integrated circuits</p>
+    </header>
+    <div class="container-fluid px-md-5 py-4">
+
+        <ul class="nav nav-pills justify-content-center mb-5" id="chipTab" role="tablist"></ul>
+        <div class="tab-content" id="chipTabContent"></div>
+    </div>
+    <div id="modal-container"></div>
+
+    <!-- Footer -->
+
+<footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+    <script>
+        // Script for nested dropdowns from old site
+        $('.dropdown-submenu > a').on("click", function(e) {
+            var submenu = $(this);
+            $('.dropdown-submenu .dropdown-menu').removeClass('show');
+            submenu.next('.dropdown-menu').addClass('show');
+            e.stopPropagation();
+        });
+        $('.dropdown').on("hidden.bs.dropdown", function() {
+            $('.dropdown-menu.show').removeClass('show');
+        });
+
+        $(document).ready(function() {
+            // ============================================================
+            // DATA SOURCE FOR CHIPS
+            // ============================================================
+            const chipsData = [
+                
+
+  {
+    id: 'chip_1',
+    name: '[#1] Probabilistic Computing p-circuit ASIC',
+    img: 'chip/1.jpg',
+    process: '65nm LP CMOS',
+    papers: [
+      {
+        year: 2025,
+        venue: 'IEEE International Solid-State Circuits Conference (ISSCC)',
+        url: 'https://ieeexplore.ieee.org/document/10904553'
+      },
+      {
+        year: 2025,
+        venue: 'arXiv',
+        url: 'https://arxiv.org/abs/2507.07763'
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+
+                {
+                    id: 'chip_2', name: '[#2] BodyID SoC with leakage-powered Wake-up Rx', img: 'chip/2.jpg', process: 'TSMC 65nm',
+                    papers: [{ year: 2025, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/10904648' }]
+                },
+
+
+
+
+
+                {
+                    id: 'chip_3', name: '[#3] 32Gb/s Serial Link (Towards USB-C)', img: 'chip/3.jpg', process: '22nm CMOS',
+                    papers: [
+
+{ year: 2014, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/6895188' },
+                        { year: 2014, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/6757504' }
+                        
+                    ]
+                },
+
+
+
+
+
+
+                {
+                    id: 'chip_4', name: '[#4] Syn-STELLAR: Synthesis-friendly SCA-Resilient AES-256', img: 'chip/4.jpg', process: '65nm CMOS LP',
+                    papers: [
+
+{ year: 2022, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9555816' },
+                        
+                        { year: 2022, venue: 'Design, Automation and Test in Europe Conference (DATE)', url: 'https://ieeexplore.ieee.org/document/9774588' },
+
+{ year: 2021, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/9365978' }
+                        
+                    ]
+                },
+                {
+                    id: 'chip_5', name: '[#5] 0.35µm Time-Based RDC', img: 'chip/5.jpg', process: '0.35µm CMOS',
+                    papers: [
+
+{ year: 2022, venue: 'Frontiers in Electronics', url: 'https://www.frontiersin.org/journals/electronics/articles/10.3389/felec.2022.792326/full' },
+                        { year: 2020, venue: 'arXiv', url: 'https://arxiv.org/abs/2011.00649' }
+                        
+                    ]
+                },
+                {
+                    id: 'chip_6', name: '[#6] 0.35µm Time-Based RDC with Speed-up Latch', img: 'chip/6.jpg', process: '0.35µm CMOS',
+                    papers: [
+                        { year: 2022, venue: 'Frontiers in Electronics', url: 'https://www.frontiersin.org/journals/electronics/articles/10.3389/felec.2022.792326/full' },
+                        { year: 2020, venue: 'arXiv', url: 'https://arxiv.org/abs/2011.00649' }
+                    ]
+                },
+                {
+                    id: 'chip_7', name: '[#7] 0.18µm Time-Based RDC with Speed-up Latch', img: 'chip/7.jpg', process: '0.18µm CMOS',
+                    papers: [
+                        { year: 2022, venue: 'Frontiers in Electronics', url: 'https://www.frontiersin.org/journals/electronics/articles/10.3389/felec.2022.792326/full' },
+                        { year: 2020, venue: 'arXiv', url: 'https://arxiv.org/abs/2011.00649' }
+                    ]
+                },
+                {
+                    id: 'chip_8', name: '[#8] Clock-Slew as Power/EM SCA Resilience', img: 'chip/8.jpg', process: '65nm CMOS LP',
+                    papers: [
+
+{ year: 2025, venue: 'IEEE Open Journal of the Solid-State Circuits Society', url: 'https://ieeexplore.ieee.org/document/11165158' },
+                        { year: 2023, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/10121240' }
+                    ]
+                },
+
+
+                {
+                    id: 'chip_9', name: '[#9] Direct Analog to MJPEG Converter (dAJC)', img: 'chip/9.jpg', process: '65nm 1P9M CMOS LP',
+                    papers: [
+                        
+
+{ year: 2025, venue: 'IEEE Journal of Solid-State (JSSC)', url: 'https://ieeexplore.ieee.org/document/11090156' },
+                        { year: 2023, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/abstract/document/10121318' }
+                    ]
+                },
+
+
+                {
+                    id: 'chip_10', name: '[#10] Integrating Sub-Sampling PLL (ISSPLL)', img: 'chip/10.jpg', process: '65nm CMOS',
+                    papers: [{ year: 2024, venue: 'arXiv', url: 'https://arxiv.org/abs/2410.16310' }]
+                },
+
+
+                
+                {
+                    id: 'chip_12', name: '[#12] ADC-less Neural Implant SoC with TD-BPQBC', img: 'chip/12.jpg', process: '65nm 1P9M CMOS LP',
+                    papers: [{ year: 2022, venue: 'IEEE European Solid-State Circuits Conference (ESSCIRC)', url: 'https://ieeexplore.ieee.org/document/9911420' }]
+                },
+
+
+
+                {
+                    id: 'chip_13', name: '[#13] CS-Audio: Compressive Sensing Audio ASIC', img: 'chip/13.jpg', process: '65nm CMOS LP',
+                    papers: [
+                        { year: 2022, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9737299' },
+                        { year: 2021, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/9431569' }
+                    ]
+                },
+
+
+                {
+                    id: 'chip_14', name: '[#14] Adaptive Wireless Image Processing SoC with Neuro-Controller', img: 'chip/14.jpg', process: '65nm 1P9M CMOS',
+                    papers: [
+                        { year: 2022, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9743554' },
+                        { year: 2020, venue: 'IEEE Symposium on VLSI Circuits (VLSI Circuits)', url: 'https://ieeexplore.ieee.org/document/9162878' }
+                    ]
+                },
+
+
+
+                {
+                    id: 'chip_15', name: '[#15] ATC-VSN: Pixel to PWM Conversion with Time-domain Body Communication SoC', img: 'chip/15.jpg', process: '65nm CMOS',
+                    papers: [{ year: 2024, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/10528984' }]
+                },
+
+
+
+                {
+                    id: 'chip_16', name: '[#16] Adiabatic HBC Transceiver with CPPM', img: 'chip/16.jpg', process: '65nm 1P9M CMOS LP',
+                    papers: [{ year: 2022, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/9431456' }]
+                },
+
+
+
+                {
+                    id: 'chip_17', name: '[#17] Resonant (EQS Res-HBC/HBP) SoC', img: 'chip/17.jpg', process: '65nm CMOS',
+                    papers: [
+
+
+{ year: 2022, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9693115' },
+                        { year: 2021, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9431456' }
+                    ]
+                },
+                
+
+
+
+{
+                    id: 'chip_18', name: '[#18] Hybrid LDO with Switched-Mode Control', img: 'chip/18.jpg', process: '130nm CMOS',
+                    papers: [
+
+
+{ year: 2018, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/8119722' },
+
+{ year: 2016, venue: 'European Solid-State Circuits Conference (ESSCIRC)', url: 'https://ieeexplore.ieee.org/document/7598306' }
+
+
+
+
+]
+                },
+
+
+
+
+
+
+
+
+
+
+
+
+                {
+                    id: 'chip_19', name: '[#19] Saber (NIST finalist) Post-Quantum Crypto Accelerator', img: 'chip/19.jpg', process: '65nm LP CMOS',
+                    papers: [
+                        { year: 2023, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/10079217' },
+                        { year: 2022, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/9772859' }
+                    ]
+                },
+
+
+
+                {
+                    id: 'chip_20', name: '[#20] R-STELLAR: SCA-Resilient AES-256 with intelligent detection', img: 'chip/20.jpg', process: '65nm CMOS LP',
+                    papers: [
+
+
+{ year: 2025, venue: 'IEEE Open Journal of the Solid-State Circuits Society (JSSC)', url: 'https://ieeexplore.ieee.org/document/11006887' },
+                        { year: 2022, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/9772853' }
+                    ]
+                },
+
+
+
+
+
+                {
+                    id: 'chip_21', name: '[#21] Orthogonally Tunable LNA', img: 'chip/21.jpg', process: '0.18µm CMOS',
+                    papers: [{ year: 2012, venue: 'IEEE Transactions on Circuits and Systems I (TCAS-I)', url: 'https://ieeexplore.ieee.org/document/6194318' }]
+                },
+
+
+
+                
+                {
+                    id: 'chip_23', name: '[#23] Wearable CMOS Dosimeter', img: 'chip/23.jpg', process: '0.35µm CMOS',
+                    papers: [
+
+{ year: 2019, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/abstract/document/8922739' },
+{ year: 2019, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/8780182' }
+
+
+]
+                },
+
+
+
+
+                {
+                    id: 'chip_24', name: '[#24] BodyWire (EQS-HBC) Transceiver', img: 'chip/24.jpg', process: '65nm CMOS',
+                    papers: [
+                        { year: 2019, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/8805102' },
+                        { year: 2018, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/8357033' }
+                    ]
+                },
+
+
+
+                
+                {
+                    id: 'chip_27', name: '[#27] Time-Varying Transfer Function (TVTF) as SCA-Resilience', img: 'chip/27.jpg', process: '65nm CMOS LP',
+                    papers: [{ year: 2023, venue: 'IEEE Transactions on Circuits and Systems II (TCAS-II)', url: 'https://ieeexplore.ieee.org/document/10208149' },
+				{ year: 2023, venue: 'IEEE Open Journal of Circuits and Systems (OJCAS)', url: 'https://ieeexplore.ieee.org/document/10208218' }]
+                },
+
+
+
+
+                {
+                    id: 'chip_28', name: '[#28] EQS Brain Communication SoC', img: 'chip/28.jpg', process: '65nm 1P9M CMOS LP',
+                    papers: [{ year: 2023, venue: 'Nature Electronics', url: 'https://www.nature.com/articles/s41928-023-01000-3' },
+
+{ year: 2021, venue: 'Symposium on VLSI Circuits', url: 'https://ieeexplore.ieee.org/abstract/document/9492445' }
+]
+                },
+
+
+
+                {
+                    id: 'chip_29', name: '[#29] Sub-µW Wearable Communication Node', img: 'chip/29.jpg', process: '65nm CMOS',
+                    papers: [{ year: 2021, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9328864' },
+{ year: 2020, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/abstract/document/9075930' }]
+                },
+                
+
+
+                {
+                    id: 'chip_31', name: '[#31] TD-dAJC: Time-Domain direct-Analog-to-MJPEG Compression', img: 'chip/31.jpg', process: '65nm 1P9M CMOS LP',
+                    papers: [{ year: 2025, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/10982732' }]
+                },
+
+
+
+
+                {
+                    id: 'chip_32', name: '[#32] Integrating Dual Data Rate Receiver', img: 'chip/32.jpg', process: 'TSMC 65nm',
+                    papers: [{ year: 2019, venue: 'IEEE Transactions on Biomedical Circuits and Systems (TBCAS)', url: 'https://ieeexplore.ieee.org/document/8691797' }]
+                },
+
+
+
+
+                {
+                    id: 'chip_34', name: '[#34] LDO for Side-Channel Protection', img: 'chip/34.jpg', process: '130nm CMOS',
+                    papers: [
+                        { year: 2018, venue: 'IEEE Transactions on Circuits and Systems I (TCAS-I)', url: 'https://ieeexplore.ieee.org/document/8351968' },
+                        
+			{ year: 2018, venue: 'IEEE Transactions on Circuits and Systems II (TCAS-II)', url: 'https://ieeexplore.ieee.org/document/8319450' },
+
+{ year: 2017, venue: 'IEEE International Symposium on Hardware Oriented Security and Trust (HOST)', url: 'https://ieeexplore.ieee.org/document/7951799' }
+                    ]
+                },
+
+
+                {
+id: 'chip_35', name: '[#35] CDSA-AES256', img: 'chip/35.jpg', process: '65nm CMOS',
+                    papers: [
+
+{ year: 2021, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/document/9269355' },
+
+{ year: 2020, venue: 'Cryptography', url: 'https://www.mdpi.com/2410-387X/4/4/30' },
+
+{ year: 2020, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/abstract/document/9075889' },
+
+{ year: 2020, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/9062997' }
+]
+
+                },
+
+
+
+
+                {
+                    id: 'chip_36', name: '[#36] mm-scale 32Gbps Proximity Communciation', img: 'chip/36.jpg', process: '14nm CMOS',
+                    papers: [
+
+{ year: 2016, venue: 'IEEE Journal of Solid-State Circuits (JSSC)', url: 'https://ieeexplore.ieee.org/abstract/document/7551204' },
+{ year: 2016, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/7418076' }
+
+]
+                },
+
+
+
+
+{
+                    id: 'chip_37', name: '[#37] 54µW Design-Agnostic Clock & Voltage Glitch FIA Detector', img: 'chip/37.jpg', process: '65nm LP CMOS',
+                    papers: [{ year: 2025, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/10983804' }]
+                },
+
+
+
+{
+                    id: 'chip_38', name: '[#38] 25.6Gb/s Differential and DDR4/GDDR5 Dual-Mode Transmitter', img: 'chip/38.jpg', process: '22nm CMOS',
+                    papers: [{ year: 2014, venue: 'IEEE International Solid-State Circuits Conference (ISSCC)', url: 'https://ieeexplore.ieee.org/document/6757506' }]
+                },
+
+
+
+
+{
+                    id: 'chip_39', name: '[#39] 2.4GHz Orthogonally Tunable Transceiver SoC', img: 'chip/39.jpg', process: '65nm CMOS',
+                    papers: [{ year: 2020, venue: 'IEEE Custom Integrated Circuits Conference (CICC)', url: 'https://ieeexplore.ieee.org/document/9075915' }]
+                }
+
+
+
+
+            ];
+
+//remove id
+
+chipsData.forEach(chip => {
+            chip.name = chip.name.replace(/\[#\d+\]\s*/, '');
+        });
+            // ============================================================
+            // SCRIPT LOGIC
+            // ============================================================
+
+
+            const allChipsOrder = [
+                37, 31, 2, 1, 15, 10, 27, 9, 8, 20, 19, 16, 12, 28, 17, 13, 4,
+                39, 35, 29, 14, 7, 6, 5, 32, 23, 24, 34, 36, 18, 38, 3, 21
+            ];
+
+            // This helper code turns your list into a fast lookup
+            const customOrderMap = new Map(
+                allChipsOrder.map((num, index) => [num, index])
+            );
+            
+            chipsData.forEach(chip => {
+                const yearsFromPapers = chip.papers.map(p => p.year);
+                chip.years = [...new Set(yearsFromPapers)].sort((a, b) => b - a);
+		
+            });
+
+            const BASE_IMG_PATH = 'static/img/';
+            const modalContainer = $('#modal-container');
+            const chipTab = $('#chipTab');
+            const chipTabContent = $('#chipTabContent');
+
+            const allYears = [...new Set(chipsData.flatMap(chip => chip.years))].sort((a, b) => b - a);
+            chipTab.append('<li class="nav-item"><a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab">All</a></li>');
+            chipTabContent.append('<div class="tab-pane fade show active" id="all" role="tabpanel"><div class="row justify-content-center"></div></div>');
+
+            allYears.forEach(year => {
+                chipTab.append(`<li class="nav-item"><a class="nav-link" id="y${year}-tab" data-toggle="tab" href="#y${year}" role="tab">${year}</a></li>`);
+                chipTabContent.append(`<div class="tab-pane fade" id="y${year}" role="tabpanel"><div class="row justify-content-center"></div></div>`);
+            });
+
+            function renderCard(chip, containerSelector) {
+                const imageUrl = `${BASE_IMG_PATH}${chip.img}`;
+                const cardHtml = `
+                    <div class="chip-card-container fade-in">
+                        <div class="card-content" data-toggle="modal" data-target="#modal_${chip.id}">
+                            <img src="${imageUrl}" alt="${chip.name}" onerror="this.onerror=null;this.src='https://placehold.co/800x800/EFF6FF/1A365D?text=Image+Not+Found';">
+                        </div>
+                        <p class="chip-name">${chip.name}</p>
+                    </div>`;
+                $(containerSelector).append(cardHtml);
+            }
+
+            function renderModal(chip) {
+                const imageUrl = `${BASE_IMG_PATH}${chip.img}`;
+                let publicationsHtml = '';
+                if (chip.papers && chip.papers.length > 0) {
+                    const publicationLinks = chip.papers
+                        
+                        .map(paper => `
+                            <li>
+                                ${paper.year} ${paper.venue} - <a href="${paper.url}" target="_blank">Read More</a>
+                            </li>
+                        `).join('');
+
+                    publicationsHtml = `
+                        <p class="detail-label">Publications:</p>
+                        <ul>
+                            ${publicationLinks}
+                        </ul>
+                    `;
+                }
+                
+                const modalHtml = `
+                    <div class="modal fade" id="modal_${chip.id}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">${chip.name}</h5>
+                                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-7 text-center mb-4 mb-lg-0">
+                                            <img src="${imageUrl}" class="modal-chip-img" alt="${chip.name}" onerror="this.onerror=null;this.src='https://placehold.co/800x800/EFF6FF/1A365D?text=Image+Not+Found';">
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <h4 class="details-heading">Details</h4>
+                                            <div class="details-list">
+                                                <p><span class="detail-label">Process:</span> ${chip.process || 'N/A'}</p>
+                                                ${publicationsHtml}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                modalContainer.append(modalHtml);
+            }
+    
+
+
+
+
+chipsData.sort((a, b) => {
+                // Helper to get the number (e.g., 39) from the ID ("chip_39")
+                const getNum = (id) => parseInt(id.split('_')[1]);
+                
+                // Get order, or put missing chips at the end (using 999)
+                const orderA = customOrderMap.has(getNum(a.id)) ? customOrderMap.get(getNum(a.id)) : 999;
+                const orderB = customOrderMap.has(getNum(b.id)) ? customOrderMap.get(getNum(b.id)) : 999;
+                
+                     return orderA - orderB;
+                
+            }).forEach(chip => renderCard(chip, '#all .row'));
+
+
+            
+            allYears.forEach(year => {
+                const chipsForYear = chipsData.filter(c => c.years.includes(year));
+                chipsForYear.sort((a,b) => b.years[0] - a.years[0]).forEach(chip => renderCard(chip, `#y${year} .row`));
+            });
+            
+            chipsData.forEach(chip => renderModal(chip));
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transitionDelay = `${(i % 10) * 50}ms`;
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            function initializeAnimations() {
+                document.querySelectorAll('.fade-in:not(.is-visible)').forEach(el => observer.observe(el));
+            }
+            
+            $('a[data-toggle="tab"]').on('shown.bs.tab', initializeAnimations);
+            
+            initializeAnimations();
+        });
+    </script>
+</body>
+</html>

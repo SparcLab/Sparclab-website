@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>News | SPARC Lab</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<!-- Bootstrap CSS -->
+
+        <style>
+/* === Final Version: SCOPED to only affect the News Section === */
+
+/* 1. Scope highlights to the news wrapper */
+.news-wrapper .highlight, .news-wrapper .highlight * {
+  color: red !important;
+  font-weight: 600 !important;
+}
+
+/* Set sensible defaults for list text, leaving hyperlinks untouched */
+
+ul li, ul li *:not(a) {
+
+  font-weight: 400;
+
+  font-size: inherit;
+
+  color: inherit;
+
+}
+
+/* 3. Fix tiny text ONLY inside news wrapper */
+.news-wrapper .accent, .news-wrapper .lead {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+/* 4. Bold accents ONLY inside news wrapper */
+.news-wrapper .accent, .news-wrapper .accent b {
+  font-weight: 600;
+}
+
+/* 5. Spacing ONLY inside news wrapper */
+.news-wrapper h2.accent, .news-wrapper h2.lead, .news-wrapper p.lead, .news-wrapper .lead {
+  margin: 0.35rem 0;
+  font-size: 1rem;
+}
+
+/* 6. *** THE FIX ***: Add margins ONLY to list items in the news section */
+.news-wrapper ul li { 
+    list-style: none; 
+    margin-bottom: 0.8rem; 
+}
+
+/* 7. Block display ONLY inside news wrapper */
+.news-wrapper ul li > h2, .news-wrapper ul li > p, .news-wrapper ul li > .lead { 
+    display: block; 
+}
+</style>
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+
+    <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html" aria-current="page">News</a>
+                        <a class="dropdown-item" href="media.html">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="chip.html">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <h1 class="page-title">SPARC Lab News</h1>
+    </header>
+            </div>
+
+
+
+   
+
+<div class="news-wrapper" style="max-width: 80%; margin: 0 auto; padding: 10px">
+
+ <ul>
+
+
+<li>
+    <span class="text-muted"><b>(Sep 25)</b></span>
+    Congratulations to <b class="accent">Ayan Biswas</b> for receiving the NSF Student Travel Grant Award to attend the IEEE-EMBS International Conference on Body Sensor Networks <span class="highlight"><b>(BSN)</b></span> 2025.
+
+
+<div class="row">
+        <a href="static/img/news/embs.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <img src="static/img/news/embs.png" class="img-fluid rounded" width="180" height="150" alt="Ayan Biswas Award">
+        </a>
+    </div>
+
+</li>
+
+<li>
+    <span class="text-muted"><b>(Sep 25)</b></span>
+    Congratulations to our graduate students <b class="accent">Samyadip Sarkar</b>, <b class="accent">Lingke Ding</b>, and <b class="accent">Ayan Biswas</b>, and thanks to our collaborator <b class="accent">Dr. Baibhab Chatterjee</b> for having four papers accepted at <span class="highlight"><b>IEEE MAPCON</b></span> 2025.
+
+
+<div class="row">
+        <a href="static/img/news/MAPCON.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <img src="static/img/news/MAPCON.png" class="img-fluid rounded" width="180" height="150" alt="Ayan Biswas Award">
+        </a>
+    </div>
+</li>
+
+
+
+
+<li>
+    <span class="text-muted"><b>(Aug 25)</b></span>
+    SparcLab's chip design work is featured as <span class="highlight"><b>Purdue's Chipshub platform is named the official NSF Chip Design Hub</b></span>, backed by a <span class="highlight"><b>$7M grant over five years</b></span> from the National Science Foundation (NSF). This initiative aims to expand chip design education and research nationwide.
+    <a href="https://www.linkedin.com/posts/purdue-university_semiconductor-thenextgiantleap-activity-7363673921453219842-ZT-o" target="_blank">(Read the Announcement)</a>
+    <a href="https://engineering.purdue.edu/Engr/AboutUs/News/Spotlights/2025/2025-0818-Chipshub-wins-NSF-award-for-Chip-Design-Hub-to-help-ease-urgent-national-semiconductor-workforce-shortage" target="_blank">(Purdue News Spotlight)</a>
+    <div class="row">
+        <a href="static/img/news/NSF2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <img src="static/img/news/NSF2.png" class="img-fluid rounded" width="180" height="150">
+        </a>
+    </div>
+</li>
+
+
+
+<li>
+    <span class="text-muted"><b>(Aug 25)</b></span>
+    Prof. Shreyas Sen attended <span class="highlight"><b>IEEE SSCS Toronto 2025</b></span> and delivered a talk at <span class="highlight"><b>University of Toronto</b></span>.
+    <div class="row">
+        <a href="static/img/news/sscs1.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <img src="static/img/news/sscs1.png" class="img-fluid rounded" width="180" height="150">
+        </a>
+    </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jul 25)</b></span>
+  <b class="accent">Ixana</b> is featured in the prestigious <span class="highlight"><b>EETimes Silicon 100</b></span> for the <span class="highlight"><b>third consecutive year (2023, 2024, and 2025)</b></span>, as <span class="highlight"><b>one of only two companies in the RF/IoT segment</b></span>.
+  <div class="row">
+    <a href="static/img/news/EETimes.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/EETimes.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Mar 25)</b></span>
+  <b class="accent">Ixana</b> showcased <span class="highlight"><b>live demonstrations</b></span> of its <span class="highlight"><b>advanced Wi-R technology</b></span> and presented <span class="highlight"><b>two papers (12.2 and 20.11)</b></span> at the <span class="highlight"><b>IEEE International Solid-State Circuits Conference (ISSCC)</b></span>.
+  <div class="row">
+    <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ISSCC.png" class="img-fluid rounded">
+    </a>
+    <a href="static/img/news/Mar 25.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/Mar 25.png" class="img-fluid rounded">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Mar 25)</b></span>
+  <b class="accent">Ixana</b> presented its Wi-R technology at the <span class="highlight"><b>US Capitol Hill</b></span>, highlighting its potential for <span class="highlight"><b>revolutionizing secure warfighter communication</b></span>.
+  <div class="row">
+    <a href="static/img/news/Capitol Hill.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/Capitol Hill.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+    <a href="static/img/news/Cap2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/Cap2.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 25)</b></span>
+  Prof. Shreyas Sen and the <b class="accent">Ixana</b> team attended the <span class="highlight"><b>Consumer Electronics Show (CES)</b></span> in Las Vegas, holding <span class="highlight"><b>numerous meetings with customers and partners over 3 days</b></span>.
+  <div class="row">
+    <a href="static/img/news/ces2025.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ces2025.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+    <a href="static/img/news/ces2025-2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ces2025-2.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 25)</b></span>
+  <b class="accent">SparcLab</b> has secured a research grant from the 
+  <b class="accent">TSMC Center for Secure Microelectronics Ecosystem (CSME)</b> to advance work on <span class="highlight"><b>Post-Quantum Cryptography side-channel attacks</b></span>.
+  <div class="row">
+    <a href="static/img/news/tsmc-logo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/tsmc-logo.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Nov 24)</b></span>
+  Congratulations to <b class="accent">Md Faizul Bari</b> on successfully defending his PhD thesis. He will be joining <span class="highlight"><b>Qualcomm</b></span> as AI Researcher.
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 24)</b></span>
+  <span class="highlight"><b>Purdue Innovates Ventures</b></span> has <span class="highlight"><b>"doubled down" on its investment</b></span> in <b class="accent">Ixana</b>, backing its revolutionary <span class="highlight"><b>"Body-Internet Platform"</b></span> technology.
+  <div class="row">
+    <a href="static/img/news/double.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/double.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+    <a href="static/img/news/ixana.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ixana.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 24)</b></span>
+  <b class="accent">Ixana</b> and its patented Wi-R technology are featured in the <span class="highlight"><b>Indiana Economic Development Corporation's annual yearbook</b></span>.
+  <div class="row">
+    <a href="static/img/news/indiana.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/indiana.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 24)</b></span>
+  <b class="accent">Ixana</b> announces a <span class="highlight"><b>strategic alliance with OTTO Engineering</b></span> to <span class="highlight"><b>revolutionize soldier communications</b></span> using its game-changing Wi-R technology. <a href="https://wordpress.ixana.ai/2024/05/16/game-changing-wi-r-technology-to-revolutionize-soldier-communications-otto-engineering-and-ixana-announce-strategic-alliance/" target="_blank">(Read the Announcement)</a>
+  <div class="row">
+    <a href="static/img/news/otto.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/otto.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 24)</b></span>
+  <b class="accent">Ixana's</b> Wi-R technology for <span class="highlight"><b>on-body video streaming</b></span>, which <span class="highlight"><b>slashes energy use by 100x</b></span> compared to Wi-Fi, wins <span class="highlight"><b>two CES 2024 Innovation Awards</b></span>. <a href="https://www.linkedin.com/posts/shreyassen_ces2024-activity-7150541823877206016-tZmm?utm_source=share&utm_medium=member_desktop&rcm=ACoAADkDjyUBVhwWommrHFi_hAfchqeyrsNBgxU" target="_blank">(View Post)</a>
+  <div class="row">
+    <a href="static/img/news/ces2024.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ces2024.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 24)</b></span>
+  A paper is published in <span class="highlight"><b>Nature Electronics</b></span> detailing <span class="highlight"><b>broadband communication to the brain</b></span> using <span class="highlight"><b>Electro-Quasistatic fields for wireless implants</b></span>. Congratulations to the first author <b class="accent">Baibhab Chatterjee</b>. <a href="https://www.nature.com/articles/s41928-023-01000-3" target="_blank">(View Paper)</a>
+  <div class="row">
+    <a href="static/img/news/natureele.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/natureele.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jul 24)</b></span>
+  Congratulations to <b class="accent">Arunashish Datta</b> on successfully defending his PhD thesis. He will be joining <span class="highlight"><b>Ixana</b></span>.
+</li>
+<li>
+  <span class="text-muted"><b>(Jul 24)</b></span>
+  Congratulations to <b class="accent">Archisman Ghosh</b> on successfully defending his PhD thesis. He will also be joining <span class="highlight"><b>Ixana</b></span>.
+</li>
+<li>
+  <span class="text-muted"><b>(Jul 24)</b></span>
+  Prof. Shreyas Sen delivered an <span class="highlight"><b>IEEE SSCS Distinguished Lecture</b></span> at <span class="highlight"><b>Intel Labs, Hillsboro, Oregon</b></span>.
+  <div class="row">
+    <a href="static/img/news/sscs1.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/sscs1.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jun 24)</b></span>
+  Prof. Shreyas Sen presented an invited talk on <span class="highlight"><b>"Human-Inspired Distributed Wearable AI"</b></span> at the <span class="highlight"><b>Design Automation Conference (DAC)</b></span>.
+  <div class="row">
+    <a href="static/img/news/DAC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/DAC.png" width="300" height="300" class="img-fluid rounded">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Feb 24)</b></span>
+  Prof. Shreyas Sen presented an invited tutorial on <span class="highlight"><b>"Circuit-Techniques for Resilience to Side-Channel Attacks"</b></span> at IEEE ISSCC.
+  <div class="row">
+    <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ISSCC.png" class="img-fluid rounded">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 24)</b></span>
+  <b class="accent">Ixana</b>, a Purdue spin-off founded by Prof. Sen, won the <span class="highlight"><b>IoT Wearables Innovation of the Year</b></span> award at the <span class="highlight"><b>IoT Breakthrough Awards</b></span>.
+  <div class="row">
+    <a href="static/img/news/iotbreak.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/iotbreak.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 24)</b></span>
+  <b class="accent">SparcLab</b> has begun work on a <span class="highlight"><b>~$4.5M IARPA grant (Phase III)</b></span> in collaboration with <span class="highlight"><b>Expedition Technology</b></span>.
+  <div class="row">
+    <a href="static/img/news/iarpa.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/iarpa.png" class="logo_size rounded">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Dec 23)</b></span>
+  Congratulations to <b class="accent">Yi Xie</b> on successfully defending her MS thesis. She will be joining <span class="highlight"><b>Ford Motor Company</b></span>.
+</li>
+<li>
+  <span class="text-muted"><b>(Dec 23)</b></span>
+  <b class="accent">Ixana</b> won the <span class="highlight"><b>CES 2023 Innovation Award</b></span> for its Wi-R technology in Embedded Technologies and Computer Hardware.
+  <div class="row">
+    <a href="static/img/news/ces2023.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ces2023.jpg" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Oct 23)</b></span>
+  <b class="accent">SparcLab</b> received a research grant from <span class="highlight"><b>Sandia National Laboratory</b></span> to study EM interference.
+  <div class="row">
+    <a href="static/img/news/snl.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/snl.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 23)</b></span>
+  <span class="highlight"><b>Purdue Ventures</b></span> announces its <span class="highlight"><b>investment in</b></span> <b class="accent">Ixana</b> to support its next-generation wireless technology. <a href="https://www.purdue.edu/newsroom/2023/Q2/purdue-ventures-invests-in-wearable-communication-chip-company-ixana/" target="_blank">(Read More)</a>
+  <div class="row">
+    <a href="static/img/news/investment.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/investment.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 23)</b></span>
+  <b class="accent">Ixana's</b> breakthrough Wi-R wireless technology is <span class="highlight"><b>featured on live TV</b></span> and showcased at <span class="highlight"><b>Mobile World Congress (MWC) 2023</b></span>. <a href="https://www.bfmtv.com/economie/replay-emissions/culture-geek/culture-geek-transferer-des-donnees-numeriques-par-le-toucher-par-anthony-morel-20-02_VN-202302200056.html" target="_blank">(Watch the feature)</a>
+  <div class="row">
+    <a href="static/img/news/MWC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/MWC.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 23)</b></span>
+  After <span class="highlight"><b>7 years of research</b></span>, <b class="accent">Ixana's</b> "Communicate with Touch" Wi-R technology becomes <span class="highlight"><b>product-ready</b></span> and makes its <span class="highlight"><b>official debut at CES 2023</b></span>. <a href="https://www.linkedin.com/posts/shreyassen_ces2023-hci-engineering-activity-7015731114040324097-f5qS" target="_blank">(Watch the Demo)</a>
+  <div class="row">
+    <a href="static/img/news/ces2023_logo.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ces2023_logo.jpg" class="img-fluid rounded" width="180" height="150">
+    </a>
+    <a href="static/img/news/ixana.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ixana.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jun 23)</b></span>
+  Congratulations to <b class="accent">Donghyun Seo</b> on successfully defending his PhD thesis. He will be joining <span class="highlight"><b>Qualcomm</b></span>.
+</li>
+<li>
+  <span class="text-muted"><b>(May 23)</b></span>
+  Congratulations to <b class="accent">Mayukh Nath</b> on successfully defending his PhD thesis. He will be joining <span class="highlight"><b>Corning</b></span>.
+</li>
+<li>
+  <span class="text-muted"><b>(Apr 23)</b></span>
+  Prof. Shreyas Sen delivered a keynote on <span class="highlight"><b>"Securing the Internet of Bodies"</b></span> at the <span class="highlight"><b>DATE Conference in Europe</b></span>.
+  <div class="row">
+    <a href="static/img/news/date.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/date.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Apr 23)</b></span>
+  <b class="accent">Ixana</b> was named Startup of the Year at the <span class="highlight"><b>Mira Awards</b></span>.
+  <div class="row">
+    <a href="https://www.youtube.com/embed/GYDBoRSrJnc" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <iframe width="180" height="150" src="https://www.youtube.com/embed/GYDBoRSrJnc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Feb 23)</b></span>
+  Prof. Shreyas Sen gave a talk on <span class="highlight"><b>Advanced Circuits for Wearable and Implantable Devices</b></span> at IEEE ISSCC.
+  <div class="row">
+    <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ISSCC.png" class="img-fluid rounded">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 23)</b></span>
+  <b class="accent">Ixana</b> was recognized in the <span class="highlight"><b>EE Times Silicon 100</b></span> list of impactful startups in electronics and semiconductors.
+  <div class="row">
+    <a href="static/img/news/ee.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/ee.jpg" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Aug 22)</b></span>
+  Prof. Shreyas Sen was appointed <span class="highlight"><b>Associate Editor</b></span> of <span class="highlight"><b>Nature Scientific Reports</b></span>.
+  <div class="row">
+    <a href="static/img/news/nature.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/nature.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jul 22)</b></span>
+  Congratulations to <b class="accent">Baibhab Chatterjee</b> on successfully defending his PhD thesis. He will be joining the <span class="highlight"><b>University of Florida</b></span> as an Assistant Professor.
+</li>
+<li>
+  <span class="text-muted"><b>(Jun 22)</b></span>
+  Prof. Shreyas Sen delivered an invited talk on <span class="highlight"><b>Human Body Communications</b></span> at the <span class="highlight"><b>IEEE RFIC Symposium</b></span>.
+  <div class="row">
+    <a href="static/img/news/rfic_new.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/rfic_new.png" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+<li>
+  <span class="text-muted"><b>(Jun 22)</b></span>
+  <b class="accent">SparcLab</b> received research support from <span class="highlight"><b>Eli Lilly and Company</b></span> for medical solutions development.
+</li>
+<li>
+  <span class="text-muted"><b>(Jan 22)</b></span>
+  Prof. Shreyas Sen was recognized in <span class="highlight"><b>Georgia Tech Alumni Association’s</b></span> <span class="highlight"><b>"40 Under 40"</b></span> list for his invention: <span class="highlight"><b>Electro-Quasistatic Human Body Communication</b></span>.
+  <div class="row">
+    <a href="static/img/news/4040.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+      <img src="static/img/news/4040.jpg" class="img-fluid rounded" width="180" height="150">
+    </a>
+  </div>
+</li>
+
+
+
+
+<h2 class="accent"><li><span class="text-muted"><b>(Oct 21)</b></span> Paper on Adiabatic HBC is accepted for presentation in ISSCC 2022 and selected for live demonstartion. </h2>
+              <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.
+</p>
+            <div class="row">
+                <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/ISSCC.png" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ 
+                 
+ <h2 class="accent"><li><span class="text-muted"><b>(Sep 21)</b></span>Purdue Teams up on $15M IARPA grant to advance frontiers of Radio-Frequency Machine Learning Security <a href="https://engineering.purdue.edu/ECE/News/2021/purdue-teams-up-on-15m-iarpa-grant-to-advance-frontiers-of-radio-frequency-machine-learning-security" target="_blank"> Purdue News Release </a> , <a href="https://www.odni.gov/index.php/newsroom/press-releases/press-releases-2021/item/2257-iarpa-announces-launch-of-scisrs-program" target="_blank"> IARPA Press Release </a> ,  <a href="https://www.linkedin.com/posts/shreyassen_purdue-teams-up-on-15m-iarpa-grant-to-advance-activity-6867120133630947329-uZGs" target="_blank"> Shreyas Linkedin </a>   ,   <a href="https://www.linkedin.com/posts/purdue-ece_purdueece-purdueuniversity-technology-activity-6867118448921640960-VyDH" target="_blank"> Purdue Linkedin </a> , <a href="https://twitter.com/PurdueECE/status/1461344125983371266" target="_blank"> Twitter </a>  , <a href="https://www.facebook.com/purdueece/posts/5287114007982405" target="_blank"> FB </a> , <a href="https://www.exptechinc.com/news/expedition-technology-wins-multi-year-contract-with-iarpa/" target="_blank"> Expedition Technology Press Release </a> .</h2>
+                       
+  <h2 class="accent"><li><span class="text-muted"><b>(Aug 21)</b></span> 8 New graduate Students join Sparclab in Fall 2021. Welcome Abdur, Gourab, Marzeih, Meghna, Samyadip, Sukriti, John and Frank. </h2>
+
+
+ <h2 class="accent"><li><span class="text-muted"><b>(May 21)</b></span> Prof. Shreyas Sen is recognized with a Rising Star Professorship as the Elmore Associate Professor of Electrical and Computer Engineering. <a href="https://www.facebook.com/PurdueforLife/photos/a.4458629637589257/4458555677596653/" target="_blank"> Link to Bio read </a> during Purdue Recognition. </h2>
+
+ 
+
+
+
+
+
+ <h2 class="accent"><li><span class="text-muted"><b>(May 21)</b></span> SparcLab's paper on the first Bi-Phasic EQS Brain Communication is presented in VLSI 2021<a href="https://ieeexplore.ieee.org/document/9492445" target="_blank"> [Paper Link] </a>, <a href=" https://www.youtube.com/watch?v=1ajRikxfbss" target="_blank"> [Video Link] </a> and selected for live demonstartion. </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.  
+</p>
+        <div class="row">
+                <a href="static/img/news/VLSI_2021.PNG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/VLSI_2021.PNG" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(April 21)</b></span> Congratulations to Baibhab for Bilsland Dissertation Fellowship </h2>
+    <div class="row">
+                                </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(April 21)</b></span> Congratulations to Prof. Sen for Purdue College of Engineering (CoE) Faculty Excellence Awardfor Early Career Research. <a href="https://engineering.purdue.edu/ECE/News/2021/ece-faculty-honored-at-2021-college-of-engineering-faculty-excellence-awards" target="_blank"> Purdue University News.  </a></h2>
+    <div class="row">
+                                </div>
+
+
+ <h2 class="accent"><li><span class="text-muted"><b>(April 21)</b></span> Congratulations to Prof. Sen for Intel's 2020 Outstanding researcher Award. <a href="https://www.intel.com/content/www/us/en/research/blogs/intel-outstanding-researcher-award-2020.html" target="_blank"> Intel News,  </a><a href="https://engineering.purdue.edu/ECE/News/2021/prof-shreyas-sen-receives-intel-outstanding-researcher-award" target="_blank"> Purdue University News.  </a></h2>
+    <div class="row">
+                <a href="static/img/logo/printlogo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-2">
+                   <img src="static/img/logo/printlogo.png" class ="img-fluid rounded">
+                </a>
+            </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(April 21)</b></span> SparcLab's paper wins Outstanding Student paper award in CICC 2021 </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/nirmoy/" target="_blank"> Nirmoy </a> and co-authors.  
+</p>
+        <div class="row">
+                <a href="static/img/news/CICC_2021.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/CICC_2021.png" class ="img-fluid rounded">
+                </a>
+            </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(Feb 21)</b></span> Congratulations to Debayan for SSCS pre-doctoral fellowship. </h2>
+
+     
+ <h2 class="accent"><li><span class="text-muted"><b>(Feb 21)</b></span> SparcLab's ISSCC selected for live demonstration in ISSCC 2021 </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/archisman-ghoshpurdue/" target="_blank"> Archisman </a>, and co-authors. Demonestration video can be found <a href="https://www.youtube.com/watch?v=d77kiIljIVQ&t=200s" target="_blank">here</a>. Full presentation can be found <a href="https://www.youtube.com/watch?v=DvmNUciMst4&list=UUuTN3cRziL9VQeGJRNTOv4g&index=9" target="_blank">here</a>. 
+</p>
+        <div class="row">
+                <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/ISSCC.png" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Feb 21)</b></span> 2 papers accepted in Scientific Reports (Nature) </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/shreeya-sriram/" target="_blank"> Shreeya </a>, <a href="https://www.linkedin.com/in/mayukh-nath-346492208/" target="_blank"> Mayukh </a> and co-authors.  
+</p>
+        <div class="row">
+                <a href="static/img/news/sci_rep.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/sci_rep.png" class ="img-fluid rounded">
+                </a>
+            </div>
+ <div>
+            <h2 class="accent"><li><span class="text-muted"><b>(Jan 21)</b> </span>4 papers accepted for oral presentation in IMS 2021. </h2>
+ <p class="lead">Congratulations to Jie, <a href="https://www.linkedin.com/in/mdfaizulbari/" target="_blank"> Faizul </a>, <a href="https://www.linkedin.com/in/arunashish-datta-83684514a/" target="_blank"> Arunashish </a>, <a href="https://www.linkedin.com/in/mayukh-nath-346492208/" target="_blank"> Mayukh </a>  and co-authors.  
+ </p>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/IMS_Logo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/IMS_Logo.png" class="logo_size rounded">
+            </a>
+        </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(Jan 21)</b></span> 2 papers accepted for oral presentation in CICC 2021 </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/gaurav-kumar-k-229258b7/" target="_blank"> Gaurav </a>, <a href="https://www.linkedin.com/in/nirmoy/" target="_blank"> Nirmoy </a> and co-authors.  
+</p>
+        <div class="row">
+                <a href="static/img/news/CICC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/CICC.png" class ="img-fluid rounded">
+                </a>
+            </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(Dec 20)</b></span> SparcLab's demo received 2nd best demo award at HOST 2020. </h2>
+  <p class="lead">Congratulations to Josef, <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a>.  
+</p>
+        <div class="row">
+                <a href="static/img/news/host_2020.jpeg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/host_2020.jpeg" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Dec 20)</b></span> SparcLab's work had been featured in IEEE spectrum Dec 2020 issue. </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a>, <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and other SparcLab members.  
+</p>
+        <div class="row">
+                <a href="static/img/news/spectrums-logo.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/spectrums-logo.jpg" class ="img-fluid rounded">
+                </a>
+            </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(Nov 20)</b></span> SparcLab's paper had been selected as an <a href="static/img/news/2020-08-28_Sensors_certificate_s19051013_Print.pdf" target="_blank"> Editor's choice </a> article in MDPI sensor's journal. </h2>
+ <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/parikha-mehrotra-566ab3a1/" target="_blank"> Parikha </a>, <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.  
+</p>
+        <div class="row">
+                <a href="static/img/news/mdpi_sensors.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/mdpi_sensors.jpg" class ="img-fluid rounded">
+                </a>
+            </div>
+ 
+ <h2 class="accent"><li><span class="text-muted"><b>(Nov 20)</b></span> Digital Communication through Human Touch achieving ~mm scale fingertip signal confinement: ACM ToCHI paper/CHI 2021 presentation. </h2>
+ <p class="lead">Congratulations to Shovan, <a href="https://www.linkedin.com/in/david-yang-b20521121/" target="_blank"> David </a> and co-authors. Demonestration video can be found <a href="https://www.youtube.com/watch?v=-2oscW5i5DQ&feature=emb_title" target="_blank">here</a>. 
+</p>
+       <div class="row">
+                <a href="static/img/news/ACM_tochi.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/ACM_tochi.jpg" class ="img-fluid rounded">
+                </a>
+            </div>
+
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Oct 20)</b></span> Prof. Shreyas Sen participated in Vaibhav (Vaishwik Bharatiya Vaigyanik summit) organized by Govt. of India. </h2>
+ <div class="row">
+                <a href="static/img/news/vaivhav.jpeg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/vaivhav.jpeg" class ="img-fluid rounded">
+                </a>
+            </div>
+<h2 class="accent"><li><span class="text-muted"><b>(Oct 20)</b></span> Paper accepted in ISSCC 2021. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/archisman-ghosh-8165abaa/" target="_blank"> Archisman </a> and co-authors.</p>
+            <div class="row">
+                <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/ISSCC.png" class ="img-fluid rounded">
+                </a>
+            </div>
+ <h2 class="accent"><li><span class="text-muted"><b>(Sep 20)</b></span> Purdue ECE : Celebrating Our Associate Professors. </h2>
+ <p class="lead">Congratulations to Prof. Shreyas Sen for starting new position as  <a href="https://www.linkedin.com/feed/update/urn:li:activity:6712716622832005121/"> Associate Professor  </a> at Purdue University.</p>
+            <div class="row">
+                <a href="static/img/news/associate_prof.jpeg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/associate_prof.jpeg" class ="img-fluid rounded">
+                </a>
+            </div>
+        </p> 
+ 
+ <h2 class="accent"><li><span class="text-muted"><b>(Aug 20)</b></span> RFIC 2020 3MT Thesis Audience Choice awarded to Baibhab Chatterjee. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a>. After CICC 2019 best paper, this is a nice continuation.</p>
+            <div class="row">
+                <a href="static/img/news/3mt_thesis.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/3mt_thesis.png" width="200" height="200" class ="img-fluid rounded">
+                </a>
+            </div> 
+  </p> 
+ <p class="lead"><li><span class="text-muted"><b>(Jun 20)</b></span> Prof. Sen talks about COVID-19 Disrupting Point of Care Diagnostics with <a href="https://www.youtube.com/watch?v=1uo05R07r-A" target="_blank">BioCrossroads</a>. 
+  <div class="row">
+   <a href="https://www.youtube.com/embed/1uo05R07r-A" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+         <iframe width="80%" height="150" src="https://www.youtube.com/embed/1uo05R07r-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+       </a>
+  </div>
+ </p>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Apr 20)</b></span> Paper accepted in VLSI 2020. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and collaborators at Georgia Tech.</p>
+            <div class="row">
+                <a href="static/img/news/VLSI20.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/VLSI20.png" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Apr 20)</b></span> Paper on HBC safety analysis accepted in IEEE Transactions on Biomedical Engineering. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a> and co-authors.</p>
+            <div class="row">
+                <a href="static/img/news/TBME.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/TBME.jpg" width="200" height="200" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Mar 20)</b></span> Paper accepted in RFIC 2020. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.</p>
+            <div class="row">
+                <a href="static/img/news/rfic.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/rfic.png" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Feb 20) </b></span> Prof. Shreyas Sen receives <a href="https://engineering.purdue.edu/ECE/News/2020/sen-nsf-career-award" target="_blank">NSF CAREER Award </a> supporting his research on <a href="https://www.nature.com/articles/s41598-018-38303-x" target="_blank">Electro-Quasistatic Human Body Communication.  </a> </h2>
+            <div class="row">
+                <a href="static/img/news/nsf.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/nsf.png" width="200" height="200" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Jan 20)</b></span> 3 Papers accepted in CICC 2020. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a>, <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a>, <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a>, and co-authors.</p>
+        <div class="row">
+  <a href="static/img/news/CICC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+     <img src="static/img/news/CICC.png" width="180" height="150" class ="img-fluid rounded">
+  </a>
+        </div>
+ <p class="lead"> Secure EQS-HBC: <a href="https://ieeexplore.ieee.org/abstract/document/9075930" target="_blank">paper </a>, <a href="https://www.youtube.com/watch?v=ARhTkC-ID40" target="_blank">video slides </a>.
+  <div class="row">
+        <a href="https://www.youtube.com/embed/ARhTkC-ID40" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <iframe width="80%" height="150" src="https://www.youtube.com/embed/ARhTkC-ID40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+        </a>
+  </div>
+</p>
+ <p class="lead"> Deep Learning SCA Resilient Hardware: <a href="https://ieeexplore.ieee.org/abstract/document/9075889" target="_blank">paper </a>, <a href="https://www.youtube.com/watch?v=J9TWTV8sXyM" target="_blank">video slides </a>.
+  <div class="row">
+    <a href="https://www.youtube.com/embed/J9TWTV8sXyM" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <iframe width="80%" height="150" src="https://www.youtube.com/embed/J9TWTV8sXyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+        </a>
+  </div>
+
+</p>
+ <p class="lead"> Energy-efficient Transciever: <a href="https://ieeexplore.ieee.org/abstract/document/9075915" target="_blank">paper </a>, <a href="https://www.youtube.com/watch?v=SrcZCo_6ksU" target="_blank">video slides </a>.
+  <div class="row">
+    <a href="https://www.youtube.com/embed/SrcZCo_6ksU" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+            <iframe width="80%" height="150" src="https://www.youtube.com/embed/SrcZCo_6ksU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+        </a>
+  </div>
+
+</p>
+
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Oct 19)</b></span> Our <a href="https://ieeexplore.ieee.org/document/8922739" target="_blank">paper </a> on  CMOS-based radiation to digital converter accepted in JSSC 2020. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.</p>
+            <div class="row">
+                <a href="static/img/news/JSSC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/JSSC.png" width="180" height="110" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Oct 19)</b></span> Our <a href="https://ieeexplore.ieee.org/document/9062997" target="_blank">paper </a> on EM Side Channel countermeasure titled "EM and Power SCA-resilient AES-256 in 65nm CMOS through >350x Current Domain Signature Attenuation" accepted in ISSCC 2020. </h2>
+ <p class="lead">Congratulations to  <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and co-authors.</p>
+ <p class="lead">ISSCC 2020 Demo Video can be found <a href="https://www.youtube.com/watch?v=sh5_SWM7o_U" target="_blank">here </a>.
+            <div class="row">
+                <a href="static/img/news/ISSCC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/ISSCC.png" class ="img-fluid rounded">
+                </a>
+  <a href="https://www.youtube.com/embed/sh5_SWM7o_U" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                 <iframe width="80%" height="150" src="https://www.youtube.com/embed/sh5_SWM7o_U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+               </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Oct 19)</b></span> Prof. Sen speaks about Security of Internet of Body at  <a href="https://www.ted.com/tedx/events/35353" target="_blank">TEDx Indianapolis.  </a> </h2>
+ <p class ="lead">Full talk can be found <a href="https://www.youtube.com/watch?v=6NKGX-sinOA" target="_blank"> here.</a></p> 
+            <div class="row">
+                <a href="static/img/news/TEDx-Social-Speakers-ShreyasS (Medium).jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/TEDx-Social-Speakers-ShreyasS (Medium).jpg" width="180" height="180" class ="img-fluid rounded">
+                </a>
+  <a href="https://www.youtube.com/embed/6NKGX-sinOA" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                 <iframe width="80%" height="100%" src="https://www.youtube.com/embed/6NKGX-sinOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+               </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Oct 19)</b></span> Prof. Sen spoke on Radio layer vulnerabilities and Spectrum Policy at  <a href="https://siliconflatirons.org/events/saving-our-spectrum-handling-radio-layer-vulnerabilities-in-wireless-systems/" target="_blank">Silicon Flatirons. </a></h2>
+<p class="lead">The conference featured keynotes by <b>Julius Knapp, Chief of the Federal Communications Commission's Office of Engineering and Technology, and Dr. Lisa Porter, Deputy Under Secretary of Defense for Research and Engineering, who oversees the U.S. Department of Defense's work on 5G security</b>. There were panel discussions on the <a href="https://www.youtube.com/watch?v=DttX0Ch8Yic" target="_blank">health care industry </a>, cellular communications, along with next steps and solutions in this area. 
+ <div class="row">
+  <a href="https://www.youtube.com/embed/DttX0Ch8Yic" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+          <iframe width="80%" height="100%" src="https://www.youtube.com/embed/DttX0Ch8Yic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+        </a>
+ </div>
+</p>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Aug 19)</b></span> Collaborative work on Wearable EMG Sensor accepted in <a href="https://advances.sciencemag.org/content/5/12/eaay3210" target="_blank">Science Advances. </a> </h2>
+            <div class="row">
+                <a href="static/img/news/sci_adv.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/sci_adv.png" width="80%" height="180" class ="img-fluid rounded">
+                </a>
+            </div>
+
+ <h2 class="accent"><li><span class="text-muted"><b>(Aug 19)</b></span> Prof. Sen presents a <a href="https://ches.iacr.org/2019/src/tutorials/ches2019tutorial_Sen.pdf" target="_blank">tutorial </a> on Hardware Security (EM Side-Channel) at the CHES conference. </h2>
+
+ <p class="lead"><li><span class="text-muted"><b>(Jul 19)</b></span> Prof. Sen spoke about Edge-Intelligence at <a href="http://www.eri-summit.com/agenda-2019" target="_blank">DARPA ERI 2019.</a> </p>
+
+ <p class="lead"><li><span class="text-muted"><b>(Jul 19)</b></span> Purdue announces record year for invention. <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/purdue-announces-record-breaking-invention-disclosures,-startups,-other-strong-commercialization-activities-for-fy19.html" target="_blank">Prof. Sen's research is featured.</a> </p>
+
+ <p class="lead"><li><span class="text-muted"><b>(Jun 19)</b></span> <a href="https://ieeexplore.ieee.org/abstract/document/8805102" target="_blank"><b>JSSC</b></a> paper on lowest-energy Broadband HBC accepted. Congratulations to  <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a> and co-authors.</p>
+
+            <div class="row">
+                <a href="static/img/news/JSSC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/JSSC.png" width="180" height="130" class ="img-fluid rounded">
+                </a>
+            </div>
+
+        <h2 class="accent"><li><span class="text-muted">(Mar-May 19)</span> Solutions to Cyber Attacks reported by The U.S. Department of Homeland Security </h2>
+        <p class="lead"> The <a href="https://www.us-cert.gov/ics/advisories/ICSMA-19-080-01" target="_blank">U.S. Department of Homeland Security</a> recently
+            <a href="https://www.us-cert.gov/ics/advisories/ICSMA-19-080-01" target="_blank">warned</a> that numerous medical devices made by Medtronic are vulnerable to cyber attacks.
+            A solution to which is the <a href="https://www.nature.com/articles/s41598-018-38303-x" target="_blank">EQS-HBC </a> recently published by our group. IEEE Spectrum covered our work saying "Medtronic discloses medical device vulnerabilities,
+            while Purdue University scientists propose countermeasure to block attacks". Details: In this <a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/thwart-cyber-attacks-on-implanted-medical-devices" target="_blank">IEEE Spectrum Article.</a></p>
+
+
+            <div class="row">
+                <a href="static/img/news/spectrums-logo.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/spectrums-logo.jpg" class ="img-fluid rounded">
+                </a>
+                <a href="static/img/news/DHS%20advisory.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                     <img src="static/img/news/DHS%20advisory.png" class="img-fluid rounded">
+                </a>
+                <a href="static/img/news/Seal_of_the_United_States_Department_of_Homeland_Security.svg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/Seal_of_the_United_States_Department_of_Homeland_Security.svg" class="img-fluid rounded">
+                </a>
+            </div>
+
+ 
+        <h2 class="accent"><li><span class="text-muted">(May 19)</span> Best Student Paper Award at HOST 2019 </h2>
+        <p class="lead">Congratulations <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and co-authors. Details: In this <a href="https://engineering.purdue.edu/ECE/News/2019/host-best-paper" target="_blank"> Purdue News Release</a>. </p>
+        <p class="lead"> This work presents a white-box model for electromagnetic signal leakage and low-overhead countermeasure for EM Side-Channel Attack.
+            <a href="https://ieeexplore.ieee.org/document/8740839" target="_blank">(Paper Link) </a> </p>
+        <p class="lead">This is also the third succesive year that SparcLab has received Best paper/poster Award at HOST (2017, 2018 and 2019). Congratulations to all the co-authors for this
+            series of fantastic work on IoT Security over past 3 years. Also, a big Thank You to our collaborators from Intel, especially Santosh Ghosh, the whole
+            <a href="https://www.linkedin.com/company/intel-labs" target="_blank"> Intel Labs </a> team, Arijit Raychowdhury
+            and <a href="https://www.linkedin.com/company/national-science-foundation" target="_blank">National Science Foundation (NSF) </a>
+        for the constant support, funding, and encouragement. </p>
+        
+
+
+          <div class="row">
+                <a href="static/img/news/host1_2019.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                   <img src="static/img/news/host1_2019.jpg" class="img-fluid rounded">
+                </a>
+              <a href="static/img/news/host2_2019%20(Small).png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                  <img src="static/img/news/host2_2019%20(Small).png" class="img-fluid rounded">
+              </a>
+  <a href="https://www.youtube.com/embed/BsUlWuFapoM" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                 <iframe width="80%" height="100%" src="https://www.youtube.com/embed/BsUlWuFapoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+               </a>
+          </div>
+
+        <h2 class="accent"><li><span class="text-muted"> (Apr 19) </span>Best Paper Award (Overall) in CICC 2019 </h2>
+        <p class="lead">Congratulations <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors, Prof. Dimitrios Peroulis' team, and our LANDAUER collaborators Daniel J. Valentino and Sean M. Scott on this award. Details: In this <a href="https://engineering.purdue.edu/ECE/News/2019/chatterjee-best-paper" target="_blank"> Purdue News Release</a>. </p>
+        <p class="lead">The paper presented the first monolithic CMOS radiation to digital converter, which consists of a floating-gate radiation sensor and a time-based resistance-to-digital-converter (RDC). Great industry-academia collaboration. Thank you all! Details: In this
+            <a href="http://ieee-cicc.org/cicc-news/cicc-2019-award-winners/" target="_blank"> CICC Award Announcement </a> </p>
+        <div class="row">
+            <a href="static/img/news/CICC_2019%20(Small).jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/CICC_2019%20(Small).jpg" class="img-fluid rounded">
+            </a>
+            <a href="static/img/news/Shreyas_Sen_CICC_Best_Paper_2019_Monolithic_Radiation_Dosimeter_Time_Based_Sensing%20(Small).png" data-toggle="lightbox" data-gallery="gallery" class="col-md-8">
+                <img src="static/img/news/Shreyas_Sen_CICC_Best_Paper_2019_Monolithic_Radiation_Dosimeter_Time_Based_Sensing%20(Small).png" class="img-fluid rounded">
+            </a>
+        </div>
+        
+        <h2 class="accent"><li><span class="text-muted"> (Mar 19) </span><a href="https://www.nature.com/articles/s41598-018-38303-x">Security of Internet of Body</a> </h2>
+        <p class="lead"> Our work on EQS-HBC is covered by 50+ news sites. More details here. This paper in Scientific Reports (Nature) demonstrated Physical Security of HBC for the first time. Congratulations to  <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and co-authors.
+        </p>
+
+        <div class="row">
+
+            <a href="static/img/news/sci_rep.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+              <img src="static/img/news/sci_rep.png" class="img-fluid rounded">
+            </a>
+
+            <a href="static/img/news/EQS_HBC%20(Small).png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+              <img src="static/img/news/EQS_HBC%20(Small).png" class="img-fluid rounded">
+            </a>
+   <a href="https://www.youtube.com/embed/NHqfT1vIe6E" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                 <iframe width="80%" height="100%" src="https://www.youtube.com/embed/NHqfT1vIe6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"    allowfullscreen></iframe>
+               </a>       
+        </div>
+ 
+
+        <h2 class="accent"><li><span class="text-muted">(Jan 19) </span>Paper accepted in DAC 19 and CICC 19 </h2>
+        <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors.</p>
+        
+        <div class="row">
+
+            <a href="static/img/news/DAC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+              <img src="static/img/news/DAC.png" width="300" height="300" class="img-fluid rounded">
+            </a>
+
+            <a href="static/img/news/CICC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+              <img src="static/img/news/CICC.png" width="180" height="110" class="img-fluid rounded">
+            </a>
+        
+        </div>
+        
+        
+        <h2 class="accent"><li><span class="text-muted">(Dec 19) </span> HKN Beta Chapter's Outstanding Professor Award</h2>
+        <p class="lead">
+            Prof. Sen is recognized with the HKN Beta Chapter 'Outstanding Professor Award' and Purdue EVPRP Acorn Award
+        </p>
+         <div class="row">
+            <a href="static/img/news/HKN_F18_Sen.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/HKN_F18_Sen.jpg" class="img-fluid rounded">
+            </a>
+            <a href="static/img/news/Shreyas_Sen_Award_Fall_2018.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+               <img src="static/img/news/Shreyas_Sen_Award_Fall_2018.jpg" class="img-fluid rounded">
+            </a>
+        </div>
+
+
+
+
+        <h2 class="lead accent"><li><span class="text-muted">(Dec 18) </span><a href="https://www.landauer.com/">Landauer</a> supports SPARC Lab Research on Efficient BioSensing </p>
+
+        
+         <div class="row">
+                <a href="static/img/logo/landauer_416x416.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/landauer_416x416.jpg" class="logo_size rounded">
+                </a>
+        </div>
+
+        <h2 class=" lead accent"><li><span class="text-muted">(Nov 18) </span> CTSI supports Sparc Lab researh on Biomedical Devices </p>
+         <div class="row">
+
+            <a href="static/img/news/cropped-ctsi-logo-horizontal.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+
+               <img src="static/img/news/cropped-ctsi-logo-horizontal.png" class="logo_size rounded">
+
+            </a>
+
+        </div>
+
+
+
+        <h2 class="lead accent"><li><span class="text-muted"> (Oct 18) </span> Intel Corporation supports SPARC Lab Research </p>
+        
+         <div class="row">
+            <a href="static/img/logo/printlogo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/printlogo.png" class="logo_size rounded">
+            </a>
+        </div>
+
+
+        <h2 class="lead accent"><li><span class="text-muted">(Aug 18) </span> SPARC Lab is supported by <a href="https://www.purdue.edu/discoverypark/birck/research/smart-films.php" target="_blank">SMART Films Consortium</a>, Purdue University to develop ULP Sensor Nodes </p>
+        <div class="row">
+            <a href="static/img/news/smartfilms.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/smartfilms.jpg" class="logo_size rounded">
+            </a>
+        </div>
+
+
+        <h2 class="lead accent"><li><span class="text-muted">(Jul 18) </span>SPARC Lab is going to lead and perform on the DARPA MIDAS program to design mm-wave oscillators. </p>
+        
+        <div class="row">
+            <a href="static/img/news/DARPA_logo_(current).png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/DARPA_logo_(current).png" class="logo_size rounded">
+            </a>
+        </div>
+
+        <h2 class="lead accent"><li><span class="text-muted">(Jun 18) </span> SPARC Lab is part of a <a href="https://www.purdue.edu/newsroom/releases/2017/Q3/lilly-and-purdue-university-announce-strategic-research-collaboration.html" target="_blank">$52M grant</a> from Eli Lilly and Company to explore Securely Connected BioMedical Devices.
+            <a href="https://www.usnews.com/news/best-states/indiana/articles/2017-07-06/eli-lilly-to-fund-up-to-52m-in-purdue-life-science-research" target="_blank">USNews Report.</a> </p>
+
+        <div class="row">
+            <a href="static/img/news/1200px-Eli_Lilly_and_Company.svg.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/1200px-Eli_Lilly_and_Company.svg.png" class="logo_size rounded">
+            </a>
+        </div>
+
+
+
+        <h2 class="accent"><li><span class="text-muted">(May 18) </span>AFRL 2030 Targets  </li></h2>
+        <p class="lead">
+ Prof. Sen was invited to speak at <a href="https://afresearchlab.com/" target="_blank">IU-AFRL 2030</a>, that aims to help define the Science and Technology vision for 2030. Discussions with  <a href="https://www.af.mil/About-Us/Biographies/Display/Article/579032/brigadier-general-william-t-bill-cooley/" target="_blank">Major General Bill Cooley</a>, Commander of Air Force Research Laboratory, during this event was really inspiring.
+        </p>
+        
+        <div class="row">
+            <a href="static/img/news/IU_AFRL_2030e1f7.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                 <img src="static/img/news/IU_AFRL_2030e1f7.jpg" class="img-fluid rounded">
+            </a>
+        </div>
+
+        <h2 class="accent"><li><span class="text-muted">(May 18) </span> Best Poster Award in HOST 2018</h2>
+        <p class="lead">Congratulations <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors. <a href="https://engineering.purdue.edu/ECE/News/2019/host-best-paper" target="_blank"> Purdue News Release</a>. </p>
+        <p class="lead">Baibhab Chatterjee and co-authors received 3rd Best Poster Award for paper titled "RF-PUF: IoT Security Enhancement through Authentication of Wireless Nodes using In-situ Machine Learning," at premier <b>Hardware Security</b> Conference
+            <a href="http://www.hostsymposium.org/host_2018awards.php">HOST 2018</a>. This work shows how <b>In-situ Machine Learning could Secure Radio Communication.</b> </p>
+         <div class="row">
+            <a href="static/img/news/Baibhab_Shreyas_HOST_17_RF_PUF%20(Small).jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                  <img src="static/img/news/Baibhab_Shreyas_HOST_17_RF_PUF%20(Small).jpg" class="img-fluid rounded">
+            </a>
+        </div>
+
+
+        <h2 class="accent"><li><span class="text-muted">(May 18) </span>MIT TR35 India Award  </h2>
+        <p class="lead">Prof. Sen has been named one of India’s top innovators under 35 by MIT Technology Review and Mint.
+            <a href="https://www.livemint.com/Industry/QwmwtJkbUYtTXAzTO5OTVL/Indias-top-innovators-under-35.html"> Mint Newspaper </a>,
+            <a href="https://engineering.purdue.edu/ECE">Purdue News Release </a></p>
+        
+         <div class="row">
+            <a href="static/img/news/tr35_in_logo_x350.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                  <img src="static/img/news/tr35_in_logo_x350.png" class="logo_size rounded">
+            </a>
+        </div>
+
+            <div>
+               <h2 class="accent"><li><span class="text-muted">(Jan 18) </span>Paper accepted in HOST 18  </h2>
+               <p class="lead"> We are going to present a RF-PUF for IoT Security Enhancement using Machine Learning in Radio baseband.
+                   Congratulations <a href="https://www.linkedin.com/in/baibhabchatterjee/" target="_blank"> Baibhab </a> and co-authors. </p>
+            </div>
+            <div>
+               <h2 class="accent"><li><span class="text-muted">(Jan 18) </span>Paper accepted in in Microwave and Wireless Component Letters (MWCL)  </h2>
+                <p class="lead">highlighting new insights into HBC Channel Models. Congratulations <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a> and co-authors.
+                    Title: Characterization of Human Body Forward Path Loss and Variability Effects in Voltage-Mode HBC. </p>
+            </div>
+            <div>
+                <h2 class="accent"><li><span class="text-muted">(Jan 18) </span>Paper accepted in CICC 18 </h2>
+                <p class="lead">demonstrating World's Lowest Energy HBC Transceiver, improving the state-of-the-art by 18X. Congratulations <a href="https://www.linkedin.com/in/shovan-maity/" target="_blank"> Shovan </a> and co-authors.
+                    Title: A 6.3pJ/b 30Mbps -30dB SIR-tolerant Broadband Interference-Robust Human Body Communication Transceiver using Time Domain Signal-Interference Separation.  </p>
+            </div>
+
+            <div>
+                <h2 class="accent"><li><span class="text-muted"> (Dec 17) </span>Radio Interview on HBC: NPR </h2>
+                <p class="lead">subsidiary <a href="https://www.lakeshorepublicradio.org/post/researchers-use-human-body-communication-network#stream/0">Lakeshore Public Radio</a>  published excerpts of Radio Interview on Purdue Human Body Communication Technology.
+                    <a href="https://www.lakeshorepublicradio.org/post/researchers-use-human-body-communication-network#stream/0">(Listen Here)</a></p>
+            </div>
+
+            <div>
+                <h2 class="accent"><li><span class="text-muted"> (Dec 17) </span> "Purdue Discovery clears way for Human Body to work as Robust Communication Network for Electronic Devices" </h2>
+  <p class="lead">Our work on <a href="https://www.purdue.edu/newsroom/releases/2017/Q4/purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices.html"> Broadband Interference-robust Human Body Communication </a> was featured by 30+ news sites in USA, UK, Greece, India.
+                    We sincerely thank our sponsors <a href="https://www.wpafb.af.mil/News/Article-Display/Article/969772/afosr-awards-grants-to-58-scientists-and-engineers-through-its-young-investigat/">AFOSR YIP</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657455">NSF CRII Award</a> and <a href="https://ai.googleblog.com/2017/02/google-research-awards-2016.html">Google FRA</a> for supporting this research spanning from basic research to applications.</p>
+            </div>
+
+        <div class="row">
+            <a href="https://www.globenewswire.com/news-release/2017/12/14/1262163/0/en/Purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices.html">
+                <img src="static/img/news/logo/5a1dde2adbd8fe0001202701_nasdaq-globenewswire-620x150.png" class="logo_size">
+            </a>
+            <a href="https://www.purdue.edu/newsroom/releases/2017/Q4/purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices.html">
+                <img src="static/img/news/logo/59021e31b695f.image.gif" class="logo_size">
+            </a>
+            <a href="http://www.ecnmag.com/discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices/">
+                <img src="static/img/news/logo/ecnmag.jpg" class="logo_size">
+            </a>
+            <a href="https://markets.businessinsider.com/news/stocks/purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices-1011409883">
+                <img src="static/img/news/logo/og-image-logo-social.png" class="logo_size">
+            </a>
+            <a href="https://phys.org/news/2017-12-discovery-human-body-robust-network.html">
+                <img src="static/img/news/logo/PhysOrg.png" class="logo_size">
+            </a>
+            <a href="https://www.theengineer.co.uk/human-body-communication-electronics/">
+                <img src="static/img/news/logo/theengineer.png" class="logo_size">
+            </a>
+            <a href="#">
+                <img src="static/img/news/logo/timestech-new-logo.png" class="logo_size">
+            </a>
+            <a href="https://article.wn.com/view/2017/12/13/Purdue_discovery_clears_way_for_human_body_to_work_as_robust/">
+                <img src="static/img/news/logo/wnlogo.png" class="logo_size">
+            </a>
+        </div>
+
+
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Dec 17) </span><a href="https://www.landauer.com/" target="_blank">Landauer</a> supports SPARC Lab Research on Efficient BioSensing </h2>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/landauer_416x416.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/landauer_416x416.jpg" class="logo_size rounded">
+            </a>
+        </div>
+        <div>
+
+            <h2 class="accent"><li><span class="text-muted"> (Nov 17) </span><a href="https://ieeexplore.ieee.org/document/8119722" target="_blank">Paper</a> published in IEEE Journal of Solid State Circuits (JSSC 2017) on Switched-Mode Control Hybrid LDO  (with ICSRL, Georgia Tech) </h2>
+            <div class="row">
+                <a href="static/img/news/JSSC.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                     <img src="static/img/news/JSSC.png" width="180" height="130" class="logo_size rounded">
+                </a>
+            </div>
+        </div>
+        <div>
+            <h2 class="lead"><li><span class="text-muted">(Oct 17) </span>Dr. Sen is now a Senior Member of IEEE. </h2>
+            <h2 class="accent"><li><span class="text-muted"> (Oct 17) </span>Intel Corporation supports SPARC Lab Research </h2>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/printlogo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/printlogo.png" class="logo_size rounded">
+            </a>
+        </div>
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Sep 17) </span>SPARC Lab is collaborating with and supported by <a href="https://www.purdue.edu/discoverypark/birck/research/smart-films.php">SMART Films Consortium</a>, Purdue University to develop ULP Sensor Nodes. </h2>
+
+        </div>
+        <div class="row">
+            <a href="static/img/news/smartfilms.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/smartfilms.jpg" class="logo_size rounded">
+            </a>
+        </div>
+        <div>
+
+            <h2 class="lead"><li><span class="text-muted">(Jul 17) </span>We presented the world's first demonstration of Inter-Human Information exchange among Smartwatches during Handshaking using HBC:
+                <a href="https://ieeexplore.ieee.org/document/8009190" target="_blank"> ISLPED 17</a> </h2>
+
+            <h2 class="lead"><li><span class="text-muted">(Jul 17) </span>Our work on Staged Inference using Conditional Deep Learning enables Real-Time Health Diagnosis on a Wearable Hub:
+                <a href="https://ieeexplore.ieee.org/document/8036767" target="_blank">EMBC 17</a> (with NRL, Purdue) </h2>
+            <h2 class="accent"><li><span class="text-muted">(Jul 17) </span>Our work on Intelligent Context-Aware IoT Sensor Node is online: <a href="https://ieeexplore.ieee.org/document/7971936">TCAS1 </a> (with ICSRL, Georgia Tech)</h2>
+        </div>
+
+        <div>
+
+            <h2 class="accent"><li><span class="text-muted">(Mar 17) </span>SparcLab  research is supported by National Science Foundation SaTC program.</h2>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/nsf1vf852.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/nsf1vf852.jpg" class="logo_size rounded">
+            </a>
+        </div>
+        <h2 class="accent"><li><span class="text-muted">(May-Aug 17) </span>Multiple research/invited presentations at DATE, EMBC, ISLPED, HOST, AFOSR, SRC, ETS, VTS. </h2>
+
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(May 17) </span>Our work on High-efficiency Power Side-Channel Attack Immunity received Best Paper Award (student) at premier Hardware Security Conference
+                <a href="http://www.hostsymposium.org/" target="_blank">HOST 2017</a>. </h2>
+  <p class="lead">Congratulations to <a href="https://www.linkedin.com/in/dasdebayan/" target="_blank"> Debayan </a> and co-authors at Purdue, Georgia Tech and Intel Labs. <a href="http://www.hostsymposium.org/">HOST Announcement</a>,
+                <a href="https://engineering.purdue.edu/ECE">Purdue Spotlight</a>, <a href="https://www.ece.gatech.edu/news/591629/nasir-tapped-ieee-host-best-student-paper-award">Georgia Tech News</a>  </p>
+        </div>
+
+        <div class="row">
+            <a href="static/img/news/Award_2fb81.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/Award_2fb81.jpg" class="img-fluid rounded">
+            </a>
+            <a href="static/img/news/HOST_Award3%20-%20smallfb81.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/HOST_Award3%20-%20smallfb81.jpg" class="img-fluid rounded">
+            </a>
+        </div>
+        <div>
+            <h2 class="lead"><li><span class="text-muted">(Apr 17) </span>Two papers on Wearable Health Monitoring accepted in IEEE Engineering in Medicine and Biology Conference (EMBC). Congratulations to Shovan, Maryam (NRL) and co-authors.</h2>
+        </div>
+        <div>
+            <h2 class="lead accent"><li><span class="text-muted">(Mar 17) </span>Prof. Sen is awarded the National Science Foundation <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657455" target="_blank">NSF CRII Award </a> to work on Implantables.
+                <a href="https://engineering.purdue.edu/ECE">ECE Spotlight, </a><a href="https://www.facebook.com/purdueece/posts/1739285482765293">Purdue FB </a></h2>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/nsf1vf852.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/nsf1vf852.jpg" class="logo_size rounded">
+            </a>
+        </div>
+
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Mar 16) </span>Prof. Sen proposes to develop a new Undergraduate course (ECE 395) on Design of Analog and Digital
+                Circuits to bridge a gap in the VLSI undergraduate curriculum. Approved by Undergraduate Committee.</h2>
+        </div>
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Feb 17) </span> Prof. Sen wins the <a href="https://ai.googleblog.com/2017/02/google-research-awards-2016.html">Google FRA</a> Award to work on Secure Human Computer Interaction using HBC.
+                <a href="http://services.google.com/fh/files/blogs/v2_final_list.pdf"> Recipient List,</a> <a
+                    href="https://engineering.purdue.edu/ECE">ECE Spotlight,</a> <a href="https://www.facebook.com/purdueece/posts/1713124605381381">Purdue FB</a></h2>
+        </div>
+        <div class="row">
+            <a href="static/img/news/1200px-Google_2015_logo.svg.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/1200px-Google_2015_logo.svg.png"  class="logo_size rounded">
+            </a>
+            <a href="static/img/news/googlefaculty_award.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/news/googlefaculty_award.png" class="logo_size rounded">
+            </a>
+        </div>
+        <div>
+            <h2 class="lead"><li><span class="text-muted">(Feb 17) </span>HOST paper accepted on Power Side-Channel Attack Immunity (Security). Congratulations to Debayan and co-authors.</h2>
+        </div>
+        <div>
+            <h2 class="lead"><li><span class="text-muted">(Jan 17) </span>IMS paper accepted on Self-Optimizing IoT Sensor Node (with Georgia Tech ICSRL). Congratulations to Ningyuan and co-authors.</h2>
+        </div>
+        <div class="row">
+            <a href="static/img/logo/IMS_Logo.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="static/img/logo/IMS_Logo.png" class="logo_size rounded">
+            </a>
+        </div>
+        <div>
+
+            <h2 class="lead "><li><span class="text-muted">(Dec 16) </span>Prof. Sen joins the Technical Program Committee of IEEE International Mixed-Signal Testing Workshop (IMSTW).</h2>
+
+            <h2 class="lead"><li><span class="text-muted">(Dec 16) </span>Prof. Sen joins the Technical Program Committee of IEEE/ACM International Conference on Computer-Aided Design (ICCAD).</p>
+
+        </div>
+        <div>
+
+            <h2 class="accent"><li><span class="text-muted">(Nav 16) </span>DATE paper accepted on Interference-Robust Human Body Communication. Congratulations to Shovan and co-authors.</h2>
+        </div>
+
+        <div>
+
+            <h2 class="accent"><li><span class="text-muted">(Oct 16) </span>Prof. Sen speaks at Invited Tutorial in <a href="https://ieee-sensors2016.org/">IEEE Sensors 2016</a> on Context-Aware IoT Sensor Nodes.</h2>
+            <div class="row">
+                <a href="static/img/logo/sensors-2016_logo_v6_b-transparent.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/sensors-2016_logo_v6_b-transparent.png" class="logo_size rounded">
+                </a>
+            </div>
+            <h2 class="accent"><li><span class="text-muted">(Oct 16) </span>Prof. Sen wins the <a href="https://www.wpafb.af.mil/News/Article-Display/Article/969772/afosr-awards-grants-to-58-scientists-and-engineers-through-its-young-investigat/">
+                AFOSR YIP 2017</a> Award to work on Human Body Communication. <a href="https://engineering.purdue.edu/ECE">ECE Spotlight,</a>
+                <a href="https://www.facebook.com/purdueece/posts/1532061906820986"> Purdue FB </a>.</h2>
+            <div class="row">
+                <a href="static/img/logo/b3bc6e49212072a7b2638c22511a7604_400x400f852f852.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/b3bc6e49212072a7b2638c22511a7604_400x400f852f852.jpg" class="logo_size rounded">
+                </a>
+            </div>
+            <h2 class="lead accent"><li><span class="text-muted">(Oct 16) </span>SparcLab is awarded an <a href="https://www.src.org/compete/s201608/">SRC Contract</a> (with Georgia Tech) to work on IoT Sensor Nodes.</h2>
+            <div class="row">
+                <a href="static/img/logo/src-logo-print.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/src-logo-print.png"  class="logo_size rounded">
+                </a>
+            </div>
+        </div>
+        <div>
+
+            <h2 class="lead"><li><span class="text-muted">(Sep 16) </span>Prof. Sen delivers Invited Talk in <a href="https://www.cmu.edu/nanotechnology-forum/Forum_13/Program.htm"> US-Korea Forum on NanoTechnology</a> on Neuromorphic Computing in CMOS.</h2>
+
+            <h2 class="lead"><li><span class="text-muted">(Sep 16) </span>Prof. Sen proposes to develop a <b>new Graduate course (ECE 695) High-Speed Mixed-Signal IC </b> to bridge a gap in the VLSI graduate curriculum. Approved by Graduate Committee.</h2>
+
+        </div>
+
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Aug 16) </span>Paper published in IEEE Journal of Solid State Circuits (JSSC 2016) on Proximity Communication demonstrating world's fastest and most energy-efficient board-to-board capacitive communication link.</h2>
+            <div class="row">
+                <a href="static/img/logo/MTUwNTQ5.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/MTUwNTQ5.jpg" class="logo_size rounded">
+                </a>
+            </div>
+            <p class="lead "><li><span class="text-muted">(Aug 16) </span>SparcLab welcomes 3 new Ph.D. students. Gregory Chang, Debayan Das, and S. Maity.</p>
+
+            <h2 class="lead "><li><span class="text-muted">(Jul 16) </span>Undergraduate student researcher Xinyi Jiang publishes first-authored research paper and attends NAECON.</h2>
+
+            <h2 class="lead "><li><span class="text-muted">(Jun 16) </span>Prof. Sen is serving on <a href="http://www.ieee-cps.org/member.html">IEEE Technical Committee </a> on Cyber-Physical Systems (CPS).</h2>
+            <div class="row">
+                <a href="static/img/logo/bar-tccps.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/bar-tccps.jpg"  class="logo_size rounded">
+                </a>
+            </div>
+            <h2 class="accent"><li><span class="text-muted">(Jun 16) </span>Prof. Sen speaks at Invited Talk in <a href="https://dac.com/">DAC 2016</a> on Context-Aware Communication for IoT.</li></h2>
+            <div class="row">
+                <a href="static/img/logo/dac_logo_generic_lg13a6.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/dac_logo_generic_lg13a6.png" class="logo_size rounded">
+                </a>
+            </div>
+
+            <h2 class="accent"><li><span class="text-muted">(Jun 16) </span>ESSCIRC paper accepted on Hybrid Mixed-Signal Switched Mode LDO (with Georgia Tech ICSRL). Congratulations to Saad.</h2>
+            <div class="row">
+                <a href="static/img/logo/essderc-esscirc_front_pagea219.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/essderc-esscirc_front_pagea219.png" class="logo_size rounded">
+                </a>
+            </div>
+
+
+            <h2 class="accent"><li><span class="text-muted">(May 16) </span>Prof. Sen is serving on the Technical Program Committee of DATE 2017.</h2>
+        
+ <div>
+            <h2 class="lead "><li><span class="text-muted">(Apr 16) </span>SparcLab's first paper on Human Body Communication is accepted in ISLPED 2016.</h2>
+
+            <h2 class="accent"><li><span class="text-muted">(Apr 16) </span>Prof. Sen is serving as Publicity Chair for <a href="http://www.ets17.org.cy/">IEEE ETS' 17.</a></h2>
+
+        </div>
+        <div>
+
+            <h2 class="accent"><span class="text-muted">(Feb 16) </span>Paper presented in <a href="http://submissions.mirasmart.com/ISSCC2016/PDF/ISSCC2016AdvanceProgram.pdf">ISSCC 2016</a> on Proximity Comm.
+                (23.2) demonstrating world's fastest and most energy-efficient board-to-board capacitive communication link.</h2>
+
+            <div class="row">
+                <a href="static/img/logo/ISSCC.jpg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/ISSCC.jpg"  class="logo_size rounded">
+                </a>
+            </div>
+
+            <h2 class="lead "><li><span class="text-muted">(Feb 16) </span>Welcome to two ECE undergraduate Sophomore students to SparcLab. Xinyi Jiang and Kavian Mojabe.</h2>
+
+        </div>
+        <div>
+            <h2 class="accent"><li><span class="text-muted">(Jan 16) </span>Prof. Sen is serving on <a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxzaHJleWFzd29yazF8Z3g6NGJiNDg4ZTI1YjljYWY0Mw">Editorial board</a> of
+                <a href="http://ieee-cas.org/publications/d-t-magazine">IEEE Design and Test</a>.</h2>
+            <div class="row">
+                <a href="static/img/logo/D%26Tcab2.png" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                    <img src="static/img/logo/D%26Tcab2.png"  class="logo_size rounded">
+                </a>
+            </div>
+            <h2 class="lead "><li><span class="text-muted">(Jan 16) </span>Prof. Sen is teaching a large undergraduate course (>250 students): ECE 270: Introduction to Digital Systems.</h2>
+
+            <h2 class="lead "><li><span class="text-muted">(Jan 16) </span>SparcLab is founded by Prof. Shreyas Sen, who joins ECE, Purdue after 5+ years of industry experience at  Circuit Research Lab (CRL) and Wireless Communication Research
+                (WCR), Intel Labs,  Qualcomm and Rambus. Prof. Sen received his PhD. from ECE, Georgia Tech in 2011.</h2>
+
+        </div>
+
+
+    </div>
+
+    
+    <br>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </body>
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+<footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

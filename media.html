@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Media | SPARC Lab</title>
+    <!-- Shared site assets (identical on every page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600&amp;display=swap">
+    <link rel="stylesheet" href="static/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/styple.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="static/js/site.js"></script>
+    <!-- /Shared site assets -->
+<link rel="stylesheet" href="static/css/footersilder.css" type="text/css">
+
+    <style>
+    /* =========================================
+       RESPONSIVE & ALIGNMENT FIXES (Logo Slider) 
+       ========================================= 
+    */
+
+    /* Ensure Slick containers use full height necessary */
+    .customer-logos.slick-slider,
+    .customer-logos .slick-list,
+    .customer-logos .slick-track {
+        display: flex;
+        align-items: center; /* Vertically center the slides within the track */
+        height: 100%;
+    }
+
+    /* Set up the individual slide as a Flex container to center its child (img) */
+    .customer-logos .slide {
+        display: flex !important; /* Slick sometimes requires !important */
+        align-items: center;      /* Essential for VERTICAL CENTERING */
+        justify-content: center;   /* Essential for HORIZONTAL CENTERING */
+        min-height: 80px;         /* Prevents short logos from floating up */
+        outline: none;            /* Removes border on click */
+    }
+
+    /* Responsive Logo Image Sizing & Spacing */
+    .customer-logos .slide img {
+        width: 130%;
+        height: auto;
+        padding: 0 20px;          /* Universal horizontal "bumper" */
+        object-fit: contain;      /* Essential: Keeps from stretching */
+        max-height: 70px;         /* Max height limit on Desktop */
+        margin: 0;                /* Reset margins as Flexbox handles alignment */
+    }
+
+    /* Tablet & Smaller Desktop Sizing Adjustments */
+    @media (max-width: 992px) {
+        .customer-logos .slide img {
+            max-height: 60px;
+            padding: 0 15px;
+        }
+        .customer-logos .slide {
+            min-height: 70px;
+        }
+    }
+
+    /* Mobile Sizing Adjustments */
+    @media (max-width: 576px) {
+        .customer-logos .slide img {
+            padding: 0 10px;      /* Minimal bumper for max scale on tiny screens */
+            max-height: 55px;     /* Scales logos down on small screens */
+        }
+        .customer-logos .slide {
+            min-height: 60px;     /* Match min-height roughly to max-height of img */
+        }
+    }
+
+    /* =========================================
+       MISC FIXES 
+       ========================================= */
+    .content-wrapper {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        padding-top: 80px;
+    }
+    
+    @media (max-width: 768px) {
+        .content-wrapper {
+            max-width: 95%;
+            padding-top: 70px;
+        }
+        #year-nav {
+            padding: 10px;
+        }
+    }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+    }
+    #year-nav {
+        margin-bottom: 30px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .news-item {
+        margin-bottom: 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .navbar-nav li:hover > ul.dropdown-menu {
+        display: block;
+    }
+    .dropdown-submenu>.dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top:-6px;
+    }
+    .dropdown-menu > li > a:hover:after {
+        text-decoration: underline;
+        transform: rotate(-90deg);
+    }
+    @media (max-width: 576px) {
+        .responsive-media-box {
+            width: 100% !important;
+            margin-right: 0 !important;
+        }
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+    <script>
+        $(document).ready(function(){
+            $('.dropdown-submenu > a').on("click", function(e) {
+                var submenu = $(this);
+                $('.dropdown-submenu .dropdown-menu').removeClass('show');
+                submenu.next('.dropdown-menu').addClass('show');
+                e.stopPropagation();
+            });
+            $('.dropdown').on("hidden.bs.dropdown", function() {
+                // hide any open menus when parent closes
+                $('.dropdown-menu.show').removeClass('show');
+            });
+            
+            $(".dropdown, .btn-group").hover(function(){
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if(dropdownMenu.is(":visible")){
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+
+            $('.customer-logos').slick({
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              autoplay: true,
+              autoplaySpeed: 1500,
+              arrows: false,
+              dots: false,
+              pauseOnHover: false,
+              responsive: [{
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 4
+                }
+              }, {
+                breakpoint: 520,
+                settings: {
+                  slidesToShow: 3
+                }
+              }]
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="static/css/site.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Site navigation (identical on every page; generated, keep in sync with the other pages) -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+        <a class="navbar-brand" href="index.html">SPARC Lab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="research.html" id="navResearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Areas</a>
+                    <ul class="dropdown-menu" aria-labelledby="navResearch">
+                        <li><a class="dropdown-item" href="research.html">Ongoing Research Area</a></li>
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="highspeedio.html">Completed Research Area</a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="highspeedio.html">High Speed IO</a></li>
+                            <li><a class="dropdown-item" href="lowpower.html">Low-Power</a></li>
+                            <li><a class="dropdown-item" href="rftest.html">RF Test</a></li>
+                            <li><a class="dropdown-item" href="speciesidentification.html">Species Identification</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navHighlights" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Highlights</a>
+                    <div class="dropdown-menu" aria-labelledby="navHighlights">
+                        <a class="dropdown-item" href="news.html">News</a>
+                        <a class="dropdown-item" href="media.html" aria-current="page">Media</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="chip.html">Chip Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="open.html">Openings</a></li>
+                <li class="nav-item"><a class="nav-link" href="HBC_Survey.html">HBC Survey</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <h1 class="page-title">SPARC Lab in the Media</h1>
+    </header>
+    </div>
+   
+    <div style="max-width: 80%; margin: 0 auto; padding: 10px;">
+
+
+
+
+
+        <div id="year-nav" class="text-center"></div>
+
+<div class="customer-logos slider" style="margin: 30px 0;">
+            <div class="slide"><img src="static/media_images/wired.png"></div>
+            <div class="slide"><img src="static/media_images/cnet.png"></div>
+            <div class="slide"><img src="static/media_images/fortune.png"></div>
+            <div class="slide"><img src="static/media_images/biss.png"></div>
+            <div class="slide"><img src="static/media_images/eetimes.png"></div>
+            <div class="slide"><img src="static/media_images/ieee.png"></div>
+            <div class="slide"><img src="static/media_images/pbs.png"></div>
+            <div class="slide"><img src="static/media_images/ven.png"></div>
+            <div class="slide"><img src="static/media_images/yahoo.png"></div>
+            <div class="slide"><img src="static/media_images/nyc.png"></div>
+           <div class="slide"><img src="static/media_images/mint.png"></div>
+        </div>
+
+        <div id="news-container"></div>
+
+    </div>
+
+    <div class="container-fluid">
+        <h2 style="text-align: center; padding: 10px; ">Sparc Lab Research Sponsors</h2>
+        <div class="customer-logos slider" >
+            <div class="slide"><img src="static/img/logo/1200px-Eli_Lilly_and_Company.svg.png"></div>
+            <div class="slide"><img src="static/img/logo/1200px-Google_2015_logo.svg1dc31dc3.png"></div>
+            <div class="slide"><img src="static/img/logo/b3bc6e49212072a7b2638c22511a7604_400x400f852f852.jpg"></div>
+            <div class="slide"><img src="static/img/logo/cropped-ctsi-logo-horizontal.png"></div>
+            <div class="slide"><img src="static/img/logo/DARPA_logo_(current).png"></div>
+            <div class="slide"><img src="static/img/logo/smartfilms.jpg"></div>
+            <div class="slide"><img src="static/img/logo/printlogo.png"></div>
+            <div class="slide"><img src="static/img/logo/nsf-logo.png"></div>
+            <div class="slide"><img src="static/img/logo/src-logo-print.png"></div>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+    <span>&copy; SPARC Lab<span class="footer-long"> &middot; Elmore Family School of Electrical and Computer Engineering</span> &middot; Purdue University</span>
+    <span class="footer-social">
+        <a href="https://twitter.com/SPARCLab_Purdue" target="_blank" rel="noopener" aria-label="SPARC Lab on X (Twitter)"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCuTN3cRziL9VQeGJRNTOv4g/videos" target="_blank" rel="noopener" aria-label="SPARC Lab on YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="contact.html" aria-label="Contact SPARC Lab"><i class="fas fa-envelope"></i></a>
+    </span>
+</footer>
+
+    <script>
+        // -----------------------------------------------------------------------
+        // GLOBAL SETTING: Change this number to make all photos and videos larger or smaller
+        // -----------------------------------------------------------------------
+        const MEDIA_WIDTH = 250; 
+
+        const myNewsData = [
+
+            {
+                year: "2026",
+                date: "Feb 26",
+                title: "Hackster.io Features Ixana's 'Wire-Like Wireless'",
+                content: "Hackster.io covered Ixana's Wi-R non-radiative near-field communication system, featuring Prof. Shreyas Sen's explanation of EQS signal confinement. The feature highlights the technology's energy efficiency, physical security, and upcoming data rate roadmap to 20 Mb/s.",
+                links: [
+                    { text: "[Read Feature]", url: "https://www.hackster.io/news/ixana-s-wi-r-wire-like-wireless-aims-to-put-you-in-touch-with-your-tech-s-comms-literally-e2979cbb1d3e" }
+                ],
+                photos: ["static/media_images/2026/2.png"],
+                youtubeLinks: ["https://www.youtube.com/watch?v=t4dhATHd6eo&t=1s"]
+            },
+            {
+                year: "2026",
+                date: "Jan 26",
+                title: "The Conversation: What is Bluetooth and how does it work?",
+                content: "Prof. Shreyas Sen authored an accessible, engaging explainer for The Conversation's 'Curious Kids' series. Promoted by Purdue ECE, the piece breaks down how Bluetooth works, its radio-wave transmission mechanisms, pairing functions, and how it compares to Wi-Fi.",
+                links: [
+                    { text: "[Read Article]", url: "https://theconversation.com/what-is-bluetooth-and-how-does-it-work-242892" },
+                    { text: "[Purdue ECE Feature]", url: "https://www.instagram.com/p/DVburRtElKT/" }
+                ],
+                photos: ["static/media_images/2026/3.png"], 
+                youtubeLinks: [] 
+            },
+            {
+                year: "2026",
+                date: "Jan 26",
+                title: "Ixana Wins 'Best of CES 2026' and Wows with NFE Demos",
+                content: "Ixana's Wi-R technology captured massive attention at CES 2026, culminating in a \"Best of CES 2026\" award in the 'Better Future Tech' category by the CNET Group. CNET's Scott Stein called the technology \"the next evolution of local wireless personal networks\" and \"the most memorable thing he saw at CES.\" The event also featured extensive video and media coverage from Power Electronics News showcasing Ixana's near-field electric (NFE) communication demos transferring data at ultra-low power.",
+                links: [
+                    { text: "[CNET Feature]", url: "https://www.cnet.com/tech/computing/i-just-saw-the-wireless-body-transmitting-network-my-future-wearables-need/" },
+                    { text: "[CES Award Announcement]", url: "https://www.ces.tech/articles/2026-best-of-ces-winners-awarded-by-cnet-group/" },
+                    { text: "[Power Electronics News]", url: "https://www.powerelectronicsnews.com/power-innovations-at-ces-2026/" },
+                    { text: "[Purdue Research Recognition]", url: "https://www.linkedin.com/posts/purdue-ece_congratulations-to-purdue-ece-prof-shreyas-activity-7415399801648951296-Q_U5/" },
+                    { text: "[NFE Interview Part 1]", url: "https://www.youtube.com/watch?v=KcURCsa4Ge8" },
+                    { text: "[NFE Interview Part 2]", url: "https://www.youtube.com/watch?v=lVy3nz7PyIM" },
+                    { text: "[NFE Video Demo]", url: "https://www.youtube.com/watch?v=fcAh5Z-5UIk" }
+                ],
+                photos: ["static/media_images/2026/4.png","static/media_images/2026/41.png", "static/media_images/2026/42.png", "static/media_images/2026/43.png", "static/media_images/2026/44.png"],
+                youtubeLinks: ["https://www.youtube.com/watch?v=KcURCsa4Ge8", "https://www.youtube.com/watch?v=lVy3nz7PyIM", "https://www.youtube.com/watch?v=fcAh5Z-5UIk" ]
+            },
+
+
+// ===================== 2025 =====================
+{
+    year: "2025",
+    date: "Dec 25",
+    title: "Pop Quiz: Brain-Computer Interfaces",
+    content: "Purdue University featured Prof. Shreyas Sen in a 'Pop Quiz' video on Facebook, exploring the science behind brain-computer interfaces and whether science can truly \"read our thoughts\" to control technology.",
+    links: [
+        { text: "[Watch Video]", url: "https://www.facebook.com/watch/?v=891537686636465" }
+    ],
+    photos: ["static/media_images/2025/1.png"],
+    youtubeLinks: ["https://www.facebook.com/watch/?v=891537686636465"]
+},
+{
+    year: "2025",
+    date: "Dec 25",
+    title: "Body-Resonance: Transmission Line-Like Wireless Links Enabling High-Speed Wearables",
+    content: "Published in Nature Communications Engineering, this breakthrough paper proposes Body-Resonance HBC, which leverages the human body's transmission-line behavior for a 30X channel capacity improvement over EQS-HBC, enabling hundreds of Mbps data rates for wearables. The research received widespread attention across science media.",
+    links: [
+        { text: "[Nature Communications Engineering]", url: "https://www.nature.com/articles/s44172-025-00533-z" },
+        { text: "[Bioengineer.org]", url: "https://bioengineer.org/body-resonance-enables-high-speed-wearable-wireless-links/" },
+        { text: "[ScienMag]", url: "https://scienmag.com/body-resonance-enables-high-speed-wearable-wireless-links/?__cf_chl_tk=4qclyc5GbtboDNhfqlLLdTehqQ72pFnIMIydjQWDAgw-1774184415-1.0.1.1-ZP5NNb4Ls5Kj7a1d99yEi0Ao00xgwg4K2ifcbYLAcIg" }
+    ],
+    photos: ["static/media_images/2025/4.png", "static/media_images/2025/2.png", "static/media_images/2025/3.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "Dec 25",
+    title: "Ixana Launches Wi-R NFE for the Ambient AI Era",
+    content: "Ixana officially launched the XA-NFE2001 transceiver chip. Described as providing >50x better energy efficiency than NFC, this breakthrough utilizes non-radiative electric fields for secure, ambient AI connections.",
+    links: [
+        { text: "[Read Announcement]", url: "https://www.linkedin.com/posts/shreyassen_wirelesscommunications-nfe-lowpowerdesign-activity-7404903040773697536-jcPN/" }
+    ],
+    photos: ["static/media_images/2025/5.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "Dec 25",
+    title: "NATO's 17th Innovation Challenge Winner",
+    content: "NATO's Allied Command Transformation announced Ixana as a winner in its 17th Innovation Challenge. The startup was recognized for its low-emission, low-probability-of-intercept medical command-and-control system using body-confined electric fields for secure triage in jammed environments.",
+    links: [
+        { text: "[NATO Innovation Challenge]", url: "https://www.act.nato.int/article/17th-innovation-challenge-concludes/" }
+    ],
+    photos: ["static/media_images/2025/6.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "Aug 25",
+    title: "Ixana Unveils World's First Production-Ready Wi-R Silicon Chip",
+    content: "GlobeNewswire carried the official press release announcing Ixana's world's first production-ready Wi-R silicon chip (YR23). The chip enables seamless touch-based communication supporting up to 20 Mb/s at sub-nJ/bit efficiency, with developer kits shipping globally.",
+    links: [
+        { text: "[GlobeNewswire]", url: "https://www.ixana.ai/news-events/ixana-wi-r-silicon-chip-press-release" }
+    ],
+    photos: ["static/media_images/2025/7.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "May 25",
+    title: "Indian Engineer Designs Ultra-Efficient Chips Inspired by the Human Body",
+    content: "Rysysth Technologies published a detailed feature on Prof. Sen's biologically-inspired chip designs for wearable AI, profiling Ixana's Wi-R chip and highlighting its touch-based communication and 100x energy efficiency over Bluetooth.",
+    links: [
+        { text: "[Read Feature]", url: "https://rysysthtechnologies.com/insights/indian-engineer-wearable-ai-chip-design" }
+    ],
+    photos: ["static/media_images/2025/8.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "May 25",
+    title: "Startups to Watch: Quasistatics Inc. (Ixana)",
+    content: "The Indianapolis Business Journal's 2025 Innovation Issue featured Ixana as one of 20 promising startups transforming their industries, highlighting the technology's ability to create a secure, personal \"aura\" for wearable communication.",
+    links: [
+        { text: "[Indianapolis Business Journal]", url: "https://www.ibj.com/articles/2025-innovation-issue-startups-to-watch-quasistatics-inc-d-b-a-ixana" }
+    ],
+    photos: ["static/media_images/2025/9.png"],
+    youtubeLinks: []
+},
+{
+    year: "2025",
+    date: "May 25",
+    title: "Agents of Tech Podcast: AI vs Energy",
+    content: "Prof. Shreyas Sen was featured on the Agents of Tech podcast to discuss how nervous-system-inspired chips for wearables can dramatically reduce AI energy consumption. The episode, heavily promoted across social media, covered his pioneering work on ultra-low-power communication and brain-connected wearables.",
+    links: [
+        { text: "[Listen on YouTube Music]", url: "https://music.youtube.com/podcast/XJlgxw-L0rw" },
+        { text: "[LinkedIn Feature]", url: "https://www.linkedin.com/posts/websedge_meet-the-future-of-ai-wearables-dr-shreyas-activity-7327714595685433344-x-Dh/" },
+        { text: "[Instagram Reel]", url: "https://www.instagram.com/reels/DJrzg_3R8a8/s" }
+    ],
+    photos: [],
+    youtubeLinks: []
+},
+
+
+// ===================== 2024 =====================
+{
+    year: "2024",
+    date: "Dec 24",
+    title: "2023 Eaton Award in Design Excellence",
+    content: "Congratulations to Dr. Baibhab Chatterjee for winning the 2023 Eaton Award in Design Excellence. Covered in the ECE Wavelinks Fall 2024 magazine, the award recognizes his groundbreaking neural implant communication research conducted as a PhD student under Prof. Shreyas Sen's advisorship.",
+    links: [
+        { text: "[Purdue ECE Wavelinks]", url: "https://engineering.purdue.edu/ECE/Wavelinks/2024/articles/2023-eaton-award-in-design-excellence" }
+    ],
+    photos: ["static/media_images/2024/1.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Dec 24",
+    title: "Body Internet Featured in ECE Wavelinks",
+    content: "Purdue's ECE Wavelinks magazine published a comprehensive feature on SPARC Lab's 'body internet' work, covering Wi-R touch-based data communication and the brain implant concepts that possess the potential to replace smartphones.",
+    links: [
+        { text: "[Read Magazine Feature]", url: "https://engineering.purdue.edu/ECE/Wavelinks/2024/articles/body-internet" }
+    ],
+    photos: ["static/media_images/2024/2.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Oct 24",
+    title: "Securing a Strong Future for Microchips",
+    content: "Highlighted during Purdue's Semiconductor Week, the university newsroom published a feature on SPARC Lab's pioneering work in custom-designing chips for wearable AI devices modeled on the human nervous system.",
+    links: [
+        { text: "[Purdue University Newsroom]", url: "https://www.purdue.edu/newsroom/2024/Q4/securing-a-strong-future-for-microchips-semiconductors-at-purdue/" }
+    ],
+    photos: ["static/media_images/2024/3.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Oct 24",
+    title: "Freethink Documentary: The Most Secure Wireless Connection Ever",
+    content: "The documentary team at Freethink (for their Hard Reset series) visited Purdue and Ixana for a detailed, on-camera analysis of EQS-HBC / Wi-R technology. The highly-produced video and companion articles explore how the chip turns the human body into an ultra-secure, 100x more energy-efficient communication network compared to Bluetooth.",
+    links: [
+        { text: "[Watch on YouTube]", url: "https://www.youtube.com/watch?v=HmM9tHwfN5M" },
+        { text: "[Freethink Media Article]", url: "https://www.freethink.com/series/hard-reset/ixana" },
+        { text: "[Facebook Video]", url: "https://www.facebook.com/watch/?v=314955748376230" }
+    ],
+    photos: [],
+    youtubeLinks: ["https://www.youtube.com/watch?v=HmM9tHwfN5M"]
+},
+{
+    year: "2024",
+    date: "Aug 24",
+    title: "Human-Inspired Chips for Energy-Efficient Wearable AI",
+    content: "Purdue News features SPARC Lab’s human-inspired chips which use 100× less energy and transfer data 10× faster than Bluetooth, enabling offline AI on wearables. The breakthroughs led to two CES 2024 Innovation Awards and an EE Times Silicon 100 listing for Ixana.",
+    links: [
+        { text: "[EurekAlert! Press Release]", url: "https://www.eurekalert.org/news-releases/1055136" },
+        { text: "[Purdue Engineering Feature]", url: "https://www.linkedin.com/posts/purdue-engineering_engineering-purdue-ai-activity-7232116431339806720-GL7n/" }
+    ],
+    photos: ["static/media_images/2024/4.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Jul 24",
+    title: "Purdue Strategic Ventures “Doubles Down” on Body-Internet",
+    content: "Purdue Strategic Ventures announces a follow-on investment in Ixana, citing accelerated growth and significant traction in both defense and commercial sectors for the revolutionary \"Body-Internet Platform.\"",
+    links: [
+        { text: "[Purdue Research Foundation Stories]", url: "https://stories.prf.org/ixana-ventures-follow-on-investment/" }
+    ],
+    photos: ["static/media_images/2024/5.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Jun 24",
+    title: "Ixana Raises $10M Series A Led by 10x Founders",
+    content: "Ixana successfully raised $10 million in Series A venture funding led by 10x Founders, with participation from Ultratech Capital Partners, Konvoy Ventures, and Scrum Ventures. The round will further accelerate Ixana's high-speed human-computer interface wearable technology.",
+    links: [
+        { text: "[Silverwood Partners]", url: "https://silverwoodpartners.com/technology-private-placement-and-ma-transactions-review-week-ending-june-9-2024/" },
+        { text: "[Semiconductor Engineering]", url: "https://semiengineering.com/startup-funding-q2-2024/" }
+    ],
+    photos: ["static/media_images/2024/6.png", "static/media_images/2024/7.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Jun 24",
+    title: "Engineering Innovations Podcast Feature",
+    content: "The official Purdue ECE Engineering Innovations podcast released an in-depth, 26-minute episode featuring Prof. Shreyas Sen. He discussed his path to academia, the 'body internet' research, the Ixana startup journey, and the future of interdisciplinary wearable technologies.",
+    links: [
+        { text: "[Watch on YouTube]", url: "https://www.youtube.com/watch?v=9bg-YGX1I8Q" },
+        { text: "[Listen on Spotify]", url: "https://open.spotify.com/episode/3ua39ypgwPxFSypsEMk78K" },
+        { text: "[RSS Feed]", url: "https://rss.com/podcasts/purdue-ece/1472652/" },
+        { text: "[Instagram Promo]", url: "https://www.instagram.com/p/C8e_RJ2JrQ4/" }
+    ],
+    photos: [],
+    youtubeLinks: ["https://www.youtube.com/watch?v=9bg-YGX1I8Q"]
+},
+{
+    year: "2024",
+    date: "Feb 24",
+    title: "EE Times Profiles Ultra-Low-Power Connectivity",
+    content: "EE Times profiled Prof. Shreyas Sen, detailing how the Ixana Wi-R technology achieves an astounding 0.1 nJ/bit—100× better than Wi-Fi/Bluetooth—using nonradiative electro-quasistatic fields confined strictly to the body's surface.",
+    links: [
+        { text: "[EE Times Article]", url: "https://www.eetimes.com/how-low-can-ultra-low-power-connectivity-go/" }
+    ],
+    photos: ["static/media_images/2024/8.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Jan 24",
+    title: "Wireless Neural Implants Could Transform Tech Interaction",
+    content: "Featured by Nature Electronics, this research demonstrates a wireless electro-quasistatic brain implant for broadband communication, paving the way for wire-free mind-controlled electronics.",
+    links: [
+        { text: "[Purdue News]", url: "http://purdue.edu/newsroom/purduetoday/2024/Q1/purdue-research-wireless-neural-implants-could-be-key-to-changing-how-we-interact-with-technology" },
+        { text: "[Nature Electronics Paper]", url: "https://www.nature.com/articles/s41928-023-01000-3" }
+    ],
+    photos: ["static/media_images/2024/9.png"],
+    youtubeLinks: []
+},
+{
+    year: "2024",
+    date: "Jan 24",
+    title: "Purdue Expert Video: The 'Body Internet'",
+    content: "Purdue University published an expert video featuring Prof. Shreyas Sen explaining how his Wi-R technology establishes an 'internet' within the human body, seamlessly connecting wearables, insulin pumps, and implants.",
+    links: [
+        { text: "[Watch Purdue Expert Video]", url: "https://www.youtube.com/watch?v=Zy5Uq_pTUns" }
+    ],
+    photos: [],
+    youtubeLinks: ["https://www.youtube.com/watch?v=Zy5Uq_pTUns"]
+},
+{
+    year: "2024",
+    date: "Jan 24",
+    title: "Ixana Wins IoT Wearables Innovation of the Year & CES 2024 Acclaim",
+    content: "Kicking off the year, Ixana won the \"IoT Wearables Innovation of the Year\" at the 2024 IoT Breakthrough Awards. The company also showcased its improved YR22 chip at CES 2024 Eureka Park, garnering extensive media coverage from tech outlets highlighting Wi-R's privacy benefits and massive energy reductions.",
+    links: [
+        { text: "[IoT Breakthrough Awards]", url: "https://iotbreakthrough.com/2024-winners/" },
+        { text: "[Interesting Engineering]", url: "https://interestingengineering.com/ces-2024/beyond-bluetooth-wi-fi-ixana-explores-power-of-wi-r-in-wearable-tech" },
+        { text: "[Inside Telecom]", url: "https://insidetelecom.com/ixanas-wi-r-chip-may-hard-launch-us-into-a-smarter-future/" },
+        { text: "[ETCentric]", url: "https://www.etcentric.org/ces-ixana-transforms-human-body-into-networked-receiver/" },
+        { text: "[CES YouTube Demo]", url: "https://www.youtube.com/shorts/MOLyQZpfWZI" }
+
+    ],
+    photos: ["static/media_images/2024/13.png", "static/media_images/2024/10.png", "static/media_images/2024/11.png", "static/media_images/2024/12.png"],
+    youtubeLinks: ["https://www.youtube.com/shorts/MOLyQZpfWZI"]
+},
+
+
+// ===================== 2023 =====================
+{
+    year: "2023",
+    date: "Dec 23",
+    title: "The “Post-Smartphone” Era: Body Internet",
+    content: "SPARC Lab’s vision of using touch and thought to interact with the digital world was highlighted at CES Las Vegas, demonstrating music transfer through human touch. Purdue announced major inventions from the lab pointing toward a post-smartphone future.",
+    links: [
+        { text: "[Read Article]", url: "https://www.purdue.edu/newsroom/2023/Q4/body-internet-may-eliminate-the-need-for-smartphones-by-changing-how-we-use-technology/" },
+        { text: "[Watch Demo]", url: "https://www.youtube.com/watch?v=fRfdrkzlCwI" },
+        { text: "[Nanowerk]", url: "https://www.nanowerk.com/news2/robotics/newsid=64176.php" },
+        { text: "[EvoNexus]", url: "https://evonexus.org/news/portfolio-news/evo-portco-may-elimiate-need-for-smartphones/" },
+        { text: "[Mirage News]", url: "https://www.miragenews.com/body-internet-could-replace-smartphones-1136677/" }
+    ],
+    photos: ["static/media_images/2023/1.png", "static/media_images/2023/2.png", "static/media_images/2023/3.png"],
+    youtubeLinks: ["https://www.youtube.com/watch?v=fRfdrkzlCwI"]
+},
+{
+    year: "2023",
+    date: "Dec 23",
+    title: "Ixana Wins CES 2024 Innovation Award",
+    content: "The Consumer Electronics Show (CES) named Ixana's Wi-R chip a 2024 Innovation Award honoree in two categories—Embedded Technologies and Computer Hardware—recognizing its 100x lower power consumption for wearable body-area networking compared to radiative wireless technologies.",
+    links: [
+        { text: "[View CES Award]", url: "https://www.ces.tech/ces-innovation-awards/2024/ixanas-wi-r-100x-lower-power-4mbps-chip-for-wearables/" }
+    ],
+    photos: ["static/media_images/2023/4.png"],
+    youtubeLinks: []
+},
+{
+    year: "2023",
+    date: "Sep 23",
+    title: "Wireless Neural Implants Could Transform Tech Interaction",
+    content: "Featured by Nature Electronics, this landmark research demonstrates a wireless electro-quasistatic brain implant for broadband communication, paving the way for wire-free mind-controlled electronics. The study was highlighted as a 2023 BCI Year in Review Annual Highlight and sparked a massive global media wave.",
+    links: [
+        { text: "[PNAS]", url: "https://www.pnas.org/post/journal-club/proof-concept-study-mouse-brain-implants-communicate-wirelessly-wearable-electronics" },
+        { text: "[New York Post]", url: "https://nypost.com/2023/09/27/wireless-brain-implants-could-bring-mind-control-to-new-level-study/" },
+        { text: "[TechXplore]", url: "https://techxplore.com/news/2023-09-brain-broadband-electro-quasistatic-fields-enable.html" },
+        { text: "[Interesting Engineering]", url: "https://interestingengineering.com/science/electro-quasistatic-fields-brain-implant" },
+        { text: "[The Science Times]", url: "https://www.sciencetimes.com/articles/46235/20230928/human-brainternet-wireless-implants-allow-users-control-computers-smart-devices.htm" },
+        { text: "[Nature Electronics]", url: "https://www.nature.com/articles/s41928-023-01041-8" },
+        { text: "[Today Headline]", url: "https://www.techinsider.ru/technologies/news-1614663-razrabotany-implantaty-v-mozg-kotorye-mogut-svyazatsya-s-kompyuterom-po-besprovodnoi-svyazi/" },
+        { text: "[TechInsider]", url: "https://www.techinsider.ru/technologies/news-1614663-razrabotany-implantaty-v-mozg-kotorye-mogut-svyazatsya-s-kompyuterom-po-besprovodnoi-svyazi/" },
+        { text: "[Futura-Sciences / Free]", url: "https://focus.ua/digital/595562-konkurenty-ilona-maska-uchenye-sozdali-implantat-kotoryy-pozvolit-upravlyat-gadzhetami" },
+        { text: "[Futura-Sciences]", url: "https://www.futura-sciences.com/tech/actualites/technologie-implants-cerebraux-universite-purdue-contourne-defi-transmission-donnees-107986/" },
+
+    ],
+    photos: ["static/media_images/2023/5.png", "static/media_images/2023/6.png", "static/media_images/2023/7.png", "static/media_images/2023/8.png", "static/media_images/2023/9.png", "static/media_images/2023/10.png", "static/media_images/2023/11.png", "static/media_images/2023/12.png"],
+    youtubeLinks: []
+},
+{
+    year: "2023",
+    date: "Sep 23",
+    title: "A Computer Engineer Explains the USB-C",
+    content: "Timed with Apple's high-profile transition to USB-C for the iPhone 15, Prof. Shreyas Sen authored a detailed explainer on the technology for The Conversation. Drawing on his unique background as a co-pioneer of the USB-C specification during his time at Intel Labs, his expert commentary was heavily syndicated by major international publications.",
+    links: [
+        { text: "[The Conversation]", url: "https://theconversation.com/what-is-usb-c-a-computer-engineer-explains-the-one-device-connector-to-rule-them-all-213447" },
+        { text: "[Fortune]", url: "https://fortune.com/2023/09/14/what-is-usb-c-apple-device-connector/" },
+        { text: "[PBS NewsHour]", url: "https://www.pbs.org/newshour/science/what-is-usb-c-an-engineer-explains-this-one-device-connector-to-rule-them-all" }
+    ],
+    photos: ["static/media_images/2023/13.png", "static/media_images/2023/14.png", "static/media_images/2023/15.png"],
+    youtubeLinks: []
+},
+{
+    year: "2023",
+    date: "Aug 23",
+    title: "Purdue University Presence at Rally Innovation Conference",
+    content: "Prof. Shreyas Sen served as a featured faculty speaker at the Rally innovation conference in Indianapolis, representing Purdue ECE's advancing technologies.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2023/purdue-university-to-have-a-large-presence-at-rally-in-indianapolis" }
+    ],
+    photos: ["static/media_images/2023/16.png"],
+    youtubeLinks: []
+},
+{
+    year: "2023",
+    date: "Jun 23",
+    title: "Emerging Hardtech Field Offers Indiana Opportunities",
+    content: "Inside INdiana Business featured how the emerging hardtech field, significantly driven by Ixana's wire-like wireless innovations, is creating new economic and technological opportunities for the state.",
+    links: [
+        { text: "[Inside INdiana Business]", url: "https://www.ixana.ai/news-events/indiana-hardtech-opportunities-insideindiana" }
+    ],
+    photos: [],
+    youtubeLinks: []
+},
+{
+    year: "2023",
+    date: "May 23",
+    title: "Purdue Ventures Invests in Ixana — “Startup of the Year at Mira Awards”",
+    content: "Following the TechPoint 'Startup of the Year' win, media covered the $3M seed funding from Purdue Ventures for Ixana’s Wi-R technology, which shifts from 'wireless' to 'wire-like wireless' using the human body.",
+    links: [
+        { text: "[Inside IN Business]", url: "https://www.insideindianabusiness.com/articles/purdue-ventures-invests-in-startup-of-the-year?__cf_chl_tk=zkpYuAoCUW62JZeaSq4du9aGadkPfzhnon.TOLjTjJA-1774040646-1.0.1.1-EXO6YK2E3E8DxhlddGzBwavT5VfCKwpMIon9TKRhhVs" },
+        { text: "[Ixana News]", url: "https://www.ixana.ai/news-events/ixana-2023-mira-awards-startup-winner" },
+        { text: "[Watch Mira Awards]", url: "https://www.youtube.com/watch?v=QMZrLDTbViQ" },
+        { text: "[Ixana News 2]", url: "https://www.ixana.ai/news-events/ixana-mira-awards-insideindiana" },
+        { text: "[TechPoint News & Video]", url: "https://techpoint.org/ixana-wins-startup-of-the-year-mira-award/" },
+        { text: "[Lafayette Journal & Courier]", url: "https://www.jconline.com/story/news/local/purdue/2023/05/17/purdue-plays-an-important-role-in-wearable-smart-devices-company/70218319007/" },
+        { text: "[Ixana News 3]", url: "https://www.ixana.ai/news-events/purdue-ventures-invests-ixana" },
+        { text: "[Purdue University Newsroom]", url: "https://www.purdue.edu/newsroom/2023/Q2/purdue-ventures-invests-in-wearable-communication-chip-company-ixana/" }
+    ],
+    photos: ["static/media_images/2023/18.png", "static/media_images/2023/20.png", "static/media_images/2023/17.png"],
+    youtubeLinks: ["https://www.youtube.com/watch?v=QMZrLDTbViQ"]
+},
+
+{
+    year: "2023",
+    date: "Jan 23",
+    title: "Ixana Unveils World's First Wi-R Silicon Chip at CES 2023",
+    content: "Ixana officially unveiled the YR11, the world's first high-speed Wi-R silicon chip, at CES 2023. Demonstrating 100x better energy efficiency than Bluetooth, the technology utilizes the human body as a conductor to seamlessly and securely communicate with touch. The breakthrough for the wearables and AR/VR markets triggered widespread international press across tech, finance, and broadcast media.",
+    links: [
+        { text: "[Yahoo Finance]", url: "https://finance.yahoo.com/news/ixana-unveils-worlds-first-wi-150000575.html" },
+        { text: "[CoinDesk]", url: "#" },
+        { text: "[Watch Nasdaq TradeTalks]", url: "https://www.youtube.com/watch?v=opx4AvYQH3U" },
+        { text: "[CNX Software]", url: "https://www.cnx-software.com/2023/02/07/the-wi-r-protocol-relies-on-body-for-data-communication-consumes-up-to-100x-less-than-bluetooth/" },
+        { text: "[PC Games Hardware]", url: "https://www.ixana.ai/news-events/ces-unveiled-2023-new-technologies" },
+        { text: "[EE Times]", url: "https://www.ixana.ai/news-events/ultra-low-power-connectivity-eetimes" },
+        { text: "[EET China]", url: "https://www.ixana.ai/news-events/ces2023-enabling-technologies" },
+        { text: "[Stacey on IoT]", url: "https://www.ixana.ai/news-events/iot-news-march-2023-staceyoniot" },
+        { text: "[BFM TV]", url: "https://www.ixana.ai/news-events/culture-geek-touch-data-transfer-bfmtv" },
+        { text: "[All About Circuits]", url: "https://www.allaboutcircuits.com/news/share-files-with-fist-bump-wi-r-confines-signal-to-users-body/" },
+        { text: "[Yanko Design]", url: "https://www.yankodesign.com/2023/01/05/the-best-of-ces-2023-the-future-of-better-living-today/" },
+        { text: "[GlobeNewswire]", url: "https://www.globenewswire.com/news-release/2023/01/03/2582309/0/en/Ixana-unveils-the-world-s-first-Wi-R-silicon-chip-to-seamlessly-communicate-with-touch.html" },
+        { text: "[MENAFN]", url: "https://www.ixana.ai/news-events/ixana-yr11-wi-r-chip-menafn" },
+    { text: "[Yahoo Finance]", url: "https://finance.yahoo.com/news/promising-wireless-tech-could-help-073201707.html" },
+    { text: "[Bitcoin Bazis]", url: "https://www.ixana.ai/news-events/ixana-wireless-metaverse-bitcoinbazis" },
+    { text: "[Analytics Insight]", url: "https://www.ixana.ai/news-events/new-wireless-metaverse-power" },
+    { text: "[Coinpedia]", url: "https://www.ixana.ai/news-events/technology-transform-metaverse" },
+    { text: "[Notícias e Tecnologia]", url: "https://www.ixana.ai/news-events/wi-r-technology-noticiasetecnologia" },
+    { text: "[[Reddit r/AR_MR_XR]]", url: "https://www.ixana.ai/news-events/ixana-100x-efficient-ar-reddit" },
+    { text: "[Réalité Virtuelle]", url: "https://www.ixana.ai/news-events/wireless-tech-metaverse-daily-life" },
+    { text: "[Holographica Space]", url: "https://www.ixana.ai/news-events/ixana-holographica-space-coverage" },
+    { text: "[CNX Software]", url: "https://www.ixana.ai/news-events/wi-r-body-communication-cnx-software" },
+    { text: "[Presse Citron]", url: "https://www.ixana.ai/news-events/wi-r-bluetooth-competitor-presse-citron" },
+    { text: "[ResearchAndMarkets]", url: "https://www.ixana.ai/news-events/global-wearables-market-2023-2033" }
+    ],
+    photos: ["static/media_images/2023/23.png", "static/media_images/2023/21.png", "static/media_images/2023/22.png",  "static/media_images/2023/24.png", "static/media_images/2023/25.png", "static/media_images/2023/26.png"],
+    youtubeLinks: ["https://www.youtube.com/watch?v=opx4AvYQH3U"]
+},
+
+
+// ===================== 2022 =====================
+{
+    year: "2022",
+    date: "Nov 22",
+    title: "Ixana Raises $3M Seed Funding with Breakthrough Wearable Silicon Chip",
+    content: "Global financial, business, and technology media covered the official launch and $3M seed funding of Ixana—a startup co-founded by Prof. Shreyas Sen to commercialize SPARC Lab's revolutionary Wi-R technology. Backed by Uncorrelated Ventures, Samsung Next, EvoNexus, Paradigm Shift, and Hack VC, the funding will accelerate the development of Ixana's YR11 silicon chip, addressing battery and thermal limitations to enable the \"wearable brain\" and all-day wearable AR glasses.",
+    links: [
+        { text: "[Business Wire]", url: "https://www.businesswire.com/news/home/20221129005939/en/Ixana-raises-$3M-with-breakthrough-wearable-silicon-chip" },
+        { text: "[GeekWire]", url: "https://www.geekwire.com/2022/with-new-chip-augmented-reality-startup-ixana-claims-breakthrough-in-quest-for-wearable-brain/" },
+        { text: "[Semiconductor Engineering]", url: "https://semiengineering.com/startup-funding-november-2022/" },
+        { text: "[Biz Crast]", url: "https://www.ixana.ai/news-events/ixana-wearable-brain-chip-crast" },
+        { text: "[Evertiq]", url: "https://www.ixana.ai/news-events/ixana-3m-funding-evertiq" },
+        { text: "[Finsmes]", url: "https://www.ixana.ai/news-events/ixana-3m-seed-funding-finsmes" },
+        { text: "[Auganix]", url: "https://www.auganix.org/ixana-raises-3m-in-seed-funding-as-it-aims-to-make-all-day-wearable-ar-possible/" },
+        { text: "[EE News Europe]", url: "https://www.ixana.ai/news-events/ixana-ar-chip-seed-funding" },
+        { text: "[VR Tuoluo]", url: "https://www.ixana.ai/news-events/ixana-3m-funding-vrtuoluo" },
+        { text: "[Sina VR]", url: "https://www.ixana.ai/news-events/sina-vr-ixana-ar-funding" },
+        { text: "[Chosun Biz]", url: "https://www.ixana.ai/news-events/chosun-biz-wi-r-metaverse" },
+    ],
+    photos: ["static/media_images/2022/1.png", "static/media_images/2022/2.png", "static/media_images/2022/3.png"],
+    youtubeLinks: []
+},
+{
+    year: "2022",
+    date: "Jul 22",
+    title: "Prof. Shreyas Sen Named to Georgia Tech 40 Under 40",
+    content: "Prof. Shreyas Sen, Elmore Associate Professor of Electrical and Computer Engineering at Purdue, was named to the Georgia Tech Alumni Association 40 Under 40 class for 2022, honoring his groundbreaking invention of Electro-Quasistatic Human Body Communication.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2022/prof-shreyas-sen-named-to-gt-40-under-40" }
+    ],
+    photos: ["static/media_images/2022/4.png"],
+    youtubeLinks: []
+},
+{
+    year: "2022",
+    date: "Apr 22",
+    title: "Emerging Energy Tech: Smart Meter Apps and Wireless Power",
+    content: "Smart Energy International featured emerging energy technologies, highlighting the potential of Ixana's Wi-R wireless communication in shaping the future of smart metering and energy-efficient data transfer.",
+    links: [
+        { text: "[Read Article]", url: "https://www.ixana.ai/news-events/smart-meter-wireless-charging-electric-racing-car" }
+    ],
+    photos: ["static/media_images/2022/5.png"],
+    youtubeLinks: []
+},
+
+
+
+// ===================== 2021 =====================
+{
+    year: "2021",
+    date: "Nov 21",
+    title: "SPARC Lab Joins $15M IARPA Grant for RF Machine Learning Security",
+    content: "Prof. Shreyas Sen's SPARC Lab is part of an Expedition Technology-led team awarded a $15M+ multi-year IARPA SCISRS contract. This major initiative applies machine learning to Radio-Frequency (RF) communication and unintended emanation signals to dramatically advance the frontiers of system security.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2021/purdue-teams-up-on-15m-iarpa-grant-to-advance-frontiers-of-radio-frequency-machine-learning-security" }
+    ],
+    photos: ["static/media_images/2021/1.png"],
+    youtubeLinks: []
+},
+{
+    year: "2021",
+    date: "Mar 21",
+    title: "Prof. Shreyas Sen Receives Intel Outstanding Researcher Award",
+    content: "Recognized as one of just 18 leading academic researchers worldwide, Prof. Shreyas Sen was honored with the Intel 2020 Outstanding Researcher Award. The award celebrates his exceptional contributions and ground-up countermeasures for power and electromagnetic side-channel attacks.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2021/prof-shreyas-sen-receives-intel-outstanding-researcher-award" }
+    ],
+    photos: [],
+    youtubeLinks: []
+},
+{
+    year: "2021",
+    date: "Feb 21",
+    title: "CyberWire Podcast Highlights the Human Body as a Communication Channel",
+    content: "Prof. Shreyas Sen was a featured guest on the CyberWire Research Saturday podcast. He discussed how Purdue engineers developed a prototype that allows the human body to act as a highly secure, energy-efficient payment link—simply by touching a machine.",
+    links: [
+        { text: "[Listen to Podcast]", url: "https://thecyberwire.com/podcasts/research-saturday/170/notes" }
+    ],
+    photos: ["static/media_images/2021/2.png"],
+    youtubeLinks: []
+},
+
+
+
+// ===================== 2020 =====================
+{
+    year: "2020",
+    date: "Dec 20",
+    title: "Tech Makes It Possible to Digitally Communicate Through Human Touch",
+    content: "Purdue University announced SPARC Lab's demonstration of the world's first technology that sends digital information strictly through the direct touch of a fingertip (BodyWire-HCI). Enabling password-free logins, contactless door access, and secure payments without biometrics, the breakthrough saw widespread global media coverage.",
+    links: [
+        { text: "[Purdue News]", url: "https://www.purdue.edu/newsroom/archive/releases/2020/Q4/tech-makes-it-possible-to-digitally-communicate-through-human-touch.html" },
+        { text: "[New Atlas]", url: "https://newatlas.com/telecommunications/watch-like-device-digital-information-fingertips/" },
+        { text: "[TechXplore]", url: "https://techxplore.com/news/2020-12-tech-digitally-human.html" },
+        { text: "[NFC World]", url: "https://www.nfcw.com/2020/12/15/369680/purdue-wearable-technology-enables-digital-communication-through-human-touch/" }
+    ],
+    photos: ["static/media_images/2020/1.png", "static/media_images/2020/2.png", "static/media_images/2020/3.png"],
+    youtubeLinks: ["youtube.com/watch?v=-2oscW5i5DQ&embeds_referring_euri=https%3A%2F%2Fwww.purdue.edu%2F&source_ve_path=Mjg2NjY"]
+},
+{
+    year: "2020",
+    date: "Dec 20",
+    title: "IEEE Spectrum features SparcLab work on the human body as wire",
+    content: "Prof. Shreyas Sen authored \"The Body Is the Network,\" a feature article in IEEE Spectrum (vol. 57) explaining how utilizing the human body for data communication improves security and energy efficiency versus Bluetooth for wearable and implantable devices. The magazine also published a \"Back Story\" feature on his multi-year effort developing this technology.",
+    links: [
+        { text: "[IEEE Spectrum Feature]", url: "https://read.nxtbook.com/ieee/spectrum/spectrum_na_december_2020/the_body_is_the_network.html" },
+        { text: "[Backstory]", url: "https://ieeexplore.ieee.org/document/9271792/" }
+    ],
+    photos: ["static/media_images/2020/4.png"],
+    youtubeLinks: []
+},
+{
+    year: "2020",
+    date: "Dec 20",
+    title: "Prof. Shreyas Sen Profiled by The Conversation",
+    content: "The Conversation published an expert profile highlighting Prof. Shreyas Sen's role as Elmore Chair Associate Professor at Purdue and Founder/CTO of Ixana, noting his work has been covered by 250+ news releases worldwide alongside multiple TV and podcast appearances.",
+    links: [
+        { text: "[Read Profile]", url: "https://theconversation.com/profiles/shreyas-sen-1186302" }
+    ],
+    photos: ["static/media_images/2020/5.png"],
+    youtubeLinks: []
+},
+{
+    year: "2020",
+    date: "Mar 20",
+    title: "Prof. Shreyas Sen Receives NSF CAREER Award",
+    content: "Prof. Shreyas Sen received the prestigious NSF Faculty Early Career Development (CAREER) Award. This major funding supports further exploration of Electro-Quasistatic Human Body Communication for healthcare applications—technology notably highlighted as a solution to DHS-warned medical device vulnerabilities.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2020/sen-nsf-career-award" }
+    ],
+    photos: ["static/media_images/2020/6.png"],
+    youtubeLinks: []
+},
+{
+    year: "2020",
+    date: "Feb 20",
+    title: "Mixed-Signal Hardware Security Thwarts Electromagnetic Attacks",
+    content: "ScienceDaily featured SPARC Lab's innovative mixed-signal circuit technology designed to embed crypto cores with signature attenuation, drastically reducing electromagnetic (EM) and power side-channel leakage.",
+    links: [
+        { text: "[ScienceDaily Article]", url: "https://www.sciencedaily.com/releases/2020/02/200219092526.htm" }
+    ],
+    photos: ["static/media_images/2020/7.png"],
+    youtubeLinks: []
+},
+{
+    year: "2020",
+    date: "Jan 20",
+    title: "TEDx Talk: How Your Body Can Play an Integral Role in Wearable Security",
+    content: "Prof. Shreyas Sen delivered a TEDx talk at TEDxIndianapolis detailing a new approach to wearable device security. He discussed utilizing the human body as a secure communication medium, covering applications from pacemakers to brain-machine interfaces.",
+    links: [
+        { text: "[Watch TEDx Talk]", url: "https://www.youtube.com/watch?v=6NKGX-sinOA" }
+    ],
+    photos: [],
+    youtubeLinks: ["https://www.youtube.com/watch?v=6NKGX-sinOA"]
+},
+{
+    year: "2020",
+    date: "Jan 20",
+    title: "Human Body Communication (HBC) Demo Video",
+    content: "A short, 17-second laboratory demonstration video from SPARC Lab at Purdue ECE showcasing human body communication (HBC) technology and data transfer through physical touch.",
+    links: [
+        { text: "[Watch Demo Video]", url: "https://www.youtube.com/watch?v=RqYjJTL80kQ" }
+    ],
+    photos: [],
+    youtubeLinks: ["https://www.youtube.com/watch?v=RqYjJTL80kQ"]
+},
+
+
+
+// ===================== 2019 =====================
+{
+    year: "2019",
+    date: "Nov 19",
+    title: "Medtronic discloses medical device vulnerabilities, while Purdue scientists propose countermeasure",
+    content: "IEEE Spectrum covers SPARC Lab's electro-quasistatic human body communication as a proposed countermeasure to the DHS-warned Medtronic medical device vulnerabilities, highlighting the body-as-wire approach as a security solution.",
+    links: [
+        { text: "[IEEE Spectrum Article]", url: "https://spectrum.ieee.org/thwart-cyber-attacks-on-implanted-medical-devices" }
+    ],
+    photos: ["static/media_images/2019/1.png"],
+    youtubeLinks: ["https://www.youtube.com/watch?v=NHqfT1vIe6E"]
+},
+{
+    year: "2019",
+    date: "Jul 19",
+    title: "Purdue professor founds startup to commercialize body communication technology",
+    content: "The Purdue Exponent reported on Prof. Shreyas Sen founding BDYWR LLC to commercialize his Purdue-developed human body communication technology.",
+    links: [
+        { text: "[Purdue Exponent]", url: "https://www.purdueexponent.org/search/?q=shreyas+sen" }
+    ],
+    photos: ["static/media_images/2019/2.png"],
+    youtubeLinks: []
+},
+{
+    year: "2019",
+    date: "May 19",
+    title: "Prof. Sen's Group Receives Best Student Paper Award at HOST, Third Year in a Row",
+    content: "Debayan Das received the Best Student Paper Award at the 2019 IEEE International Symposium on Hardware Oriented Security and Trust (HOST) for the paper 'STELLAR', marking the third consecutive year the group won the award.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2019/host-best-paper" }
+    ],
+    photos: ["static/media_images/2019/3.png"],
+    youtubeLinks: []
+},
+{
+    year: "2019",
+    date: "Apr 19",
+    title: "Purdue Team Wins Best Paper Award at CICC Conference",
+    content: "Baibhab Chatterjee received the Best Paper Award (Overall) at the 2019 IEEE Custom Integrated Circuits Conference (CICC) for a joint work on a wearable real-time CMOS dosimeter.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2019/chatterjee-best-paper" }
+    ],
+    photos: ["static/media_images/2019/4.png"],
+    youtubeLinks: []
+},
+{
+    year: "2019",
+    date: "Apr 19",
+    title: "IEEE Spectrum suggests SparcLab work as a solution of US Department of Homeland Security advisory",
+    content: "The U.S. Department of Homeland Security warned that numerous medical devices made by Medtronic are vulnerable to cyber attack. A solution to which is the EQS-HBC recently published. Purdue Research and IEEE Spectrum covered our prototype countermeasure to block these attacks.",
+    links: [
+        { text: "[Purdue Research Feature]", url: "https://www.purdue.edu/research/features/stories/secure-internet-of-body-could-protect-medical-devices-from-dhs-warned-cyberattacks/" }
+    ],
+    photos: ["static/media_images/2019/5.png"],
+    youtubeLinks: []
+},
+
+{
+    year: "2019",
+    date: "Mar 19",
+    title: "Secure Internet of Body using Electro-Quasistatic Human Body Communication (Scientific Reports (Nature))",
+    content: "Covered by 50+ news websites worldwide:",
+    links: [
+        { text: "[ScienceDaily]", url: "https://www.sciencedaily.com/releases/2019/03/190312151233.htm" },
+        { text: "[Popular Mechanics]", url: "https://www.popularmechanics.com/science/health/a26801867/scientists-design-a-network-that-lives-inside-your-body/" },
+        { text: "[VentureBeat]", url: "https://venturebeat.com/technology/researchers-say-quasistatic-signals-will-protect-wearables-and-implants-from-hackers" },
+        { text: "[ECNmag]", url: "https://www.medicaldesignandoutsourcing.com/a-prototype-watch-tries-to-ward-off-deadly-human-body-hackers/" },
+        { text: "[The Asian Age]", url: "https://www.asianage.com/technology/in-other-news/160319/your-body-is-your-internet-and-now-it-cant-be-hacked-indian-professor-research.html" },
+        { text: "[Deccan Chronicle]", url: "https://www.deccanchronicle.com/technology/in-other-news/160319/your-body-is-your-internet-and-now-it-cant-be-hacked-indian-profess.html" },
+        { text: "[Futurity]", url: "https://www.futurity.org/pacemaker-hacking-security-device-2006962/" },
+        { text: "[New Atlas]", url: "https://newatlas.com/prototype-watch-body-hackers/58855/" },
+        { text: "[TechXplore]", url: "https://techxplore.com/news/2019-03-body-internetand-hacked.html" },
+        { text: "[Wired.IT]", url: "https://www.wired.it/scienza/biotech/2019/03/15/attacchi-hacker-dispositivi-medici/?refresh_ce=" },
+        { text: "[The Engineer]", url: "https://www.theengineer.co.uk/content/news/prototype-system-uses-body-for-secure-bio-communication" },
+        { text: "[PurdueU]", url: "https://www.purdue.edu/newsroom/archive/releases/2019/Q1/your-body-has-internet--and-now-it-cant-be-hacked.html" },
+        { text: "[ScienceBlog]", url: "https://scienceblog.com/your-body-has-internet-and-now-it-cant-be-hacked/" },
+        { text: "[Purdue Exponent]", url: "https://www.purdueexponent.org/campus/article_c876987a-44ec-11e9-9843-b3b9ca59e8ae.html" },
+        { text: "[Tdnews]", url: "https://www.purdueexponent.org/campus/article_c876987a-44ec-11e9-9843-b3b9ca59e8ae.html" },
+        { text: "[I-Connect007]", url: "https://iconnect007.com/index.php/article/116037/your-body-is-your-internet-and-now-it-cant-be-hacked/116040?skin=ein" },
+        { text: "[Tech Explorist]", url: "https://www.techexplorist.com/your-body-has-internet-and-now-it-cant-be-hacked/21540/" },
+        { text: "[Design Products and Application]", url: "https://www.dpaonthenet.net/article/167869/Your-body-is-your-internet-and-now-it-can-t-be-hacked.aspx" },
+        { text: "[Domain-b]", url: "https://www.domain-b.com/technology/technology-general/your-body-is-your-internet-and-now-it-can-t-be-hacked" },
+        { text: "[Koddos]", url: "https://blog.koddos.net/medical-hackers-worst-enemy-electro-quasistatic-signals/" },
+        { text: "[Engineering.com]", url: "https://www.engineering.com/protecting-the-internet-of-your-body-from-hackers/" },
+        { text: "[RTL]", url: "https://www.rtl.it/notizie/articoli/sempre-piu-connesso-il-corpo-umano-e-a-rischio-hacker/" },
+        { text: "[Infosalus]", url: "https://www.infosalus.com/asistencia/noticia-desarrollan-dispositivo-mejorar-seguridad-dispositivos-medicos-contra-posible-hackeo-20190313175841.html" },
+        { text: "[Omicrono]", url: "https://www.elespanol.com/omicrono/tecnologia/20190315/hackear-humanos-no-posible-cuerpo-humano-escudo/383463105_0.html" },
+        { text: "[PPLware]", url: "https://pplware.sapo.pt/ciencia/cientistas-projetam-uma-rede-que-vive-dentro-de-seu-corpo/" },
+        { text: "[Pieuvre]", url: "https://www.pieuvre.ca/2019/03/14/technologie-sante-piratage-corps/" },
+        { text: "[laRegione]", url: "https://www.laregione.ch/rubriche/tecnologia/1357889/anche-il-corpo-umano-e-a-rischio-hacker" },
+        { text: "[uncached]", url: "https://uncached.com/new-tech-sends-signals-directly-through-skin-to-avoid-hackers/" },
+        { text: "[eeDesignIt]", url: "https://www.eedesignit.com/preventing-your-body-from-getting-hacked/" },
+        { text: "[microsiervos]", url: "https://www.microsiervos.com/archivo/seguridad/tecnologia-seguridad-internet-cuerpo.html" },
+        { text: "[InvDes]", url: "https://invdes.com.mx/salud/blindan-por-fin-el-internet-del-cuerpo/" },
+        { text: "[eltelegrafo]", url: "https://www.eltelegrafo.com.ec/noticias/tecnologia/1/internet-cuerpo-nuevo-escudo" },
+        { text: "[Security Boulevard]", url: "https://securityboulevard.com/2019/03/securing-the-internet-of-the-body/" },
+        { text: "[livemint]", url: "https://www.livemint.com/technology/tech-news/why-some-young-scientists-are-riding-high-on-radio-waves-1553588125263.html" },
+        { text: "[ZAP]", url: "https://zap.aeiou.pt/cientistas-internet-corpo-248164" },
+        { text: "[MAAKINDUSTRIE]", url: "" },
+        { text: "[Inovacao tecnologica]", url: "https://www.inovacaotecnologica.com.br/noticias/noticia.php?artigo=seu-corpo-sua-internet-ela-hackeada&id=010150190326#.XfmQbWRKiUl" },
+        { text: "[Wearable Technologies]", url: "https://wt-obk.wearable-technologies.com/2019/03/keep-your-body-and-implants-safe-from-hackers-with-this-wireless-body-network/" },
+        { text: "[Medindia]", url: "https://www.medindia.net/news/new-device-can-protect-wearables-and-implants-from-remote-hacks-186508-1.htm" },
+        { text: "[Futurism]", url: "https://futurism.com/neoscope/protect-medical-implants-hackers" },
+        { text: "[Environmental News Network]", url: "https://www.enn.com/articles/57213-your-body-is-your-internet-and-now-it-can-t-be-hacked" },
+        { text: "[Santé blog]", url: "https://blog.santelog.com/2019/04/28/votre-corps-est-votre-internet-mais-comment-eviter-quil-soit-pirate/" },
+        { text: "[Digital Journal]", url: "https://www.digitaljournal.com/life/designing-pacemakers-that-cannot-be-hacked/article/549097" },
+        { text: "[Nature Scientific Reports]", url: "https://www.nature.com/articles/s41598-018-38303-x" },
+        { text: "[VentureBeat]", url: "https://venturebeat.com/ai/researchers-say-quasistatic-signals-will-protect-wearables-and-implants-from-hackers" },
+    ],
+    photos: ["static/media_images/2019/15.png","static/media_images/2019/6.png", "static/media_images/2019/7.png", "static/media_images/2019/8.png", "static/media_images/2019/9.png", "static/media_images/2019/10.png", "static/media_images/2019/11.png", "static/media_images/2019/12.png", "static/media_images/2019/13.png", "static/media_images/2019/14.png",  "static/media_images/2019/16.png", "static/media_images/2019/17.png", "static/media_images/2019/18.png", "static/media_images/2019/19.png", "static/media_images/2019/20.png", "static/media_images/2019/21.png", "static/media_images/2019/22.png", "static/media_images/2019/23.png", "static/media_images/2019/24.png", "static/media_images/2019/25.png", "static/media_images/2019/26.png", "static/media_images/2019/27.png", "static/media_images/2019/28.png"],
+    youtubeLinks: ["https://www.youtube.com/watch?v=NHqfT1vIe6E"]
+},
+
+
+// ===================== 2018 =====================
+{
+    year: "2018",
+    date: "May 18",
+    title: "SPARC Lab Wins Best Poster Award at IEEE HOST 2018",
+    content: "Congratulations to ECE students Baibhab Chatterjee, Debayan Das, and Prof. Shreyas Sen for receiving the Best Poster Award (3rd) at the 2018 IEEE International Symposium on Hardware Oriented Security and Trust (HOST). This marks the lab's second consecutive recognition at this premier conference for hardware security.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2018/sen-2018-host-best-paper" }
+    ],
+    photos: ["static/media_images/2018/1.png"],
+    youtubeLinks: []
+},
+{
+    year: "2018",
+    date: "Mar 18",
+    title: "MIT TR35 India Award: Top 10 Innovators Under 35",
+    content: "Prof. Shreyas Sen was named one of the Top 10 Indian Inventors Worldwide Under 35 by MIT Technology Review and Hindustan Times Mint. This global honor recognizes his invention of Electro-Quasistatic Human Body Communication, which paves the way for the world's lowest-energy body area network—operating at 100x less energy than Bluetooth. The recognition sparked widespread media coverage, including an award ceremony speech and an exclusive feature on CNBC TV18’s Young Turks program.",
+    links: [
+        { text: "[Purdue Press Release]", url: "https://www.purdue.edu/newsroom/archive/releases/2018/Q4/global-honor-recognizes-purdue-innovator-for-using-the-human-body-as-a-wire-to-improve-health-care,-neuroscience.html" },
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2018/shreyas-sen-top-10-under-35" },
+        { text: "[Watch Award Speech]", url: "https://www.youtube.com/watch?v=nWEhU6EX0R8" },
+        { text: "[Watch CNBC Interview]", url: "https://www.youtube.com/watch?v=QFSlZ4X3CwQ&t=281s" }
+    ],
+    photos: ["static/media_images/2018/2.png","static/media_images/2018/4.png", "static/media_images/2018/5.png", "static/media_images/2018/6.png", "static/media_images/2018/7.png" ],
+    youtubeLinks: ["https://www.youtube.com/watch?v=nWEhU6EX0R8", "https://www.youtube.com/watch?v=QFSlZ4X3CwQ&t=281s"]
+},
+{
+    year: "2018",
+    date: "Jan 18",
+    title: "Public Radio Features the Human Body as a Communication Network",
+    content: "WFYI (NPR affiliate / Indiana Public Radio) covered SPARC Lab's pioneering technology that utilizes the human body as a secure, energy-efficient communication network for wearable and implantable devices. The segment highlighted the lab's first demonstration of seamless, person-to-person data transfer via physical touch.",
+    links: [
+        { text: "[Read on WFYI]", url: "https://www.wfyi.org/news/articles/researchers-use-human-body-as-communication-network" }
+    ],
+    photos: ["static/media_images/2018/3.png"],
+    youtubeLinks: []
+},
+
+
+
+// ===================== 2017 =====================
+{
+    year: "2017",
+    date: "Dec 17",
+    title: "Human Body as a Wire: A Secure Communication Network",
+    content: "SPARC Lab's breakthrough research on Broadband Interference-robust Human Body Communication was featured by 30+ news sites globally. This discovery clears the way for the human body to act as a secure, ultra-low-energy communication network for wearable and implantable devices, with applications ranging from reprogramming pacemakers to sharing contact info via handshake. We sincerely thank our sponsors AFOSR YIP, NSF CRII Award, and Google FRA for supporting this research spanning from basic research to applications.",
+    links: [
+        { text: "[Purdue Press Release]", url: "https://www.purdue.edu/newsroom/archive/releases/2017/Q4/purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices.html" },
+        { text: "[Globe Newswire]", url: "https://www.globenewswire.com/news-release/2017/12/14/1262163/0/en/Purdue-discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices.html" },
+        { text: "[Phys.org]", url: "https://phys.org/news/2017-12-discovery-human-body-robust-network.html" },
+        { text: "[Business Insider]", url: "https://phys.org/news/2017-12-discovery-human-body-robust-network.html" },
+        { text: "[The Engineer]", url: "https://www.theengineer.co.uk/content/news/human-body-channels-communication-in-networked-electronics" },
+        { text: "[ECN Magazine]", url: "https://www.eeworldonline.com/discovery-clears-way-for-human-body-to-work-as-robust-communication-network-for-electronic-devices/" },
+        { text: "[WN]", url: "https://article.wn.com/view/2017/12/13/Purdue_discovery_clears_way_for_human_body_to_work_as_robust/" }
+    ],
+    photos: ["static/media_images/2017/1.png", "static/media_images/2017/2.png", "static/media_images/2017/3.png", "static/media_images/2017/4.png", "static/media_images/2017/5.png"],
+    youtubeLinks: []
+},
+{
+    year: "2017",
+    date: "Mar 17",
+    title: "NSF CISE Research Initiation Initiative (CRII) Award",
+    content: "Prof. Shreyas Sen was selected to receive the prestigious NSF CRII Award. This crucial funding supports the lab's early-stage, foundational research on human body communication and the secure networking of wearable devices.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2017/professor-shreyas-sen-receives-nsf-cise-research-initiation-initiative-crii-award" }
+    ],
+    photos: [],
+    youtubeLinks: []
+},
+{
+    year: "2017",
+    date: "Feb 17",
+    title: "Google Faculty Research Award for Secure Human-Computer Interaction",
+    content: "Supporting our vision for the future of physical interfaces and immersive experiences, Prof. Shreyas Sen received the Google Faculty Research Award to advance SPARC Lab's research on using the human body as a conducting medium for secure human-computer interaction.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2017/professor-shreyas-sen-wins-google-faculty-research-award-to-work-on-secure-human-computer-interaction" }
+    ],
+    photos: [],
+    youtubeLinks: []
+},
+
+// ===================== 2016 =====================
+{
+    year: "2016",
+    date: "Oct 16",
+    title: "Prof. Shreyas Sen Wins AFOSR Young Investigator Award",
+    content: "The Air Force Office of Scientific Research (AFOSR) officially announced Prof. Shreyas Sen as one of 58 scientists selected for its prestigious Young Investigator Research Program (YIP). Sharing in $20.8 million in grants, Prof. Sen received the award to advance his foundational research on the \"Security and Conduction Properties of Interference-Robust Human Body Communication,\" which explores utilizing the human body as a secure, highly energy-efficient conducting medium for wearable and implantable devices.",
+    links: [
+        { text: "[Purdue ECE News]", url: "https://engineering.purdue.edu/ECE/News/2016/professor-shreyas-sen-wins-the-afosr-young-investigator-award-to-work-on-human-body-communication" },
+        { text: "[Air Force Press Release]", url: "https://www.wpafb.af.mil/News/Article-Display/Article/969772/afosr-awards-grants-to-58-scientists-and-engineers-through-its-young-investigat/" }
+    ],
+    photos: ["static/media_images/2016/1.png"],
+    youtubeLinks: []
+},
+
+            // ====================================================================
+            // TO ADD A NEW ITEM, ADD A COMMA ABOVE AND PASTE A NEW BLOCK HERE 
+            // ====================================================================
+        ];
+
+        // =========================================================================
+        // 🛑 DO NOT EDIT BELOW THIS LINE 🛑
+        // =========================================================================
+        
+        // Helper function to extract YouTube ID from a standard link
+        function getYouTubeID(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("news-container");
+            let htmlContent = "";
+
+            myNewsData.forEach(item => {
+                // 1. Build Title and Content (Removed the <br> so links flow inline)
+                htmlContent += `
+                    <div class="news-item" data-year="${item.year}">
+                        <h2 class="accent"><span class="text-muted">(${item.date})</span> ${item.title}</h2>
+                        <p class="lead" style="margin-bottom: 10px;">
+                            ${item.content}
+                `;
+                
+                // 2. Build Links (Inline with a small left margin for spacing)
+                if (item.links && item.links.length > 0) {
+                    item.links.forEach(link => {
+                        htmlContent += ` <a href="${link.url}" target="_blank" style="margin-left: 5px; white-space: nowrap;">${link.text}</a>`;
+                    });
+                }
+                htmlContent += `</p>`;
+
+// 3 & 4. Build Media (Photos and Videos Side-by-Side)
+                if ((item.photos && item.photos.length > 0) || (item.youtubeLinks && item.youtubeLinks.length > 0)) {
+                    htmlContent += `<div class="d-flex flex-wrap" style="margin-top: 15px;">`;
+                    
+                    // Add Photos
+                    if (item.photos && item.photos.length > 0) {
+                        item.photos.forEach(photo => {
+                            htmlContent += `
+                                <div style="width: ${MEDIA_WIDTH}px; margin-right: 15px; margin-bottom: 15px;">
+                                    <img src="${photo}" class="img-fluid rounded" alt="News Image" style="width: 100%; height: auto; object-fit: cover;">
+                                </div>
+                            `;
+                        });
+                    }
+
+                    // Add YouTube Videos
+                    if (item.youtubeLinks && item.youtubeLinks.length > 0) {
+                        const videoHeight = Math.round((MEDIA_WIDTH * 9) / 16);
+                        item.youtubeLinks.forEach(ytLink => {
+                            const ytID = getYouTubeID(ytLink);
+                            if (ytID) {
+                                htmlContent += `
+                                    <div style="width: ${MEDIA_WIDTH}px; margin-right: 15px; margin-bottom: 15px;">
+                                        <iframe width="100%" height="${videoHeight}" 
+                                                src="https://www.youtube.com/embed/${ytID}" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                `;
+                            }
+                        });
+                    }
+                    
+                    htmlContent += `</div>`;
+                }
+
+                htmlContent += `</div>`; // Close news-item
+            });
+
+            // Inject HTML into the page
+            container.innerHTML = htmlContent;
+
+            // Trigger the dynamic year jump navigation generation
+            const years = new Set();
+            document.querySelectorAll('.news-item').forEach(item => {
+                const year = item.getAttribute('data-year');
+                if (year) {
+                    years.add(parseInt(year));
+                    if (!document.getElementById('year-' + year)) {
+                        item.id = 'year-' + year;
+                    }
+                }
+            });
+
+const sortedYears = Array.from(years).sort((a, b) => b - a);
+const navContainer = document.getElementById('year-nav');
+if (sortedYears.length > 0 && navContainer) {
+    // Let Flexbox handle the alignment, removed the d-inline-block stuff
+    let navHTML = '<strong style="font-size: 1.2rem; margin-right: 5px;">Jump to Year: </strong> ';
+    sortedYears.forEach(year => {
+        // Added explicit inline margin as a failsafe against custom CSS overrides
+        navHTML += `<a href="#year-${year}" class="btn btn-danger btn-sm" style="background-color: #c00000; border-color: #c00000; margin: 4px;">${year}</a>`;
+    });
+    navContainer.innerHTML = navHTML;
+}
+        });
+    </script>
+</body>
+</html>
