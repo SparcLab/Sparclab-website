@@ -1,0 +1,13 @@
+id,title,doi,reason
+hbc-204,Performance Analysis of Near-Field Magnetic Induction Communication in Extreme Environments,10.2528/pierl20010702,Magnetic-induction links in underground/underwater environments; outside body/implant communication scope.
+hbc-229,A Highly Stretchable and Washable All-Yarn-Based Self-Charging Knitting Power Textile Composed of Fiber Triboelectric Nanogenerators and Supercapacitors,10.1021/acsnano.7b05317,Textile energy harvesting and storage; no body communication link focus.
+hbc-261,"Fiber‐Based Wearable Electronics: A Review of Materials, Fabrication, Devices, and Applications",10.1002/adma.201400633,General fiber-based wearable materials and electronics review; no HBC/channel focus.
+hbc-278,A review of wearable sensors and systems with application in rehabilitation.,10.1186/1743-0003-9-21,General rehabilitation sensors and systems review; outside communication IC/channel scope.
+hbc-280,Design and fabrication of nanoscale ultrasonic transducers,10.1088/1742-6596/353/1/012001,Nanoscale ultrasonic transducer fabrication and imaging; no communication link focus.
+hbc-294,Closed-Loop Control of Deep Brain Stimulation: A Simulation Study,10.1109/tnsre.2010.2081377,Deep-brain stimulation control simulation; no communication IC/channel focus.
+hbc-306,Impedance characteristics of deep brain stimulation electrodes in vitro and in vivo,10.1088/1741-2560/6/4/046008,Stimulation-electrode impedance characterization; outside body communication channel scope.
+hbc-330,A general statistical model for ultrasonic backscattering from tissues,10.1109/58.842062,Ultrasonic tissue-backscatter statistics for imaging; no communication link focus.
+hbc-331,Reliability of multiple frequency bioelectrical impedance analysis: An intermachine comparison,10.1002/(sici)1520-6300(1997)9:1<63::aid-ajhb9>3.0.co;2-r,Removed at author request: bioimpedance instrument reliability.
+hbc-334,Ultrasonic transducers and arrays,10.1109/51.544509,Removed at author request: general ultrasonic transducers and arrays.
+hbc-335,Biomedical ultrasonics,10.1109/tieci.1970.230441,General biomedical ultrasonics; outside communication IC/channel scope.
+hbc-336,"StimDust: A 2.2 mm3 , implantable wireless precision neural stimulator with ultrasonic power and communication",,Removed at author request: incomplete undated StimDust record; the separate IC publication remains.
