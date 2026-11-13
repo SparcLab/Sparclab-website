@@ -1,0 +1,153 @@
+/* ==========================================================================
+   SPARC Lab: shared site styles
+   Loaded last in <head> on every page, so these rules win over the older
+   per-page styles. The nav bar, page title and footer are styled only here;
+   edit this file (not individual pages) to change them site-wide.
+   ========================================================================== */
+
+:root {
+    --sparc-dark: #18171C;        /* nav + footer background */
+    --sparc-text: #212529;        /* page titles */
+    --sparc-muted: #6c757d;       /* subtitles */
+    --sparc-nav-link: rgba(255, 255, 255, .75);
+    --sparc-nav-h: 56px;
+    --sparc-footer-h: 40px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: var(--sparc-nav-h);                         /* clear the fixed nav */
+    padding-bottom: calc(var(--sparc-footer-h) + 1rem);     /* clear the fixed footer */
+}
+
+/* ---------- Navigation bar ---------- */
+.navbar-custom {
+    background-color: var(--sparc-dark);
+    min-height: var(--sparc-nav-h);
+    font-family: 'Poppins', sans-serif;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #fff;
+}
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--sparc-nav-link);
+}
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link:focus,
+.navbar-custom .nav-item:hover > .nav-link,
+.navbar-custom .nav-item.active > .nav-link {
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-custom .nav-item.active > .nav-link {
+    font-weight: 600;
+}
+/* some pages have a generic `.active { background: … }` rule for slideshow dots */
+.navbar-custom .nav-item.active,
+.navbar-custom .nav-item.active > .nav-link {
+    background-color: transparent;
+}
+.navbar-custom .dropdown-menu {
+    margin-top: 0;
+    font-size: .95rem;
+}
+
+/* Dropdowns open on hover when the full menu is shown (tablet/desktop) */
+@media (min-width: 768px) {
+    .navbar-custom .navbar-nav > .dropdown:hover > .dropdown-menu,
+    .navbar-custom .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* "Completed Research Area" fly-out submenu
+   (hidden until its own parent is hovered/clicked, at every screen width;
+   main.css used to open it whenever "Research Areas" was hovered below 1280px) */
+.navbar-custom .dropdown-submenu {
+    position: relative;
+}
+.navbar-custom .dropdown-submenu > .dropdown-menu {
+    display: none;
+    top: 0;
+    left: 100%;
+    margin-top: -.5rem;
+    margin-left: 0;
+}
+.navbar-custom .dropdown-submenu > .dropdown-menu.show {
+    display: block;
+}
+@media (max-width: 767.98px) {
+    /* collapsed (phone) menu: always list the submenu, indented under its parent */
+    .navbar-custom .dropdown-submenu > .dropdown-menu {
+        display: block;
+        position: static;
+        margin: 0 0 0 1rem;
+        border: 0;
+        background: transparent;
+    }
+    .navbar-custom .dropdown-submenu > .dropdown-menu .dropdown-item {
+        color: inherit;
+    }
+}
+
+/* ---------- Page title (one per page, directly under the nav) ---------- */
+.page-header {
+    text-align: center;
+    padding: 2rem 16px 1.25rem;
+}
+.page-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--sparc-text);
+    margin: 0;
+}
+.page-subtitle {
+    color: var(--sparc-muted);
+    font-size: 1rem;
+    margin: .5rem 0 0;
+    text-align: center;
+}
+@media (max-width: 767.98px) {
+    .page-header { padding-top: 1.25rem; }
+    .page-title  { font-size: 2.25rem; }
+}
+
+/* ---------- Footer (fixed bar at the bottom of every page) ---------- */
+footer.site-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1020;
+    height: var(--sparc-footer-h);
+    margin: 0;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background-color: var(--sparc-dark);
+    color: rgba(255, 255, 255, .6);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    text-align: center;
+}
+footer.site-footer a {
+    color: var(--sparc-nav-link);
+    text-decoration: none;
+}
+footer.site-footer a:hover,
+footer.site-footer a:focus {
+    color: #fff;
+}
+footer.site-footer .footer-social a {
+    font-size: 1rem;
+    margin: 0 .4rem;
+}
+@media (max-width: 575.98px) {
+    footer.site-footer .footer-long { display: none; }
+}
