@@ -30,7 +30,7 @@
     }
   ],
   "ai_usage_statement": "Artificial intelligence (AI), including large language models accessed through OpenAI ChatGPT and Codex, has been used for literature discovery, bibliographic organization, and preparation of the website, manuscript, and scripts. AI-assisted content may contain mistakes. If you find a mistake, please let us know.",
-  "conflict_of_interest_statement": "Shreyas Sen is a founder, Chairman and Chief Technology Officer of Quasistatics, Inc. (doing business as Ixana). This affiliation is disclosed as a potential competing interest. The catalogue includes publications coauthored by Shreyas Sen.",
+  "conflict_of_interest_statement": "Shreyas Sen is a founder, Chairman and Chief Technology Officer of Quasistatics, Inc. (doing business as Ixana). This affiliation is disclosed as a potential competing interest. The survey includes publications coauthored by Shreyas Sen.",
   "inclusion_request": "We may have missed relevant papers. If you would like a relevant paper published in a Tier-1 journal or conference to be considered for inclusion, please email shreyas@purdue.edu with its title, full citation, and DOI or source link. Requests will be reviewed for inclusion.",
   "corrections": "If you find a mistake, please email shreyas@purdue.edu with the paper identifier or DOI and a description of the error. Reported issues will be reviewed, and confirmed corrections will be incorporated into subsequent updates.",
   "contact_email": "shreyas@purdue.edu",
@@ -44,5 +44,16 @@
     "reason": "Scope screening and author-requested exclusions; original IDs retained."
   },
   "records": 337,
-  "doi_records": 335
+  "doi_records": 335,
+  "resource_description": "A continuously maintained literature and performance survey of human body communication.",
+  "inspiration": {
+    "author": "Boris Murmann",
+    "title": "ADC Performance Survey",
+    "url": "https://github.com/bmurmann/ADC-survey",
+    "statement": "This living literature and performance survey was inspired by Boris Murmann's ADC Performance Survey, which maintains a curated collection of published converter performance data."
+  },
+  "editorial_revision": {
+    "date": "2026-11-14",
+    "description": "Consistent survey terminology and acknowledgement of the ADC Performance Survey inspiration; literature snapshot and measurements unchanged."
+  }
 }

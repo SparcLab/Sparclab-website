@@ -47,7 +47,7 @@ out = [r'% Generated from anc/survey_snapshot.json. Do not edit entries by hand.
 for category, heading in cat_names:
     group = [r for r in ordered if r['category']==category]
     out += ([r'\clearpage'] if category=='ICs' else [r'\vspace{6pt}'])
-    out += [r'\section{' + heading + ' (' + str(len(group)) + ' records)}', r'\label{cat:' + ('ic' if category=='ICs' else 'channel' if category.startswith('Channels') else 'other') + '}',
+    out += [r'\section{Publication Catalogue: ' + heading + ' (' + str(len(group)) + ' records)}', r'\label{cat:' + ('ic' if category=='ICs' else 'channel' if category.startswith('Channels') else 'other') + '}',
             r'\begin{multicols}{2}', r'\cataloguefont']
     for r in group:
         doi = r.get('doi','').strip()

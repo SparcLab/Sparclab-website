@@ -29,7 +29,7 @@ Four EMBC 2026 programme entries were found but are not counted as confirmed pub
 
 The page generator in `anc/build_page.py` reuses the repository's shared navigation/assets and updates HBC_Survey.html. Run it from any directory. The workbook generator uses the @oai/artifact-tool runtime; the exported XLSX does not need that runtime to open.
 
-The catalogue PDF is the primary public download. Overleaf/arXiv source ZIPs and manuscript TeX files are not distributed in the current website tree. Do not add source-download links or republish those manuscript files. Earlier Git history can still contain previously published files.
+The survey paper PDF (`HBC_Survey.pdf`) is the primary public download. `HBC_Catalogue.pdf` is retained as a compatibility alias to the same PDF. Overleaf/arXiv source ZIPs and manuscript TeX files are not distributed in the current website tree. Do not add source-download links or republish those manuscript files. Earlier Git history can still contain previously published files.
 
 ## Validation
 
@@ -40,3 +40,7 @@ The catalogue PDF is the primary public download. Overleaf/arXiv source ZIPs and
 - The live GitHub Pages release was checked in the browser after deployment; the published PDF matched the approved file byte-for-byte.
 
 The branch updates only HBC_Survey.html and the survey/ directory. Merging or deploying is a separate step; this release has not changed the live Purdue website.
+
+## Naming and inspiration (14 November 2026)
+
+Use **HBC Survey** for the website and **Human Body Communication: A Living Survey of Integrated Circuits and Channel Models** for the paper. Describe the resource as a continuously maintained literature and performance survey; its PDF is a dated, citable snapshot. Use **Publication Catalogue** for the reference-list sections. The resource was inspired by Boris Murmann's [ADC Performance Survey](https://github.com/bmurmann/ADC-survey). The literature snapshot remains 13 November 2026.
