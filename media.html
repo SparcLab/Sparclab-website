@@ -1165,7 +1165,7 @@
                             if (ytID) {
                                 htmlContent += `
                                     <div style="width: ${MEDIA_WIDTH}px; margin-right: 15px; margin-bottom: 15px;">
-                                        <iframe width="100%" height="${videoHeight}" 
+                                        <iframe referrerpolicy="strict-origin-when-cross-origin" width="100%" height="${videoHeight}" 
                                                 src="https://www.youtube.com/embed/${ytID}" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
